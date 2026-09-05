@@ -1,0 +1,8 @@
+{
+  "name": "Genkimed SpA - Fixapro Insumos Médicos",
+  "description": "Sitio web oficial y catálogo institucional de Genkimed SpA, especialista en insumos médicos clínicos, apósitos Fixapro® y dispositivos respiratorios y sondas Alveos® disponibles en Mercado Público y venta directa institucional.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

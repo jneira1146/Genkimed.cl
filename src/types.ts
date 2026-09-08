@@ -79,3 +79,15 @@ export interface ClinicalProcedureRecommendation {
   clinicalRationale: string;
   bestPracticeTip: string;
 }
+
+export interface QuoteItem {
+  productId: string;
+  productName: string;
+  brand: string;
+  dimensions: string;
+  unitPerBox: number;
+  quantityBoxes: number;
+  formatOrCaliber?: string;
+  image?: string;
+}
+

@@ -9,7 +9,8 @@ import {
   Building2, 
   Sparkles, 
   ExternalLink,
-  MessageCircle
+  MessageCircle,
+  FileSpreadsheet
 } from 'lucide-react';
 import { Product } from '../types';
 import { Logo } from './Logo';
@@ -21,6 +22,8 @@ interface NavbarProps {
   onNavigate: (sectionId: string) => void;
   selectedBrand?: 'all' | 'Fixapro' | 'Alveos';
   onNavigateBrand?: (brand: 'Fixapro' | 'Alveos') => void;
+  onOpenQuickQuote?: () => void;
+  quoteCount?: number;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -30,6 +33,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   onNavigate,
   selectedBrand = 'all',
   onNavigateBrand,
+  onOpenQuickQuote,
+  quoteCount = 0,
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -231,8 +236,24 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </nav>
 
-          {/* Actions: Mobile Menu Trigger */}
+          {/* Actions: Quick Quote Button & Mobile Menu Trigger */}
           <div className="flex items-center gap-2">
+            {onOpenQuickQuote && (
+              <button
+                onClick={onOpenQuickQuote}
+                className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-[#A8287F] via-[#7B37A0] to-[#2066BA] text-white font-extrabold text-xs shadow-sm hover:opacity-95 transition-all"
+                title="Abrir cotizador de insumos"
+              >
+                <FileSpreadsheet className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Cotizar</span>
+                {quoteCount > 0 && (
+                  <span className="w-4 h-4 rounded-full bg-emerald-400 text-slate-950 font-black text-[10px] flex items-center justify-center shadow-xs">
+                    {quoteCount}
+                  </span>
+                )}
+              </button>
+            )}
+
             {/* Mobile Menu Trigger */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

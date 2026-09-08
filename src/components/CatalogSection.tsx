@@ -18,7 +18,7 @@ import {
   Wind,
   Pipette
 } from 'lucide-react';
-import { Product, ProductCategory, CategoryInfo } from '../types';
+import { Product, ProductCategory, CategoryInfo, QuoteItem } from '../types';
 import { CATEGORIES } from '../data/products';
 import { ProductCard } from './ProductCard';
 
@@ -26,19 +26,37 @@ interface CatalogSectionProps {
   products: Product[];
   selectedBrand?: 'all' | 'Fixapro' | 'Alveos';
   onBrandChange?: (brand: 'all' | 'Fixapro' | 'Alveos') => void;
+  selectedCategory?: ProductCategory;
+  onSelectCategory?: (category: ProductCategory) => void;
   onSelectProduct: (product: Product) => void;
   onOpenDatasheet: (product: Product) => void;
+  onAddToQuote?: (product: Product) => void;
+  quoteItems?: QuoteItem[];
+  onOpenQuickQuote?: () => void;
 }
 
 export const CatalogSection: React.FC<CatalogSectionProps> = ({
   products,
   selectedBrand: controlledBrand,
   onBrandChange,
+  selectedCategory: controlledCategory,
+  onSelectCategory,
   onSelectProduct,
   onOpenDatasheet,
+  onAddToQuote,
+  quoteItems = [],
+  onOpenQuickQuote,
 }) => {
   const [internalBrand, setInternalBrand] = useState<'all' | 'Fixapro' | 'Alveos'>('all');
   const selectedBrand = controlledBrand !== undefined ? controlledBrand : internalBrand;
+
+  const [internalCategory, setInternalCategory] = useState<ProductCategory>('all');
+  const selectedCategory = controlledCategory !== undefined ? controlledCategory : internalCategory;
+
+  const setSelectedCategory = (cat: ProductCategory) => {
+    setInternalCategory(cat);
+    onSelectCategory?.(cat);
+  };
 
   const handleBrandSelect = (brand: 'all' | 'Fixapro' | 'Alveos') => {
     setInternalBrand(brand);
@@ -50,7 +68,6 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
     }
   };
 
-  const [selectedCategory, setSelectedCategory] = useState<ProductCategory>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'featured' | 'name'>('featured');
   const [onlyInStock, setOnlyInStock] = useState(false);
@@ -339,14 +356,20 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
         {/* Products Grid */}
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProducts.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                onSelectProduct={onSelectProduct}
-                onOpenDatasheet={onOpenDatasheet}
-              />
-            ))}
+            {filteredProducts.map((product) => {
+              const quoteItem = quoteItems?.find((item) => item.productId === product.id);
+              return (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  onSelectProduct={onSelectProduct}
+                  onOpenDatasheet={onOpenDatasheet}
+                  onAddToQuote={onAddToQuote}
+                  isInQuote={Boolean(quoteItem)}
+                  quoteQuantity={quoteItem?.quantityBoxes || 0}
+                />
+              );
+            })}
           </div>
         ) : (
           <div className="bg-white rounded-2xl border border-dashed border-slate-300 p-12 text-center max-w-lg mx-auto">

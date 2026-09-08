@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { CatalogSection } from './components/CatalogSection';
-import { TrustSection } from './components/TrustSection';
-import { ContactSection } from './components/ContactSection';
+import { CompanyPage } from './components/CompanyPage';
 import { Footer } from './components/Footer';
 import { ProductDetailModal } from './components/ProductDetailModal';
 import { TechnicalDatasheetModal } from './components/TechnicalDatasheetModal';
@@ -11,17 +10,28 @@ import { QuoteFunnelModal } from './components/QuoteFunnelModal';
 import { QuickQuoteBar } from './components/QuickQuoteBar';
 import { PRODUCTS } from './data/products';
 import { Product, ProductCategory, QuoteItem } from './types';
-import { MessageCircle, ArrowUp } from 'lucide-react';
+import { MessageCircle, ArrowUp, Building2, ArrowRight, ShieldCheck, FileSpreadsheet } from 'lucide-react';
 
 export default function App() {
   const [products] = useState<Product[]>(PRODUCTS);
   const [selectedDetailProduct, setSelectedDetailProduct] = useState<Product | null>(null);
   const [selectedDatasheetProduct, setSelectedDatasheetProduct] = useState<Product | null>(null);
-  const [activeSection, setActiveSection] = useState<string>('hero');
+  
+  // 2 Distinct Pages: 'empresa' | 'productos' (Nuestra Empresa is primary)
+  const [activePage, setActivePage] = useState<'empresa' | 'productos'>(() => {
+    try {
+      const hash = window.location.hash.toLowerCase();
+      if (hash.includes('producto') || hash.includes('catalogo') || hash.includes('insumo')) {
+        return 'productos';
+      }
+    } catch {}
+    return 'empresa';
+  });
+
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // Conversion Funnel State
+  // Conversion Funnel State (Persistent across both pages)
   const [quoteItems, setQuoteItems] = useState<QuoteItem[]>(() => {
     try {
       const saved = localStorage.getItem('genkimed_quote_items');
@@ -33,6 +43,20 @@ export default function App() {
   const [isQuoteFunnelOpen, setIsQuoteFunnelOpen] = useState(false);
   const [selectedCatalogBrand, setSelectedCatalogBrand] = useState<'all' | 'Fixapro' | 'Alveos'>('all');
   const [selectedCategoryFilter, setSelectedCategoryFilter] = useState<ProductCategory>('all');
+
+  // Hash change synchronization for browser history (back/forward)
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.toLowerCase();
+      if (hash.includes('producto') || hash.includes('catalogo') || hash.includes('insumo')) {
+        setActivePage('productos');
+      } else {
+        setActivePage('empresa');
+      }
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   // Scroll listener for top button
   useEffect(() => {
@@ -54,22 +78,37 @@ export default function App() {
     }, 2800);
   };
 
-  const scrollToSection = (sectionId: string) => {
-    setActiveSection(sectionId);
-    if (sectionId === 'hero') {
+  const handleNavigatePage = (page: 'productos' | 'empresa', subSection?: string) => {
+    setActivePage(page);
+    try {
+      window.location.hash = page === 'empresa' ? '#empresa' : '#productos';
+    } catch {}
+    
+    if (subSection) {
+      setTimeout(() => {
+        const el = document.getElementById(subSection);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 150);
+    } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      return;
-    }
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
   const handleNavigateBrand = (brand: 'Fixapro' | 'Alveos') => {
+    setActivePage('productos');
     setSelectedCatalogBrand(brand);
     setSelectedCategoryFilter('all');
-    scrollToSection('catalogo');
+    try {
+      window.location.hash = '#productos';
+    } catch {}
+    setTimeout(() => {
+      const el = document.getElementById('catalogo');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
   };
 
   // Funnel Actions
@@ -147,68 +186,128 @@ export default function App() {
     } else {
       setSelectedCatalogBrand('Fixapro');
     }
-    scrollToSection('catalogo');
+    const el = document.getElementById('catalogo');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-cyan-500 selection:text-white">
       
-      {/* Navigation Bar with conversion trigger */}
+      {/* Dynamic 2-Page Navigation Bar */}
       <Navbar
-        onSelectProduct={(prod) => setSelectedDetailProduct(prod)}
+        onSelectProduct={(prod) => {
+          setActivePage('productos');
+          setSelectedDetailProduct(prod);
+        }}
         products={products}
-        activeSection={activeSection}
-        onNavigate={scrollToSection}
+        activePage={activePage}
+        onNavigatePage={handleNavigatePage}
         selectedBrand={selectedCatalogBrand}
         onNavigateBrand={handleNavigateBrand}
         onOpenQuickQuote={() => setIsQuoteFunnelOpen(true)}
         quoteCount={quoteItems.length}
       />
 
-      {/* Main Funnel Flow */}
+      {/* RENDER ACTIVE PAGE */}
       <main className="flex-grow">
         
-        {/* FUNNEL STEP 1: Hero & Needs Selection */}
-        <Hero
-          onExploreCatalog={() => {
-            setSelectedCatalogBrand('all');
-            setSelectedCategoryFilter('all');
-            scrollToSection('catalogo');
-          }}
-          onSelectCategoryFilter={handleSelectCategoryFromHero}
-          onOpenQuickQuote={() => setIsQuoteFunnelOpen(true)}
-          featuredProducts={products.filter((p) => p.featured)}
-        />
+        {/* ==================================================== */}
+        {/* PÁGINA 1: CATÁLOGO DE PRODUCTOS E INSUMOS MÉDICOS     */}
+        {/* ==================================================== */}
+        {activePage === 'productos' ? (
+          <div className="animate-fadeIn">
+            {/* Hero de Insumos */}
+            <Hero
+              onExploreCatalog={() => {
+                setSelectedCatalogBrand('all');
+                setSelectedCategoryFilter('all');
+                const el = document.getElementById('catalogo');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              onSelectCategoryFilter={handleSelectCategoryFromHero}
+              onOpenQuickQuote={() => setIsQuoteFunnelOpen(true)}
+              featuredProducts={products.filter((p) => p.featured)}
+            />
 
-        {/* FUNNEL STEP 2: Agile Product Selection Catalog */}
-        <CatalogSection
-          products={products}
-          selectedBrand={selectedCatalogBrand}
-          onBrandChange={setSelectedCatalogBrand}
-          selectedCategory={selectedCategoryFilter}
-          onSelectCategory={setSelectedCategoryFilter}
-          onSelectProduct={(prod) => setSelectedDetailProduct(prod)}
-          onOpenDatasheet={(prod) => setSelectedDatasheetProduct(prod)}
-          onAddToQuote={handleAddToQuote}
-          quoteItems={quoteItems}
-          onOpenQuickQuote={() => setIsQuoteFunnelOpen(true)}
-        />
+            {/* Catálogo de Productos */}
+            <CatalogSection
+              products={products}
+              selectedBrand={selectedCatalogBrand}
+              onBrandChange={setSelectedCatalogBrand}
+              selectedCategory={selectedCategoryFilter}
+              onSelectCategory={setSelectedCategoryFilter}
+              onSelectProduct={(prod) => setSelectedDetailProduct(prod)}
+              onOpenDatasheet={(prod) => setSelectedDatasheetProduct(prod)}
+              onAddToQuote={handleAddToQuote}
+              quoteItems={quoteItems}
+              onOpenQuickQuote={() => setIsQuoteFunnelOpen(true)}
+            />
 
-        {/* INSTITUTIONAL TRUST & GUARANTEES: Compact & high credibility */}
-        <TrustSection onOpenQuickQuote={() => setIsQuoteFunnelOpen(true)} />
+            {/* Banner Conector a la Página de la Empresa */}
+            <section className="py-12 bg-white border-t border-slate-200">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="space-y-2 text-center md:text-left">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-900/60 border border-cyan-500/40 text-cyan-300 text-xs font-semibold">
+                      <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
+                      <span>Respaldo y Certificación Institucional</span>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-black">
+                      ¿Necesita antecedentes de <span className="bg-gradient-to-r from-[#A8287F] via-[#7B37A0] to-[#2066BA] bg-clip-text text-transparent">Genkimed SpA</span> para su Orden de Compra?
+                    </h3>
+                    <p className="text-slate-300 text-xs sm:text-sm max-w-2xl leading-relaxed">
+                      Conozca nuestro registro de proveedor habilitado en Mercado Público (ChileCompra), certificaciones de calidad ISO 13485 / CE y despacho express desde nuestra bodega central en Santiago.
+                    </p>
+                  </div>
 
-        {/* FUNNEL STEP 3: Institutional Conversion & Quote Request */}
-        <ContactSection
-          quoteItems={quoteItems}
-          onOpenQuickQuote={() => setIsQuoteFunnelOpen(true)}
-        />
+                  <div className="shrink-0 flex flex-col sm:flex-row items-center gap-3">
+                    <button
+                      onClick={() => handleNavigatePage('empresa')}
+                      className="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-950 font-extrabold text-xs sm:text-sm transition-all shadow-md flex items-center gap-2 hover:scale-[1.02]"
+                    >
+                      <Building2 className="w-4 h-4 text-[#7B37A0]" />
+                      <span>Ver Información de la Empresa</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                    
+                    <button
+                      onClick={() => setIsQuoteFunnelOpen(true)}
+                      className="px-5 py-3.5 rounded-xl bg-gradient-to-r from-[#A8287F] via-[#7B37A0] to-[#2066BA] text-white font-extrabold text-xs sm:text-sm shadow-md transition-all flex items-center gap-1.5"
+                    >
+                      <FileSpreadsheet className="w-4 h-4" />
+                      <span>Cotizar Ahora</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        ) : (
+          /* ==================================================== */
+          /* PÁGINA 2: NUESTRA COMPAÑÍA / EMPRESA GENKIMED SpA   */
+          /* ==================================================== */
+          <CompanyPage
+            onNavigateToProducts={(brand) => {
+              if (brand) {
+                handleNavigateBrand(brand);
+              } else {
+                handleNavigatePage('productos');
+              }
+            }}
+            onOpenQuickQuote={() => setIsQuoteFunnelOpen(true)}
+            quoteItems={quoteItems}
+          />
+        )}
 
       </main>
 
-      {/* Footer */}
-      <Footer onNavigate={scrollToSection} onNavigateBrand={handleNavigateBrand} />
+      {/* Global Footer (Supports 2-Page navigation) */}
+      <Footer 
+        onNavigatePage={handleNavigatePage} 
+        onNavigateBrand={handleNavigateBrand} 
+      />
 
-      {/* STICKY BOTTOM QUOTE BAR (When user has selected items) */}
+      {/* STICKY BOTTOM QUOTE BAR (When user has selected items, visible across both pages) */}
       <QuickQuoteBar
         quoteItems={quoteItems}
         onOpenFunnel={() => setIsQuoteFunnelOpen(true)}

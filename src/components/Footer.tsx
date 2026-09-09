@@ -194,14 +194,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigatePage, onNavigateBrand 
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-purple-400 shrink-0" />
-                <a href="mailto:compras@genkimed.cl" className="hover:text-white transition-colors">
-                  compras@genkimed.cl
-                </a>
-              </p>
-              <p className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-slate-400 shrink-0" />
-                <a href="mailto:ventas@genkimed.cl" className="hover:text-white transition-colors">
-                  ventas@genkimed.cl
+                <a href="mailto:contacto@genkimed.cl" className="hover:text-white transition-colors">
+                  contacto@genkimed.cl
                 </a>
               </p>
               <p className="flex items-start gap-2 text-slate-400 pt-1">

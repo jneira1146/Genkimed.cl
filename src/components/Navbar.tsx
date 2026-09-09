@@ -103,11 +103,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             </a>
             <span className="text-slate-700 hidden sm:inline">|</span>
             <a 
-              href="mailto:compras@genkimed.cl" 
+              href="mailto:contacto@genkimed.cl" 
               className="hidden sm:flex items-center gap-1 text-slate-300 hover:text-white transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-cyan-400" />
-              <span>compras@genkimed.cl</span>
+              <span>contacto@genkimed.cl</span>
             </a>
           </div>
 

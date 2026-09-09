@@ -162,12 +162,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 <div className="flex items-start gap-3">
                   <Mail className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-bold text-white">Correos Institucionales:</p>
-                    <a href="mailto:compras@genkimed.cl" className="text-purple-300 hover:underline block">
-                      compras@genkimed.cl
-                    </a>
-                    <a href="mailto:ventas@genkimed.cl" className="text-slate-400 hover:underline block">
-                      ventas@genkimed.cl
+                    <p className="font-bold text-white">Correo Electrónico:</p>
+                    <a href="mailto:contacto@genkimed.cl" className="text-purple-300 hover:underline block font-medium">
+                      contacto@genkimed.cl
                     </a>
                   </div>
                 </div>

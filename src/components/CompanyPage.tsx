@@ -22,10 +22,10 @@ import {
 } from 'lucide-react';
 import { Logo } from './Logo';
 import { ContactSection } from './ContactSection';
-import { QuoteItem } from '../types';
+import { QuoteItem, ProductBrand } from '../types';
 
 interface CompanyPageProps {
-  onNavigateToProducts: (brand?: 'Fixapro' | 'Alveos') => void;
+  onNavigateToProducts: (brand?: ProductBrand) => void;
   onOpenQuickQuote: () => void;
   quoteItems?: QuoteItem[];
 }
@@ -489,6 +489,16 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({
               className="px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/20 transition-all"
             >
               Línea Alveos® (Respiratorio y Sondas)
+            </button>
+            <button
+              onClick={() => onNavigateToProducts('Columna')}
+              className="px-5 py-3.5 rounded-xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 hover:opacity-95 text-white font-black text-xs sm:text-sm border border-purple-400/40 transition-all flex items-center gap-2 shadow-md"
+            >
+              <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-400 to-emerald-400"></span>
+              <span>Línea Columna MIS (Ver3® & Unomis®)</span>
+              <span className="text-[10px] bg-amber-400 text-slate-950 px-1.5 py-0.5 rounded-md uppercase font-black border border-amber-500">
+                Próximamente
+              </span>
             </button>
           </div>
         </div>

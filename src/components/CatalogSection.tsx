@@ -16,21 +16,26 @@ import {
   LayoutGrid,
   Percent,
   Wind,
-  Pipette
+  Pipette,
+  Play,
+  Layers
 } from 'lucide-react';
-import { Product, ProductCategory, CategoryInfo, QuoteItem } from '../types';
+import { Product, ProductCategory, CategoryInfo, QuoteItem, ProductBrand } from '../types';
 import { CATEGORIES } from '../data/products';
 import { ProductCard } from './ProductCard';
+import { Ver3VideoBanner } from './Ver3VideoBanner';
 
 interface CatalogSectionProps {
   products: Product[];
-  selectedBrand?: 'all' | 'Fixapro' | 'Alveos';
-  onBrandChange?: (brand: 'all' | 'Fixapro' | 'Alveos') => void;
+  selectedBrand?: ProductBrand;
+  onBrandChange?: (brand: ProductBrand) => void;
   selectedCategory?: ProductCategory;
   onSelectCategory?: (category: ProductCategory) => void;
   onSelectProduct: (product: Product) => void;
   onOpenDatasheet: (product: Product) => void;
   onAddToQuote?: (product: Product) => void;
+  onOpenVideo?: (product: Product) => void;
+  onOpenImage?: (product: Product, initialImageSrc?: string) => void;
   quoteItems?: QuoteItem[];
   onOpenQuickQuote?: () => void;
 }
@@ -44,10 +49,12 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
   onSelectProduct,
   onOpenDatasheet,
   onAddToQuote,
+  onOpenVideo,
+  onOpenImage,
   quoteItems = [],
   onOpenQuickQuote,
 }) => {
-  const [internalBrand, setInternalBrand] = useState<'all' | 'Fixapro' | 'Alveos'>('all');
+  const [internalBrand, setInternalBrand] = useState<ProductBrand>('all');
   const selectedBrand = controlledBrand !== undefined ? controlledBrand : internalBrand;
 
   const [internalCategory, setInternalCategory] = useState<ProductCategory>('all');
@@ -58,13 +65,35 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
     onSelectCategory?.(cat);
   };
 
-  const handleBrandSelect = (brand: 'all' | 'Fixapro' | 'Alveos') => {
+  const handleBrandSelect = (brand: ProductBrand) => {
     setInternalBrand(brand);
     onBrandChange?.(brand);
-    if (brand === 'Alveos' && selectedCategory !== 'all' && selectedCategory !== 'respiratory' && selectedCategory !== 'nebulizers') {
+    if (brand === 'Ossyn' || brand === 'Columna' || brand === 'Ver3' || brand === 'Unomis' || brand === 'OpenPed') {
+      setSelectedCategory('spine_surgery');
+    } else if (brand === 'Alveos' && selectedCategory !== 'all' && selectedCategory !== 'respiratory' && selectedCategory !== 'nebulizers') {
       setSelectedCategory('all');
-    } else if (brand === 'Fixapro' && (selectedCategory === 'respiratory' || selectedCategory === 'nebulizers')) {
+    } else if (brand === 'Fixapro' && (selectedCategory === 'respiratory' || selectedCategory === 'nebulizers' || selectedCategory === 'spine_surgery')) {
       setSelectedCategory('all');
+    }
+  };
+
+  const handleCategorySelect = (catId: ProductCategory) => {
+    setSelectedCategory(catId);
+    if (catId === 'spine_surgery') {
+      if (selectedBrand === 'Fixapro' || selectedBrand === 'Alveos') {
+        setInternalBrand('Columna');
+        onBrandChange?.('Columna');
+      }
+    } else if (catId === 'respiratory' || catId === 'nebulizers') {
+      if (selectedBrand === 'Fixapro' || selectedBrand === 'Columna' || selectedBrand === 'Ver3' || selectedBrand === 'Unomis' || selectedBrand === 'OpenPed') {
+        setInternalBrand('all');
+        onBrandChange?.('all');
+      }
+    } else if (catId !== 'all') {
+      if (selectedBrand === 'Alveos' || selectedBrand === 'Columna' || selectedBrand === 'Ver3' || selectedBrand === 'Unomis' || selectedBrand === 'OpenPed') {
+        setInternalBrand('all');
+        onBrandChange?.('all');
+      }
     }
   };
 
@@ -80,6 +109,19 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
         return false;
       }
       if (selectedBrand === 'Alveos' && !product.brand.toLowerCase().includes('alveos')) {
+        return false;
+      }
+      if (
+        (selectedBrand === 'Ossyn' || selectedBrand === 'Columna' || selectedBrand === 'Ver3' || selectedBrand === 'Unomis' || selectedBrand === 'OpenPed') &&
+        !(
+          product.category === 'spine_surgery' ||
+          product.brand.toLowerCase().includes('ossyn') ||
+          product.brand.toLowerCase().includes('columna') ||
+          product.brand.toLowerCase().includes('ver3') ||
+          product.brand.toLowerCase().includes('unomis') ||
+          product.brand.toLowerCase().includes('openped')
+        )
+      ) {
         return false;
       }
       // Category filter
@@ -152,7 +194,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
         </div>
 
         {/* Brand Selector Filter Tabs */}
-        <div className="flex items-center gap-2 mb-4 bg-slate-200/70 p-1.5 rounded-2xl w-fit">
+        <div className="flex items-center gap-2 mb-4 bg-slate-200/70 p-1.5 rounded-2xl w-fit flex-wrap">
           <button
             onClick={() => handleBrandSelect('all')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
@@ -185,6 +227,20 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
             <span className="w-2 h-2 rounded-full bg-blue-300"></span>
             Línea Alveos® (Respiratorio & Sondas)
           </button>
+          <button
+            onClick={() => handleBrandSelect('Ossyn')}
+            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+              selectedBrand === 'Ossyn' || selectedBrand === 'Columna' || selectedBrand === 'Ver3' || selectedBrand === 'Unomis' || selectedBrand === 'OpenPed'
+                ? 'bg-gradient-to-r from-slate-900 via-purple-950 to-slate-950 text-white border border-purple-500/40 shadow-sm'
+                : 'text-slate-600 hover:text-purple-700'
+            }`}
+          >
+            <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-400 via-emerald-400 to-purple-400 animate-pulse"></span>
+            <span>Línea Ossyn (Ver3®, Unomis® & OpenPed®)</span>
+            <span className="text-[9px] font-black uppercase px-1.5 py-0.5 rounded-full bg-amber-400 text-slate-950 border border-amber-500 ml-0.5">
+              Próximamente
+            </span>
+          </button>
         </div>
 
         {/* Category Filter Pills (Horizontal scrolling on mobile) */}
@@ -195,8 +251,8 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
             return (
               <button
                 key={cat.id}
-                onClick={() => setSelectedCategory(cat.id)}
-                className={`flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all border ${
+                onClick={() => handleCategorySelect(cat.id)}
+                className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all border ${
                   isSelected
                     ? 'bg-gradient-to-r from-[#A8287F] via-[#7B37A0] to-[#2066BA] border-transparent text-white shadow-md shadow-purple-900/20'
                     : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-100 hover:border-slate-300'
@@ -215,6 +271,13 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                   <Icon className={`w-4 h-4 ${isSelected ? 'text-white' : 'text-slate-500'}`} />
                 )}
                 <span>{cat.shortLabel}</span>
+                {cat.badge && (
+                  <span className={`text-[9px] font-black uppercase px-1.5 py-0.5 rounded-full ${
+                    isSelected ? 'bg-amber-300 text-slate-950' : 'bg-amber-100 text-amber-900 border border-amber-300'
+                  }`}>
+                    {cat.badge}
+                  </span>
+                )}
               </button>
             );
           })}
@@ -225,27 +288,47 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
           const currentCat = CATEGORIES.find(c => c.id === selectedCategory);
           if (!currentCat) return null;
           return (
-            <div className="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-5 mb-8 shadow-sm flex flex-col md:flex-row items-center gap-5">
+            <div className={`border rounded-2xl p-4 sm:p-5 mb-8 shadow-sm flex flex-col md:flex-row items-center gap-5 ${
+              currentCat.id === 'spine_surgery' || currentCat.id === 'ver3_spine'
+                ? 'bg-gradient-to-br from-slate-900 via-purple-950/90 to-slate-950 text-white border-purple-500/30'
+                : 'bg-white border-slate-200/90'
+            }`}>
               {currentCat.image && (
-                <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden bg-white border border-slate-200 shadow-2xs shrink-0">
+                <div className={`relative w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden ${
+                  currentCat.id === 'spine_surgery' || currentCat.id === 'ver3_spine' ? 'bg-slate-900 border-purple-500/40 p-1.5' : 'bg-slate-950 border-slate-200'
+                } border shadow-2xs shrink-0 flex items-center justify-center`}>
                   <img 
                     src={currentCat.image} 
                     alt={currentCat.label} 
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover" 
+                    className="w-full h-full object-contain" 
                   />
                   <div className="absolute top-1 left-1">
-                    <span className="bg-[#7B37A0] text-white text-[8px] font-black uppercase px-1.5 py-0.5 rounded">
-                      Oficial
+                    <span className={`text-[8px] font-black uppercase px-1.5 py-0.5 rounded ${
+                      currentCat.id === 'spine_surgery' || currentCat.id === 'ver3_spine'
+                        ? 'bg-amber-400 text-slate-950'
+                        : 'bg-[#7B37A0] text-white'
+                    }`}>
+                      {currentCat.badge || 'Oficial'}
                     </span>
                   </div>
                 </div>
               )}
               <div className="flex-1 text-center md:text-left space-y-1.5">
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#7B37A0] bg-purple-50 px-2 py-0.5 rounded border border-purple-100">
-                    Categoría Destacada
+                  <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded border ${
+                    currentCat.id === 'spine_surgery' || currentCat.id === 'ver3_spine'
+                      ? 'text-purple-200 bg-purple-900/60 border-purple-400/40 font-black'
+                      : 'text-[#7B37A0] bg-purple-50 border-purple-100'
+                  }`}>
+                    {currentCat.id === 'spine_surgery' ? '★ Línea Quirúrgica de Columna' : 'Categoría Destacada'}
                   </span>
+                  {currentCat.id === 'spine_surgery' && (
+                    <span className="text-[10px] font-black uppercase tracking-wider text-amber-300 bg-amber-950/70 px-2 py-0.5 rounded border border-amber-500/40 flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                      Ver3® Vertres, Unomis® MISS & OpenPed®
+                    </span>
+                  )}
                   {selectedCategory === 'wound_care' && (
                     <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                       3 Formatos en Caja Oficial
@@ -257,12 +340,77 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                     </span>
                   )}
                 </div>
-                <h3 className="text-base sm:text-lg font-black text-slate-900">
+                <h3 className={`text-base sm:text-lg font-black ${
+                  currentCat.id === 'spine_surgery' ? 'text-white' : 'text-slate-900'
+                }`}>
                   {currentCat.label}
                 </h3>
-                <p className="text-xs text-slate-600 max-w-3xl leading-relaxed">
+                <p className={`text-xs max-w-3xl leading-relaxed ${
+                  currentCat.id === 'spine_surgery' ? 'text-purple-100/90' : 'text-slate-600'
+                }`}>
                   {currentCat.description}
                 </p>
+                {(selectedCategory === 'spine_surgery' || selectedCategory === 'ver3_spine' || selectedCategory === 'unomis_spine' || selectedCategory === 'openped_spine') && (() => {
+                  const ver3Product = products.find(p => p.brand.toLowerCase().includes('ver3') || p.id.includes('ver3'));
+                  const unomisProduct = products.find(p => p.brand.toLowerCase().includes('unomis') || p.id.includes('unomis'));
+                  const openpedProduct = products.find(p => p.brand.toLowerCase().includes('openped') || p.id.includes('openped'));
+                  return (
+                    <div className="pt-2 space-y-2">
+                      <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-[11px]">
+                        <span className="bg-amber-500/20 border border-amber-400/50 text-amber-200 px-2.5 py-1 rounded-lg font-bold flex items-center gap-1.5">
+                          <strong className="text-amber-300">Ver3® Vertres:</strong> Implante Expansible Ti-6Al-4V ELI + Cemento PMMA (T6-L5)
+                          <span className="text-[9px] font-black uppercase px-1.5 py-0.2 rounded bg-amber-400 text-slate-950 border border-amber-500 ml-1">
+                            Próximamente
+                          </span>
+                        </span>
+                        <span className="bg-emerald-500/20 border border-emerald-400/50 text-emerald-200 px-2.5 py-1 rounded-lg font-bold flex items-center gap-1.5">
+                          <strong className="text-emerald-300">Unomis® MISS:</strong> Tornillos Ø 5.0-7.0 mm (Incisión 1.8 mm) + Barras Bullet Ø 5.5 mm
+                          <span className="text-[9px] font-black uppercase px-1.5 py-0.2 rounded bg-amber-400 text-slate-950 border border-amber-500 ml-1">
+                            Próximamente
+                          </span>
+                        </span>
+                        <span className="bg-purple-500/20 border border-purple-400/50 text-purple-200 px-2.5 py-1 rounded-lg font-bold flex items-center gap-1.5">
+                          <strong className="text-purple-300">OpenPed®:</strong> Tornillos Canulados Ø 4.5-6.0 mm (Aletas Reducción + PMMA) + Cross Link + Barras 5.5 mm
+                          <span className="text-[9px] font-black uppercase px-1.5 py-0.2 rounded bg-amber-400 text-slate-950 border border-amber-500 ml-1">
+                            Próximamente
+                          </span>
+                        </span>
+                      </div>
+                      <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-1">
+                        {ver3Product && onOpenVideo && (
+                          <button
+                            type="button"
+                            onClick={() => onOpenVideo(ver3Product)}
+                            className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-3 py-1 rounded-lg text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer"
+                          >
+                            <Play className="w-3.5 h-3.5 fill-slate-950 text-slate-950" />
+                            <span>Video Ver3® Vertres</span>
+                          </button>
+                        )}
+                        {unomisProduct && onOpenVideo && (
+                          <button
+                            type="button"
+                            onClick={() => onOpenVideo(unomisProduct)}
+                            className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-3 py-1 rounded-lg text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer"
+                          >
+                            <Play className="w-3.5 h-3.5 fill-slate-950 text-slate-950" />
+                            <span>Video Unomis® MISS CBT</span>
+                          </button>
+                        )}
+                        {openpedProduct && (
+                          <button
+                            type="button"
+                            onClick={() => onSelectProduct(openpedProduct)}
+                            className="bg-purple-600 hover:bg-purple-500 text-white font-black px-3 py-1 rounded-lg text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer"
+                          >
+                            <Layers className="w-3.5 h-3.5 text-amber-400" />
+                            <span>Ver Ficha OpenPed®</span>
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })()}
                 {selectedCategory === 'wound_care' && (
                   <div className="pt-1 flex flex-wrap items-center justify-center md:justify-start gap-2 text-[11px]">
                     <span className="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded font-semibold text-slate-800">
@@ -365,6 +513,8 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                   onSelectProduct={onSelectProduct}
                   onOpenDatasheet={onOpenDatasheet}
                   onAddToQuote={onAddToQuote}
+                  onOpenVideo={onOpenVideo}
+                  onOpenImage={onOpenImage}
                   isInQuote={Boolean(quoteItem)}
                   quoteQuantity={quoteItem?.quantityBoxes || 0}
                 />

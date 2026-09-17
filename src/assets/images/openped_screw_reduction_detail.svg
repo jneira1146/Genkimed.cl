@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="srdBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+
+    <linearGradient id="srdTitanium" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="25%" stop-color="#f1f5f9" />
+      <stop offset="70%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+
+    <linearGradient id="srdGreenHead" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#15803d" />
+      <stop offset="40%" stop-color="#4ade80" />
+      <stop offset="100%" stop-color="#166534" />
+    </linearGradient>
+
+    <filter id="srdShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <rect width="1000" height="800" fill="url(#srdBg)" />
+
+  <!-- Header Banner -->
+  <g transform="translate(50, 40)">
+    <rect x="0" y="0" width="160" height="28" rx="6" fill="#4a154b" />
+    <text x="80" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">
+      OPENPED® TI-6AL-4V
+    </text>
+    <text x="0" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="900" fill="#0f172a">
+      Tornillo Pedicular Canulado con Aleta de Reducción
+    </text>
+    <text x="0" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#64748b">
+      Doble Rosca Córtico-Esponjosa • Fenestración Distal de Aumentación • Poliaxialidad ±30°
+    </text>
+  </g>
+
+  <!-- Central Schematic Drawing of the Reduction Screw -->
+  <g transform="translate(180, 160)">
+    <!-- Breakaway Tabs / Aletas Extendidas (Long U-shape) -->
+    <g transform="translate(100, 0)">
+      <!-- Left Extension Tab -->
+      <rect x="0" y="0" width="16" height="150" rx="4" fill="url(#srdTitanium)" stroke="#475569" stroke-width="1.5" />
+      <line x1="0" y1="135" x2="16" y2="135" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,2" />
+      <text x="-40" y="75" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ef4444">Aleta separable</text>
+
+      <!-- Right Extension Tab -->
+      <rect x="64" y="0" width="16" height="150" rx="4" fill="url(#srdTitanium)" stroke="#475569" stroke-width="1.5" />
+      <line x1="64" y1="135" x2="80" y2="135" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,2" />
+
+      <!-- Center Rod Channel Guide (U-cutout) -->
+      <path d="M16 135 C16 160, 64 160, 64 135" fill="none" stroke="#0284c7" stroke-width="2" stroke-dasharray="3,3" />
+
+      <!-- Setscrew with double-lead thread hovering into the head -->
+      <g transform="translate(24, 25)">
+        <rect x="0" y="0" width="32" height="24" rx="4" fill="url(#srdTitanium)" stroke="#1e293b" stroke-width="1.5" />
+        <line x1="0" y1="8" x2="32" y2="12" stroke="#475569" stroke-width="2" />
+        <line x1="0" y1="16" x2="32" y2="20" stroke="#475569" stroke-width="2" />
+        <polygon points="16,4 22,8 22,16 16,20 10,16 10,8" fill="#0f172a" />
+        <text x="45" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#0284c7">Tornillo de Cierre</text>
+      </g>
+    </g>
+
+    <!-- Polyaxial Sphere Head (Under the tabs) -->
+    <g transform="translate(100, 150)">
+      <circle cx="40" cy="25" r="32" fill="url(#srdGreenHead)" stroke="#14532d" stroke-width="2" />
+      <rect x="18" y="10" width="44" height="30" rx="6" fill="#0f172a" opacity="0.3" />
+      <text x="40" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">± 30°</text>
+    </g>
+
+    <!-- Threaded Shaft (Canulado & Doble Rosca) -->
+    <g transform="translate(126, 205)">
+      <!-- Main Core (Canulated central lumen indicated with dashed lines) -->
+      <rect x="0" y="0" width="28" height="320" rx="4" fill="url(#srdTitanium)" stroke="#334155" stroke-width="1.5" />
+      <!-- Central lumen cannulation (for K-wire or PMMA cement) -->
+      <line x1="14" y1="0" x2="14" y2="335" stroke="#38bdf8" stroke-width="3" stroke-dasharray="5,4" />
+
+      <!-- Proximal Cortical Threads (Fine Pitch) -->
+      <g stroke="#334155" stroke-width="2.5">
+        <line x1="-8" y1="20" x2="36" y2="32" />
+        <line x1="-8" y1="40" x2="36" y2="52" />
+        <line x1="-8" y1="60" x2="36" y2="72" />
+        <line x1="-8" y1="80" x2="36" y2="92" />
+        <line x1="-8" y1="100" x2="36" y2="112" />
+        <line x1="-8" y1="120" x2="36" y2="132" />
+      </g>
+
+      <!-- Distal Cancellous Threads (Wide Pitch) -->
+      <g stroke="#334155" stroke-width="3">
+        <line x1="-12" y1="155" x2="40" y2="175" />
+        <line x1="-12" y1="195" x2="40" y2="215" />
+        <line x1="-12" y1="235" x2="40" y2="255" />
+        <line x1="-12" y1="275" x2="40" y2="295" />
+      </g>
+
+      <!-- Distal Fenestration Slot (for PMMA cement flow) -->
+      <rect x="7" y="240" width="14" height="40" rx="7" fill="#0f172a" stroke="#f97316" stroke-width="2" />
+      <circle cx="14" cy="252" r="3" fill="#fde047" />
+      <circle cx="14" cy="268" r="3" fill="#fde047" />
+
+      <!-- Self-tapping Flutes / Trocar Tip -->
+      <polygon points="0,320 28,320 14,355" fill="url(#srdTitanium)" stroke="#334155" stroke-width="1.5" />
+      <!-- Cutting notch -->
+      <polygon points="4,322 14,345 10,322" fill="#0f172a" />
+    </g>
+
+    <!-- Lateral Explanatory Callouts -->
+    <!-- Callout 1: Dual Thread -->
+    <g transform="translate(-130, 230)">
+      <rect x="0" y="0" width="220" height="70" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#srdShadow)" />
+      <text x="15" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#0f172a">Doble Rosca Ósea</text>
+      <text x="15" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" fill="#64748b">• Paso fino proximal (Cortical)</text>
+      <text x="15" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" fill="#64748b">• Paso amplio distal (Esponjosa)</text>
+      <line x1="220" y1="35" x2="250" y2="35" stroke="#64748b" stroke-width="1.5" />
+    </g>
+
+    <!-- Callout 2: Augmentation Slot -->
+    <g transform="translate(-130, 420)">
+      <rect x="0" y="0" width="220" height="85" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5" filter="url(#srdShadow)" />
+      <text x="15" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#ea580c">Ranura de Aumentación</text>
+      <text x="15" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#9a3412">• Inyección segura de PMMA</text>
+      <text x="15" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#9a3412">• Para osteoporosis u osteopenia</text>
+      <text x="15" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#9a3412">• Distribución ósea controlada</text>
+      <line x1="220" y1="45" x2="260" y2="470" stroke="#ea580c" stroke-width="1.5" />
+    </g>
+
+    <!-- Right Callout: Reduction Tabs -->
+    <g transform="translate(250, 40)">
+      <rect x="0" y="0" width="220" height="85" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#srdShadow)" />
+      <text x="15" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#4a154b">Aleta Larga de Reducción</text>
+      <text x="15" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" fill="#64748b">• Descenso gradual de la barra</text>
+      <text x="15" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" fill="#64748b">• Espondilolistesis y fracturas</text>
+      <text x="15" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" fill="#64748b">• Ruptura limpia post-bloqueo</text>
+      <line x1="0" y1="45" x2="-70" y2="45" stroke="#4a154b" stroke-width="1.5" />
+    </g>
+
+    <!-- Right Callout 2: Calibers -->
+    <g transform="translate(250, 260)">
+      <rect x="0" y="0" width="220" height="95" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#srdShadow)" />
+      <text x="15" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#0f172a">Gama Dimensional</text>
+      <text x="15" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#0284c7">• Diámetros: Ø 4.5, 5.0 y 6.0 mm</text>
+      <text x="15" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748b">• Longitudes: 30 a 50 mm</text>
+      <text x="15" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748b">• Versiones canulada y sólida</text>
+    </g>
+  </g>
+</svg>

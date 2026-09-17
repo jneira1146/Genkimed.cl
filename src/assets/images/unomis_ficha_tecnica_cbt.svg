@@ -1,0 +1,298 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 960" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#312e81" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+    <linearGradient id="cbtGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+    <linearGradient id="tradBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="titaniumScrew" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="50%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="960" fill="url(#bgGrad)" />
+  <rect x="0" y="0" width="1400" height="8" fill="#4f46e5" />
+
+  <!-- Top Header Bar -->
+  <g transform="translate(50, 45)">
+    <!-- Title &amp; Brand -->
+    <text x="0" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="900" fill="#0f172a" letter-spacing="-0.5">Sistema De Fijación UNOMIS</text>
+    <text x="0" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#6366f1">SISTEMA DE FIJACIÓN PEDICULAR POSTERIOR MISS • ALEACIÓN Ti-6Al-4V</text>
+
+    <!-- MaffHealth &amp; Unomis Logo Badges -->
+    <g transform="translate(1000, 0)">
+      <rect x="0" y="0" width="300" height="65" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow)" />
+      <!-- Unomis Icon -->
+      <rect x="18" y="16" width="32" height="32" rx="8" fill="#581c87" />
+      <circle cx="34" cy="32" r="5" fill="#ffffff" />
+      <text x="58" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#1e1b4b">Unomis</text>
+      <!-- Separator -->
+      <line x1="150" y1="15" x2="150" y2="50" stroke="#cbd5e1" stroke-width="1" />
+      <!-- MaffHealth text -->
+      <text x="165" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#0f172a">Maff<tspan fill="#0284c7">Health</tspan></text>
+    </g>
+  </g>
+
+  <!-- Left Column: Trajectory Diagram &amp; Screw Anatomy (x: 50..460) -->
+  <g transform="translate(50, 140)">
+    <!-- Card 1: CBT vs Traditional Trajectory -->
+    <rect x="0" y="0" width="410" height="420" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow)" />
+    
+    <rect x="20" y="20" width="370" height="38" rx="8" fill="#f1f5f9" />
+    <text x="35" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#1e293b">TRAYECTORIAS DE FIJACIÓN PEDICULAR</text>
+
+    <!-- Vertebra illustration diagram -->
+    <g transform="translate(45, 80)">
+      <!-- Vertebra body shape -->
+      <path d="M 60 180 C 40 140, 70 80, 160 80 C 250 80, 280 140, 260 180 C 250 230, 220 250, 160 250 C 100 250, 70 230, 60 180 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2.5" />
+      <!-- Spinal canal hole -->
+      <ellipse cx="160" cy="140" rx="42" ry="38" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5" />
+      <!-- Spinous process -->
+      <path d="M 140 240 L 160 290 L 180 240 Z" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2" />
+      <!-- Transverse processes -->
+      <path d="M 60 150 L 5 130 L 55 120 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+      <path d="M 260 150 L 315 130 L 265 120 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+
+      <!-- Left: CBT (Cortical Bone Trajectory) -->
+      <g transform="translate(10, 0)">
+        <rect x="90" y="0" width="30" height="110" rx="5" fill="url(#cbtGreen)" transform="rotate(18, 105, 55)" opacity="0.95" />
+        <line x1="120" y1="30" x2="120" y2="135" stroke="#0f766e" stroke-width="4" stroke-dasharray="4 3" />
+        <!-- CBT Label -->
+        <rect x="40" y="-15" width="130" height="28" rx="6" fill="#0f766e" />
+        <text x="105" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">CBT (Cortical)</text>
+      </g>
+
+      <!-- Right: Traditional Trajectory -->
+      <g transform="translate(0, 0)">
+        <rect x="200" y="0" width="30" height="110" rx="5" fill="url(#tradBlue)" transform="rotate(-22, 215, 55)" opacity="0.95" />
+        <line x1="200" y1="30" x2="200" y2="135" stroke="#0369a1" stroke-width="4" stroke-dasharray="4 3" />
+        <!-- Trad Label -->
+        <rect x="180" y="-15" width="130" height="28" rx="6" fill="#0284c7" />
+        <text x="245" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">Tradicional</text>
+      </g>
+    </g>
+
+    <!-- Legend note -->
+    <rect x="20" y="350" width="370" height="50" rx="8" fill="#f8fafc" stroke="#e2e8f0" />
+    <text x="35" y="372" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0f172a">• Abordaje CBT: Un solo abordaje en línea media</text>
+    <text x="35" y="388" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#475569">• Máximo anclaje en zona de mayor densidad cortical</text>
+
+    <!-- Card 2: Screw Thread Anatomy (y: 440..780) -->
+    <g transform="translate(0, 435)">
+      <rect x="0" y="0" width="410" height="340" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow)" />
+      
+      <rect x="20" y="18" width="370" height="34" rx="8" fill="#eef2ff" />
+      <text x="35" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#3730a3">DISEÑO CÓRTICO-ESPONJOSA DUAL</text>
+
+      <!-- Screw Graphic -->
+      <g transform="translate(70, 75)">
+        <!-- Screw Head with Reduction Tabs -->
+        <rect x="30" y="0" width="36" height="55" rx="6" fill="#6366f1" stroke="#4338ca" stroke-width="2" />
+        <line x1="48" y1="0" x2="48" y2="40" stroke="#ffffff" stroke-width="2" stroke-dasharray="3 2" />
+        <circle cx="48" cy="45" r="5" fill="#ffffff" />
+        
+        <!-- Proximal Thread: Paso Cortical -->
+        <rect x="34" y="55" width="28" height="60" fill="url(#titaniumScrew)" stroke="#475569" stroke-width="1.5" />
+        <line x1="32" y1="65" x2="64" y2="70" stroke="#334155" stroke-width="3" />
+        <line x1="32" y1="75" x2="64" y2="80" stroke="#334155" stroke-width="3" />
+        <line x1="32" y1="85" x2="64" y2="90" stroke="#334155" stroke-width="3" />
+        <line x1="32" y1="95" x2="64" y2="100" stroke="#334155" stroke-width="3" />
+        <line x1="32" y1="105" x2="64" y2="110" stroke="#334155" stroke-width="3" />
+
+        <!-- Distal Thread: Paso Esponjoso -->
+        <rect x="36" y="115" width="24" height="95" fill="url(#titaniumScrew)" stroke="#475569" stroke-width="1.5" />
+        <line x1="32" y1="130" x2="64" y2="140" stroke="#334155" stroke-width="3.5" />
+        <line x1="32" y1="150" x2="64" y2="160" stroke="#334155" stroke-width="3.5" />
+        <line x1="32" y1="170" x2="64" y2="180" stroke="#334155" stroke-width="3.5" />
+        <line x1="32" y1="190" x2="64" y2="200" stroke="#334155" stroke-width="3.5" />
+        <!-- Taper tip -->
+        <polygon points="36,210 60,210 48,228" fill="#475569" />
+
+        <!-- Labels and Callouts -->
+        <!-- Bracket 1: Cortical -->
+        <path d="M 85 55 L 105 55 L 105 85 L 115 85 L 105 85 L 105 115 L 85 115" fill="none" stroke="#4f46e5" stroke-width="2" />
+        <text x="125" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#312e81">Paso de Rosca Cortical</text>
+        <text x="125" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748b">Paso fino de alta sujeción</text>
+
+        <!-- Bracket 2: Esponjosa -->
+        <path d="M 85 118 L 105 118 L 105 170 L 115 170 L 105 170 L 105 220 L 85 220" fill="none" stroke="#0284c7" stroke-width="2" />
+        <text x="125" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#0369a1">Paso de Rosca Esponjosa</text>
+        <text x="125" y="181" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748b">Paso ancho para anclaje esponjoso</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Middle Column: Key Clinical &amp; Mechanical Features (x: 485..915) -->
+  <g transform="translate(485, 140)">
+    <rect x="0" y="0" width="430" height="775" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow)" />
+    
+    <!-- Title -->
+    <rect x="25" y="22" width="380" height="38" rx="8" fill="#f8fafc" />
+    <text x="40" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" fill="#0f172a">CARACTERÍSTICAS TÉCNICAS UNOMIS</text>
+
+    <!-- Feature 1: Sistema MISS Ti-6Al-4V -->
+    <g transform="translate(25, 80)">
+      <circle cx="16" cy="16" r="16" fill="#e0e7ff" />
+      <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#4338ca" text-anchor="middle">1</text>
+      <text x="45" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#0f172a">Sistema Pedicular MISS Ti-6Al-4V</text>
+      <text x="45" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">Aleación médica que ofrece óptima biocompatibilidad</text>
+      <text x="45" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">y altísima resistencia biomecánica a la fatiga.</text>
+    </g>
+
+    <!-- Feature 2: CBT &amp; Percutánea -->
+    <g transform="translate(25, 155)">
+      <circle cx="16" cy="16" r="16" fill="#ccfbf1" />
+      <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#0f766e" text-anchor="middle">2</text>
+      <text x="45" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#0f172a">Versatilidad Instrumental: CBT y Percutánea</text>
+      <text x="45" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">Permite realizar técnica CBT (Cortical Bone Trajectory)</text>
+      <text x="45" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">y abordaje percutáneo mínimamente invasivo puro.</text>
+    </g>
+
+    <!-- Feature 3: Anclaje Línea Media -->
+    <g transform="translate(25, 230)">
+      <circle cx="16" cy="16" r="16" fill="#e0f2fe" />
+      <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#0369a1" text-anchor="middle">3</text>
+      <text x="45" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#0f172a">Abordaje Único en Línea Media (CBT)</text>
+      <text x="45" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">Preserva la musculatura paravertebral y asegura</text>
+      <text x="45" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">anclaje sólido en hueso cortical denso.</text>
+    </g>
+
+    <!-- Feature 4: Tornillos Autorroscantes &amp; Canulados -->
+    <g transform="translate(25, 305)">
+      <circle cx="16" cy="16" r="16" fill="#f3e8ff" />
+      <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#7e22ce" text-anchor="middle">4</text>
+      <text x="45" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#0f172a">Tornillos Canulados y Fenestrados</text>
+      <text x="45" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">Autorroscantes para inserción segura sobre aguja guía:</text>
+      <text x="45" y="52" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#6d28d9">Ø 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5 y 8.0 mm</text>
+    </g>
+
+    <!-- Feature 5: Poliaxialidad ±30° -->
+    <g transform="translate(25, 385)">
+      <circle cx="16" cy="16" r="16" fill="#fef3c7" />
+      <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#b45309" text-anchor="middle">5</text>
+      <text x="45" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#0f172a">Amplia Poliaxialidad de hasta ±30°</text>
+      <text x="45" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">Angulación multidireccional que facilita la alineación</text>
+      <text x="45" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">de la barra en deformidades y casos complejos.</text>
+    </g>
+
+    <!-- Feature 6: Aletas de Reducción Integradas -->
+    <g transform="translate(25, 460)">
+      <circle cx="16" cy="16" r="16" fill="#dcfce7" />
+      <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#15803d" text-anchor="middle">6</text>
+      <text x="45" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#0f172a">Aletas de Reducción Integrada</text>
+      <text x="45" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">Óptima captura de la barra sin necesidad de</text>
+      <text x="45" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">instrumental voluminoso de reducción externa.</text>
+    </g>
+
+    <!-- Feature 7: Agujas Guías Patentadas -->
+    <g transform="translate(25, 535)">
+      <circle cx="16" cy="16" r="16" fill="#fee2e2" />
+      <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#b91c1c" text-anchor="middle">7</text>
+      <text x="45" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#0f172a">Aleta con Agujas Guías Patentadas</text>
+      <text x="45" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">Fácil confirmación de ubicación bajo radioscopía</text>
+      <text x="45" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">sin interferencia visual en el campo quirúrgico.</text>
+    </g>
+
+    <!-- Feature 8: Barras &amp; Bloqueo -->
+    <g transform="translate(25, 610)">
+      <circle cx="16" cy="16" r="16" fill="#ede9fe" />
+      <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#5b21b6" text-anchor="middle">8</text>
+      <text x="45" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#0f172a">Barras Bullet 5.5 mm &amp; Bloqueo Rápido</text>
+      <text x="45" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">Barras precortadas con punta tipo proyectil y</text>
+      <text x="45" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#475569">tornillos de bloqueo en un solo paso.</text>
+    </g>
+  </g>
+
+  <!-- Right Column: Reduction Mechanism, Rods &amp; Locking Screws (x: 940..1350) -->
+  <g transform="translate(940, 140)">
+    <!-- Mechanism Card: Reduction Tabs in Action -->
+    <rect x="0" y="0" width="410" height="420" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow)" />
+    
+    <rect x="20" y="20" width="370" height="38" rx="8" fill="#f5f3ff" />
+    <text x="35" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#4338ca">MECANISMO DE REDUCCIÓN INTEGRADA</text>
+
+    <!-- Reduction Action Diagram -->
+    <g transform="translate(60, 85)">
+      <!-- Green downward push arrow -->
+      <polygon points="135,5 155,5 155,30 170,30 145,55 120,30 135,30" fill="#16a34a" />
+
+      <!-- Screw reduction collar -->
+      <rect x="110" y="65" width="70" height="85" rx="8" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2" />
+      <line x1="145" y1="65" x2="145" y2="120" stroke="#4f46e5" stroke-width="2" stroke-dasharray="3 2" />
+
+      <!-- Horizontal titanium rod inserted -->
+      <rect x="30" y="105" width="230" height="18" rx="9" fill="url(#titaniumScrew)" stroke="#334155" stroke-width="2" />
+      <circle cx="255" cy="114" r="8" fill="#475569" />
+
+      <!-- Inserter shaft -->
+      <rect x="135" y="150" width="20" height="100" fill="#cbd5e1" stroke="#475569" stroke-width="2" />
+      <!-- Screw distal thread entering bone -->
+      <rect x="137" y="250" width="16" height="50" fill="#64748b" />
+      <polygon points="137,300 153,300 145,315" fill="#475569" />
+    </g>
+
+    <rect x="20" y="340" width="370" height="60" rx="8" fill="#f8fafc" stroke="#e2e8f0" />
+    <text x="35" y="364" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0f172a">• Aleta con guías patentadas de reducción activa</text>
+    <text x="35" y="382" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#475569">• Captura la barra axialmente sin instrumental adicional</text>
+
+    <!-- Rod &amp; Locking Screws Card (y: 435..775) -->
+    <g transform="translate(0, 435)">
+      <rect x="0" y="0" width="410" height="340" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow)" />
+      
+      <rect x="20" y="18" width="370" height="34" rx="8" fill="#f1f5f9" />
+      <text x="35" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#0f172a">BARRAS BULLET Y TORNILLOS DE BLOQUEO</text>
+
+      <!-- Precut Rod illustration -->
+      <g transform="translate(30, 75)">
+        <text x="10" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#0f172a">Barra Precurvada 5.5 mm (Punta Proyectil):</text>
+        <path d="M 20 45 Q 160 25 300 45" fill="none" stroke="url(#titaniumScrew)" stroke-width="14" stroke-linecap="round" />
+        <ellipse cx="300" cy="45" rx="8" ry="7" fill="#64748b" />
+        <text x="10" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748b">Punta tipo bullet para inserción MIS suave entre planos musculares</text>
+      </g>
+
+      <!-- Locking Set Screws illustration -->
+      <g transform="translate(30, 185)">
+        <text x="10" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#0f172a">Tornillos de Bloqueo en 1 Solo Paso:</text>
+        <!-- 3 set screws -->
+        <g transform="translate(40, 30)">
+          <circle cx="30" cy="30" r="24" fill="#cbd5e1" stroke="#475569" stroke-width="2" />
+          <polygon points="30,16 38,24 38,36 30,44 22,36 22,24" fill="#1e293b" />
+          
+          <circle cx="95" cy="30" r="24" fill="#cbd5e1" stroke="#475569" stroke-width="2" />
+          <polygon points="95,16 103,24 103,36 95,44 87,36 87,24" fill="#1e293b" />
+
+          <circle cx="160" cy="30" r="24" fill="#cbd5e1" stroke="#475569" stroke-width="2" />
+          <polygon points="160,16 168,24 168,36 160,44 152,36 152,24" fill="#1e293b" />
+        </g>
+        <text x="10" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748b">Huella Star/Hexalobular anti-crossthreading de fijación rápida definitiva</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Footer Info -->
+  <g transform="translate(50, 925)">
+    <text x="0" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#64748b">DISTRIBUCIÓN EXCLUSIVA GENKIMED SpA • CHILE • CONVENIO MARCO / MERCADO PÚBLICO</text>
+    <text x="1300" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6366f1" text-anchor="end">MAFFHEALTH SPINAL SOLUTIONS</text>
+  </g>
+</svg>

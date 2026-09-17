@@ -13,7 +13,11 @@ import {
   Clock,
   HelpCircle,
   Building,
-  Info
+  Info,
+  Play,
+  Video,
+  CheckCircle2,
+  ZoomIn
 } from 'lucide-react';
 import { Product } from '../types';
 
@@ -21,16 +25,20 @@ interface ProductDetailModalProps {
   product: Product | null;
   onClose: () => void;
   onOpenDatasheet: (product: Product) => void;
+  onOpenVideo?: (product: Product) => void;
+  onOpenImage?: (product: Product, initialImageSrc?: string) => void;
 }
 
 export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
   product,
   onClose,
   onOpenDatasheet,
+  onOpenVideo,
+  onOpenImage,
 }) => {
   if (!product) return null;
 
-  const [activeTab, setActiveTab] = useState<'overview' | 'protocol' | 'specs'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'protocol' | 'specs' | 'video'>('overview');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const currentImage = selectedImage || product.image;
@@ -44,7 +52,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
         {/* Modal Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors"
+          className="absolute top-4 right-4 z-20 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors cursor-pointer"
           aria-label="Cerrar modal"
         >
           <X className="w-5 h-5" />
@@ -56,18 +64,49 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
           <div className="md:col-span-5 bg-slate-50 p-6 flex flex-col justify-between border-b md:border-b-0 md:border-r border-slate-200">
             <div className="space-y-4">
               
-              {/* Product Image */}
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-white border border-slate-200 shadow-inner">
+              {/* Product Image with Zoom Click */}
+              <div 
+                onClick={() => onOpenImage && onOpenImage(product, currentImage)}
+                className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-white border border-slate-200 shadow-inner group cursor-zoom-in"
+                title="Haz clic para ver la imagen en tamaño grande y alta resolución"
+              >
                 <img 
                   src={currentImage} 
                   alt={product.name} 
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover transition-all duration-300"
+                  className={`w-full h-full ${product.brand.toLowerCase().includes('ver3') || product.brand.toLowerCase().includes('unomis') ? 'object-contain p-2 bg-white' : 'object-cover'} transition-all duration-300 group-hover:scale-105`}
+                  onError={(e) => {
+                    if (product.image && e.currentTarget.src !== product.image) {
+                      e.currentTarget.src = product.image;
+                    }
+                  }}
                 />
+                
+                {/* Hover Zoom Badge */}
+                <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <span className="bg-slate-950/85 backdrop-blur-xs text-white text-xs font-bold px-3 py-1.5 rounded-xl border border-white/20 shadow-xl flex items-center gap-1.5 transform translate-y-1 group-hover:translate-y-0 transition-transform">
+                    <ZoomIn className="w-4 h-4 text-amber-400" />
+                    <span>Ampliar Imagen</span>
+                  </span>
+                </div>
+
                 <div className="absolute top-3 left-3 flex flex-col gap-1">
-                  <span className="bg-[#7B37A0] text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-md shadow-sm">
+                  <span className={`text-[10px] font-black uppercase px-2.5 py-0.5 rounded-md shadow-sm ${
+                    product.brand.toLowerCase().includes('ver3')
+                      ? 'bg-amber-500 text-slate-950 font-black'
+                      : product.brand.toLowerCase().includes('unomis')
+                        ? 'bg-emerald-600 text-white font-black'
+                        : product.brand.toLowerCase().includes('openped')
+                          ? 'bg-purple-900 text-amber-300 border border-purple-400 font-black'
+                          : 'bg-[#7B37A0] text-white'
+                  }`}>
                     {product.brand}
                   </span>
+                  {product.badge && (
+                    <span className="bg-amber-400 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded-md shadow-sm border border-amber-500">
+                      {product.badge}
+                    </span>
+                  )}
                 </div>
                 <div className="absolute bottom-2.5 right-2.5">
                   <span className="bg-slate-950/80 backdrop-blur-xs text-slate-200 text-[10px] font-medium px-2 py-0.5 rounded shadow-sm border border-white/10 flex items-center gap-1">
@@ -80,30 +119,79 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
               {/* Gallery Thumbnails (if available) */}
               {product.galleryImages && product.galleryImages.length > 1 && (
                 <div className="space-y-1.5">
-                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
-                    Vistas y Cajas por Formato:
-                  </span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                      Vistas y Cajas por Formato:
+                    </span>
+                    <span className="text-[10px] text-slate-400">
+                      Haz clic para cambiar o ampliar
+                    </span>
+                  </div>
                   <div className="grid grid-cols-4 gap-2">
                     {product.galleryImages.map((img, i) => (
                       <button
                         key={i}
                         type="button"
-                        onClick={() => setSelectedImage(img)}
-                        className={`relative aspect-square rounded-xl overflow-hidden border-2 transition-all p-0.5 bg-white ${
+                        onClick={() => {
+                          setSelectedImage(img);
+                        }}
+                        onDoubleClick={() => {
+                          if (onOpenImage) onOpenImage(product, img);
+                        }}
+                        className={`relative aspect-square rounded-xl overflow-hidden border-2 transition-all p-0.5 bg-white cursor-pointer group ${
                           currentImage === img
                             ? 'border-[#7B37A0] ring-2 ring-purple-300 scale-102 shadow-xs'
                             : 'border-slate-200 opacity-70 hover:opacity-100 hover:border-slate-300'
                         }`}
-                        title={i === 0 ? 'Línea completa' : `Formato ${i}`}
+                        title={i === 0 ? 'Línea completa (Doble clic para ampliar)' : `Formato ${i} (Doble clic para ampliar)`}
                       >
                         <img 
                           src={img} 
                           alt={`Caja ${i + 1}`} 
-                          className="w-full h-full object-cover rounded-lg" 
+                          className={`w-full h-full ${product.brand.toLowerCase().includes('ver3') || product.brand.toLowerCase().includes('unomis') ? 'object-contain p-0.5' : 'object-cover'} rounded-lg`}
                           referrerPolicy="no-referrer" 
+                          onError={(e) => {
+                            if (product.image && e.currentTarget.src !== product.image) {
+                              e.currentTarget.src = product.image;
+                            }
+                          }}
                         />
+                        <div className="absolute bottom-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity bg-slate-950/70 text-white rounded p-0.5">
+                          <ZoomIn className="w-2.5 h-2.5" />
+                        </div>
                       </button>
                     ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Ver3 Video Quick Launch Card if hasVideo */}
+              {product.hasVideo && (
+                <div 
+                  onClick={() => {
+                    if (onOpenVideo) {
+                      onOpenVideo(product);
+                    } else {
+                      setActiveTab('video');
+                    }
+                  }}
+                  className="p-3 rounded-xl bg-gradient-to-r from-slate-950 via-slate-900 to-amber-950 border border-amber-500/50 shadow-md cursor-pointer hover:border-amber-400 transition-all group"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-9 h-9 rounded-lg bg-amber-500 text-slate-950 flex items-center justify-center shrink-0 shadow group-hover:scale-105 transition-transform">
+                      <Play className="w-4 h-4 fill-slate-950 ml-0.5" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-[10px] font-black uppercase text-amber-400">Video Quirúrgico</span>
+                        <span className="text-[9px] font-mono text-slate-400">
+                          {product.videoInfo?.duration || 'Video HD'}
+                        </span>
+                      </div>
+                      <p className="text-xs font-bold text-white group-hover:text-amber-200 transition-colors truncate">
+                        {product.videoInfo?.title || 'Ver animación y técnica quirúrgica'}
+                      </p>
+                    </div>
                   </div>
                 </div>
               )}
@@ -168,13 +256,59 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
               
               {/* Product Header */}
               <div>
-                <div className="text-xs font-bold text-[#A8287F] tracking-wider uppercase mb-1 flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#A8287F]"></span>
-                  {product.brand === 'Fixapro' ? 'Línea Fixapro® • Insumo Hospitalario & Clínico' : 'Línea Alveos® • Dispositivos Médicos & Terapia Respiratoria'}
+                <div className="text-xs font-bold tracking-wider uppercase mb-1 flex items-center gap-1.5">
+                  <span className={`w-2 h-2 rounded-full ${
+                    product.brand.toLowerCase().includes('ver3') 
+                      ? 'bg-amber-500' 
+                      : product.brand.toLowerCase().includes('unomis')
+                        ? 'bg-emerald-500'
+                        : product.brand.toLowerCase().includes('openped')
+                          ? 'bg-purple-600'
+                          : product.category === 'spine_surgery' || product.brand.toLowerCase().includes('columna')
+                            ? 'bg-purple-600'
+                            : product.brand.toLowerCase().includes('fixapro')
+                              ? 'bg-[#A8287F]'
+                              : 'bg-[#2066BA]'
+                  }`}></span>
+                  <span className={
+                    product.brand.toLowerCase().includes('ver3') 
+                      ? 'text-amber-700 font-extrabold' 
+                      : product.brand.toLowerCase().includes('unomis')
+                        ? 'text-emerald-700 font-extrabold'
+                        : product.brand.toLowerCase().includes('openped')
+                          ? 'text-purple-800 font-extrabold'
+                          : product.category === 'spine_surgery' || product.brand.toLowerCase().includes('columna')
+                            ? 'text-purple-700 font-extrabold'
+                            : product.brand.toLowerCase().includes('fixapro')
+                              ? 'text-[#A8287F]'
+                              : 'text-[#2066BA]'
+                  }>
+                    {product.brand.toLowerCase().includes('ver3')
+                      ? 'Categoría Ossyn • Ver3® Vertres (Restauración Vertebral & PMMA)'
+                      : product.brand.toLowerCase().includes('unomis')
+                        ? 'Categoría Ossyn • Unomis® MISS (Fijación Pedicular MIS & Técnica CBT)'
+                        : product.brand.toLowerCase().includes('openped')
+                          ? 'Categoría Ossyn • OpenPed® (Fijación Pedicular Posterior & Aumentación PMMA)'
+                          : product.category === 'spine_surgery'
+                            ? 'Categoría Ossyn • Cirugía de Columna'
+                            : product.brand.toLowerCase().includes('fixapro')
+                              ? 'Línea Fixapro® • Insumo Hospitalario & Clínico'
+                              : 'Línea Alveos® • Dispositivos Médicos & Terapia Respiratoria'}
+                  </span>
                 </div>
-                <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">
-                  {product.name}
-                </h2>
+                <div className="flex items-center gap-2.5 flex-wrap">
+                  <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">
+                    {product.name}
+                  </h2>
+                  {product.badge && (
+                    <span className="bg-amber-400 text-slate-950 text-[10px] font-black uppercase px-2.5 py-0.5 rounded-md shadow-xs border border-amber-500 flex items-center gap-1.5">
+                      {product.badge.toLowerCase().includes('próx') && (
+                        <span className="w-1.5 h-1.5 rounded-full bg-slate-950 animate-ping"></span>
+                      )}
+                      {product.badge}
+                    </span>
+                  )}
+                </div>
                 <p className="text-xs text-slate-500 font-medium mt-0.5">
                   {product.subtitle}
                 </p>
@@ -212,6 +346,20 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 >
                   Ficha Técnica Resumida
                 </button>
+
+                {product.hasVideo && (
+                  <button
+                    onClick={() => setActiveTab('video')}
+                    className={`pb-2.5 border-b-2 transition-all flex items-center gap-1.5 ${
+                      activeTab === 'video'
+                        ? 'border-amber-500 text-amber-600 font-black'
+                        : 'border-transparent text-amber-700 hover:text-amber-800'
+                    }`}
+                  >
+                    <Play className="w-3.5 h-3.5 fill-current" />
+                    <span>Video Quirúrgico MIS (03:16)</span>
+                  </button>
+                )}
               </div>
 
               {/* Tab Content */}
@@ -500,6 +648,146 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 </div>
               )}
 
+              {/* Video Tab Content */}
+              {activeTab === 'video' && product.hasVideo && (
+                <div className="space-y-4 text-xs text-slate-700 animate-fadeIn">
+                  {/* Video Player Preview (Supports YouTube and MP4) */}
+                  <div className="w-full aspect-video rounded-2xl overflow-hidden bg-black border border-amber-500/40 shadow-xl relative">
+                    {(() => {
+                      const vUrl = product.videoInfo?.videoUrl || 'https://youtu.be/obF2R_95aLo';
+                      const ytMatch = vUrl.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/);
+                      if (ytMatch && ytMatch[1]) {
+                        return (
+                          <iframe
+                            src={`https://www.youtube-nocookie.com/embed/${ytMatch[1]}?rel=0`}
+                            className="w-full h-full border-0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                            title={product.videoInfo?.title || "Video Quirúrgico Ver3"}
+                          />
+                        );
+                      }
+                      return (
+                        <video
+                          src={vUrl}
+                          controls
+                          playsInline
+                          preload="metadata"
+                          className="w-full h-full object-contain"
+                        />
+                      );
+                    })()}
+                  </div>
+
+                  {/* Video Overview Banner */}
+                  <div className="p-4 rounded-2xl bg-gradient-to-br from-slate-950 via-slate-900 to-amber-950 text-white border border-amber-500/40 shadow-lg space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"></span>
+                        <span className="text-xs font-black uppercase text-amber-400 tracking-wider">
+                          {product.brand || 'Genkimed SpA'} • Video Quirúrgico Oficial
+                        </span>
+                      </div>
+                      <span className="text-[10px] font-mono text-slate-300 bg-slate-800/80 px-2 py-0.5 rounded border border-white/10">
+                        Duración: {product.videoInfo?.duration || '00:24 min'}
+                      </span>
+                    </div>
+
+                    <h4 className="text-sm sm:text-base font-black text-white leading-snug">
+                      {product.videoInfo?.title || 'Vertres - Sistema de Expansión Tridimensional MIS'}
+                    </h4>
+
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      {product.videoInfo?.subtitle}
+                    </p>
+
+                    <div className="pt-1 flex flex-wrap items-center gap-2">
+                      <button
+                        onClick={() => onOpenVideo && onOpenVideo(product)}
+                        className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500 text-slate-950 text-xs font-black transition-all hover:opacity-95 shadow-md flex items-center gap-2 cursor-pointer"
+                      >
+                        <Play className="w-4 h-4 fill-slate-950" />
+                        <span>Abrir en Pantalla Completa y Cargar Mi Video</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Procedural Chapters Breakdown */}
+                  {product.videoInfo?.chapters && (
+                    <div className="space-y-2 pt-1">
+                      <p className="font-bold text-slate-900 uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+                        <Layers className="w-3.5 h-3.5 text-amber-600" />
+                        Pasos Quirúrgicos Guiados en el Video:
+                      </p>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {product.videoInfo.chapters.map((chap, i) => (
+                          <div 
+                            key={i} 
+                            onClick={() => onOpenVideo && onOpenVideo(product)}
+                            className="p-2.5 rounded-xl border border-slate-200 hover:border-amber-400 bg-slate-50 hover:bg-amber-50/50 transition-all flex items-start gap-2.5 cursor-pointer group"
+                          >
+                            <div 
+                              onClick={(e) => {
+                                if (onOpenImage) {
+                                  e.stopPropagation();
+                                  onOpenImage(product, chap.image);
+                                }
+                              }}
+                              className="w-12 h-12 rounded-lg overflow-hidden bg-slate-900 border border-slate-300 shrink-0 relative cursor-zoom-in"
+                              title="Haz clic para ver el render 3D ampliado"
+                            >
+                              <img src={chap.image} alt={chap.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                              <div className="absolute inset-0 bg-slate-950/20"></div>
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center justify-between">
+                                <span className="text-[10px] font-mono font-bold text-amber-700">
+                                  {chap.time}
+                                </span>
+                                <Play className="w-3 h-3 text-slate-400 group-hover:text-amber-600" />
+                              </div>
+                              <h5 className="text-xs font-bold text-slate-900 truncate">
+                                {chap.title}
+                              </h5>
+                              <p className="text-[10px] text-slate-600 line-clamp-1 mt-0.5">
+                                {chap.description}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* 4 Pillars */}
+                  <div className="bg-amber-50/70 border border-amber-200/80 rounded-xl p-3 space-y-1.5 text-[11px] text-amber-950">
+                    <span className="font-bold flex items-center gap-1 text-amber-900">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                      Ventajas Demostradas en la Animación Quirúrgica:
+                    </span>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pl-1">
+                      <li className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                        <span><strong>Three-dimensional expansion:</strong> soporte activo</span>
+                      </li>
+                      <li className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                        <span><strong>Stable restoration:</strong> mantenimiento de altura</span>
+                      </li>
+                      <li className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                        <span><strong>VCF restoration:</strong> reducción anatómica</span>
+                      </li>
+                      <li className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                        <span><strong>Larger volume:</strong> distribución simétrica PMMA</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              )}
+
             </div>
 
             {/* Institutional Distribution & Direct Contact Actions */}
@@ -526,8 +814,10 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                   <span className="text-[10px] text-slate-400 uppercase tracking-wider block">
                     Disponibilidad
                   </span>
-                  <span className="font-bold text-emerald-400">
-                    En Stock
+                  <span className={`font-bold ${
+                    product.badge?.toLowerCase().includes('próx') ? 'text-amber-400' : 'text-emerald-400'
+                  }`}>
+                    {product.badge?.toLowerCase().includes('próx') ? 'Próximamente' : 'En Stock'}
                   </span>
                 </div>
                 <div>

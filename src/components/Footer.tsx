@@ -11,10 +11,11 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { Logo } from './Logo';
+import { ProductBrand } from '../types';
 
 interface FooterProps {
   onNavigatePage: (page: 'productos' | 'empresa', subSection?: string) => void;
-  onNavigateBrand?: (brand: 'Fixapro' | 'Alveos') => void;
+  onNavigateBrand?: (brand: ProductBrand) => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({ onNavigatePage, onNavigateBrand }) => {
@@ -138,6 +139,21 @@ export const Footer: React.FC<FooterProps> = ({ onNavigatePage, onNavigateBrand 
                 >
                   <span className="w-2 h-2 rounded-full bg-[#2066BA]"></span>
                   <span>Línea Alveos® (Respiratorio & Sondas)</span>
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => {
+                    onNavigatePage('productos');
+                    if (onNavigateBrand) onNavigateBrand('Columna');
+                  }} 
+                  className="hover:text-purple-300 transition-colors text-left flex items-center gap-1.5 font-bold text-purple-200"
+                >
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-400 to-emerald-400"></span>
+                  <span>Línea Columna MIS (Ver3® & Unomis®)</span>
+                  <span className="text-[9px] bg-amber-400 text-slate-950 border border-amber-500 px-1 py-0.2 rounded font-black uppercase">
+                    Próx.
+                  </span>
                 </button>
               </li>
               <li>

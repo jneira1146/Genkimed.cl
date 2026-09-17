@@ -1,5 +1,7 @@
 export type ProductCategory = 
   | 'all'
+  | 'spine_surgery'
+  | 'ossyn'
   | 'iv_fixation'
   | 'wound_care'
   | 'tapes'
@@ -9,7 +11,20 @@ export type ProductCategory =
   | 'nebulizers'
   | 'urology_tubes'
   | 'antisepsis'
-  | 'first_aid';
+  | 'first_aid'
+  | 'ver3_spine'
+  | 'unomis_spine'
+  | 'openped_spine';
+
+export type ProductBrand = 
+  | 'all' 
+  | 'Fixapro' 
+  | 'Alveos' 
+  | 'Ossyn'
+  | 'Columna' 
+  | 'Ver3' 
+  | 'Unomis'
+  | 'OpenPed';
 
 export interface CategoryInfo {
   id: ProductCategory;
@@ -18,6 +33,8 @@ export interface CategoryInfo {
   iconName: string;
   description: string;
   image?: string;
+  badge?: string;
+  comingSoon?: boolean;
 }
 
 export interface Product {
@@ -52,6 +69,21 @@ export interface Product {
   featured?: boolean;
   badge?: string;
   galleryImages?: string[];
+  hasVideo?: boolean;
+  videoInfo?: {
+    title: string;
+    subtitle: string;
+    duration: string;
+    author: string;
+    videoUrl?: string;
+    chapters: {
+      time: string;
+      seconds: number;
+      title: string;
+      description: string;
+      image: string;
+    }[];
+  };
   availableCalibers?: {
     gauge: string;
     colorName: string;

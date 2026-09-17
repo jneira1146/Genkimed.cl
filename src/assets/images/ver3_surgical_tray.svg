@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="trayMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="50%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+    <linearGradient id="handleDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="steelShaft" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="50%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+    <pattern id="perforated" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="2.5" fill="#64748b" opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <rect width="900" height="600" fill="#0b1120" />
+
+  <!-- Title -->
+  <text x="40" y="45" fill="#f59e0b" font-family="system-ui, sans-serif" font-weight="900" font-size="20">
+    Set de Instrumental Quirúrgico Ver3® Vertres
+  </text>
+  <text x="40" y="70" fill="#94a3b8" font-family="system-ui, sans-serif" font-weight="600" font-size="13">
+    Cajas de Esterilización Autoclavable • Sistema de Colocación, Expansión Controlada y Cánulas Dilatadoras
+  </text>
+
+  <!-- TOP TRAY: Cannulation & Working Tubes -->
+  <g transform="translate(40, 95)">
+    <!-- Metal Tray Outer -->
+    <rect width="820" height="210" rx="16" fill="url(#trayMetal)" stroke="#64748b" stroke-width="4" />
+    <!-- Perforated internal sheet -->
+    <rect x="15" y="15" width="790" height="180" rx="10" fill="#cbd5e1" />
+    <rect x="15" y="15" width="790" height="180" rx="10" fill="url(#perforated)" />
+
+    <!-- Instrument 1: Guide wire & Trocar with ergonomic grip -->
+    <g transform="translate(40, 45)">
+      <!-- T-Handle -->
+      <path d="M 0 10 C 0 0 15 -10 35 -10 C 55 -10 70 0 70 10 C 70 20 55 25 45 30 L 45 45 L 25 45 L 25 30 C 15 25 0 20 0 10 Z" fill="url(#handleDark)" stroke="#0f172a" />
+      <circle cx="35" cy="10" r="6" fill="#475569" />
+      <!-- Long shaft -->
+      <rect x="32" y="45" width="6" height="520" rx="2" fill="url(#steelShaft)" transform="rotate(-90 32 45)" />
+      <!-- Beveled tip -->
+      <polygon points="555,45 565,48 555,51" fill="#f8fafc" />
+    </g>
+
+    <!-- Instrument 2: Working Cannula & Dilator -->
+    <g transform="translate(40, 105)">
+      <path d="M 0 10 C 0 0 15 -10 35 -10 C 55 -10 70 0 70 10 C 70 20 55 25 45 30 L 45 45 L 25 45 L 25 30 C 15 25 0 20 0 10 Z" fill="url(#handleDark)" stroke="#0f172a" />
+      <rect x="30" y="45" width="10" height="500" rx="2" fill="url(#steelShaft)" transform="rotate(-90 30 45)" />
+      <!-- Depth markings on shaft -->
+      <line x1="200" y1="40" x2="200" y2="50" stroke="#0284c7" stroke-width="2" />
+      <line x1="300" y1="40" x2="300" y2="50" stroke="#0284c7" stroke-width="2" />
+      <line x1="400" y1="40" x2="400" y2="50" stroke="#0284c7" stroke-width="2" />
+    </g>
+
+    <!-- Instrument 3: Hand drill / reamer -->
+    <g transform="translate(40, 160)">
+      <rect x="15" y="-6" width="40" height="16" rx="4" fill="url(#handleDark)" />
+      <rect x="33" y="10" width="4" height="540" rx="1" fill="url(#steelShaft)" transform="rotate(-90 33 10)" />
+      <polygon points="575,8 585,10 575,12" fill="#38bdf8" />
+    </g>
+
+    <text x="640" y="180" fill="#0f172a" font-family="system-ui, sans-serif" font-weight="bold" font-size="11">
+      BANDEJA A: ACCESO &amp; GUÍA
+    </text>
+  </g>
+
+  <!-- BOTTOM TRAY: Placement & Expansion System -->
+  <g transform="translate(40, 325)">
+    <rect width="820" height="230" rx="16" fill="url(#trayMetal)" stroke="#64748b" stroke-width="4" />
+    <rect x="15" y="15" width="790" height="200" rx="10" fill="#cbd5e1" />
+    <rect x="15" y="15" width="790" height="200" rx="10" fill="url(#perforated)" />
+
+    <!-- Implant Inserter & Expansion Controller with calibrated wheel -->
+    <g transform="translate(50, 65)">
+      <!-- Ergonomic Pistol / T-Grip with torque gauge -->
+      <rect x="0" y="0" width="70" height="85" rx="8" fill="url(#handleDark)" stroke="#0f172a" />
+      <circle cx="35" cy="40" r="14" fill="#38bdf8" />
+      <circle cx="35" cy="40" r="6" fill="#0f172a" />
+      <!-- Expansion thumbwheel -->
+      <rect x="25" y="90" width="20" height="25" rx="4" fill="#f59e0b" />
+      <!-- Coaxial Shaft -->
+      <rect x="70" y="34" width="12" height="520" rx="2" fill="url(#steelShaft)" transform="rotate(-90 70 34)" />
+      <rect x="70" y="38" width="4" height="535" rx="1" fill="#0284c7" transform="rotate(-90 70 38)" />
+      <!-- Distal connector for Vertres implant -->
+      <rect x="605" y="33" width="24" height="14" rx="3" fill="#38bdf8" stroke="#ffffff" stroke-width="1" />
+    </g>
+
+    <!-- Cement injection adapter & pusher rod -->
+    <g transform="translate(50, 165)">
+      <rect x="10" y="0" width="50" height="26" rx="6" fill="url(#handleDark)" />
+      <rect x="32" y="10" width="6" height="540" rx="1" fill="url(#steelShaft)" transform="rotate(-90 32 10)" />
+      <circle cx="580" cy="13" r="5" fill="#f59e0b" />
+    </g>
+
+    <text x="610" y="200" fill="#0f172a" font-family="system-ui, sans-serif" font-weight="bold" font-size="11">
+      BANDEJA B: COLOCACIÓN &amp; EXPANSIÓN
+    </text>
+  </g>
+</svg>

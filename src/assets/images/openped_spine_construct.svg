@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="scBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <linearGradient id="scBone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7" />
+      <stop offset="70%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <linearGradient id="scTitanium" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="35%" stop-color="#f8fafc" />
+      <stop offset="70%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+
+    <linearGradient id="scGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="40%" stop-color="#fde047" />
+      <stop offset="80%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#78350f" />
+    </linearGradient>
+
+    <filter id="scGlow">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#38bdf8" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Dark Medical Canvas -->
+  <rect width="1200" height="900" fill="url(#scBg)" />
+
+  <!-- Grid overlay -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="900" />
+    <line x1="200" y1="0" x2="200" y2="900" />
+    <line x1="300" y1="0" x2="300" y2="900" />
+    <line x1="400" y1="0" x2="400" y2="900" />
+    <line x1="500" y1="0" x2="500" y2="900" />
+    <line x1="600" y1="0" x2="600" y2="900" />
+    <line x1="700" y1="0" x2="700" y2="900" />
+    <line x1="800" y1="0" x2="800" y2="900" />
+    <line x1="900" y1="0" x2="900" y2="900" />
+    <line x1="1000" y1="0" x2="1000" y2="900" />
+    <line x1="1100" y1="0" x2="1100" y2="900" />
+  </g>
+
+  <!-- Title & Metadata -->
+  <g transform="translate(60, 55)">
+    <rect x="0" y="0" width="130" height="28" rx="6" fill="#f97316" />
+    <text x="65" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">
+      OPENPED® MIS &amp; OPEN
+    </text>
+    <text x="0" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="900" fill="#ffffff">
+      Montaje Anatómico de Fijación Pedicular Lumbar
+    </text>
+    <text x="0" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#94a3b8">
+      4 Tornillos Poliaxiales de Reducción Ti-6Al-4V • 2 Barras Rectas Ø 5.5 mm • Conector Transverso Cross Link
+    </text>
+  </g>
+
+  <!-- Center Biomechanical Anatomy -->
+  <g transform="translate(300, 160)">
+    <!-- Vertebra L4 -->
+    <g transform="translate(100, 40)">
+      <ellipse cx="200" cy="100" rx="190" ry="70" fill="url(#scBone)" stroke="#78350f" stroke-width="2" />
+      <ellipse cx="200" cy="90" rx="65" ry="26" fill="#0f172a" stroke="#475569" stroke-width="1.5" />
+      <text x="200" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#94a3b8" text-anchor="middle">Canal Raquídeo L4</text>
+    </g>
+
+    <!-- Intervertebral Disc Space L4-L5 -->
+    <path d="M140 180 C200 210, 400 210, 460 180 L465 220 C400 250, 200 250, 135 220 Z" fill="#38bdf8" opacity="0.4" />
+    <text x="300" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#38bdf8" text-anchor="middle">Espacio Discal L4-L5</text>
+
+    <!-- Vertebra L5 -->
+    <g transform="translate(100, 240)">
+      <ellipse cx="200" cy="110" rx="195" ry="75" fill="url(#scBone)" stroke="#78350f" stroke-width="2" />
+      <ellipse cx="200" cy="100" rx="68" ry="28" fill="#0f172a" stroke="#475569" stroke-width="1.5" />
+      <text x="200" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#94a3b8" text-anchor="middle">Canal Raquídeo L5</text>
+    </g>
+
+    <!-- Pedicle Screws & Construct Overlay -->
+    <!-- Left Straight Rod Ø 5.5mm -->
+    <rect x="150" y="20" width="18" height="420" rx="9" fill="url(#scTitanium)" stroke="#0284c7" stroke-width="1.5" filter="url(#scGlow)" />
+    <!-- Right Straight Rod Ø 5.5mm -->
+    <rect x="432" y="20" width="18" height="420" rx="9" fill="url(#scTitanium)" stroke="#0284c7" stroke-width="1.5" filter="url(#scGlow)" />
+
+    <!-- Left Pedicle Screw L4 (Top) -->
+    <g transform="translate(159, 110)">
+      <!-- U-Head polyaxial -->
+      <circle cx="0" cy="0" r="24" fill="url(#scTitanium)" stroke="#334155" stroke-width="2" />
+      <circle cx="0" cy="0" r="12" fill="#1e293b" />
+      <circle cx="0" cy="0" r="6" fill="#38bdf8" />
+      <!-- Transpedicular axis trajectory -->
+      <line x1="0" y1="0" x2="-85" y2="25" stroke="#f97316" stroke-width="8" stroke-linecap="round" opacity="0.9" />
+      <!-- Pedicle depth ring -->
+      <circle cx="-85" cy="25" r="5" fill="#fde047" />
+    </g>
+
+    <!-- Left Pedicle Screw L5 (Bottom) -->
+    <g transform="translate(159, 320)">
+      <circle cx="0" cy="0" r="24" fill="url(#scTitanium)" stroke="#334155" stroke-width="2" />
+      <circle cx="0" cy="0" r="12" fill="#1e293b" />
+      <circle cx="0" cy="0" r="6" fill="#38bdf8" />
+      <line x1="0" y1="0" x2="-85" y2="25" stroke="#f97316" stroke-width="8" stroke-linecap="round" opacity="0.9" />
+      <circle cx="-85" cy="25" r="5" fill="#fde047" />
+    </g>
+
+    <!-- Right Pedicle Screw L4 (Top) -->
+    <g transform="translate(441, 110)">
+      <circle cx="0" cy="0" r="24" fill="url(#scTitanium)" stroke="#334155" stroke-width="2" />
+      <circle cx="0" cy="0" r="12" fill="#1e293b" />
+      <circle cx="0" cy="0" r="6" fill="#38bdf8" />
+      <line x1="0" y1="0" x2="85" y2="25" stroke="#f97316" stroke-width="8" stroke-linecap="round" opacity="0.9" />
+      <circle cx="85" cy="25" r="5" fill="#fde047" />
+    </g>
+
+    <!-- Right Pedicle Screw L5 (Bottom) -->
+    <g transform="translate(441, 320)">
+      <circle cx="0" cy="0" r="24" fill="url(#scTitanium)" stroke="#334155" stroke-width="2" />
+      <circle cx="0" cy="0" r="12" fill="#1e293b" />
+      <circle cx="0" cy="0" r="6" fill="#38bdf8" />
+      <line x1="0" y1="0" x2="85" y2="25" stroke="#f97316" stroke-width="8" stroke-linecap="round" opacity="0.9" />
+      <circle cx="85" cy="25" r="5" fill="#fde047" />
+    </g>
+
+    <!-- Pre-assembled Cross Link (Conector Transverso) -->
+    <g transform="translate(150, 205)">
+      <!-- Left clamp -->
+      <rect x="0" y="0" width="30" height="36" rx="8" fill="url(#scGold)" stroke="#78350f" stroke-width="2" />
+      <circle cx="15" cy="18" r="6" fill="#451a03" />
+
+      <!-- Center adjustable rod bridge -->
+      <rect x="25" y="10" width="250" height="16" rx="4" fill="url(#scGold)" stroke="#78350f" stroke-width="1.5" />
+      <!-- Central locking nut -->
+      <rect x="135" y="5" width="30" height="26" rx="6" fill="#f59e0b" stroke="#78350f" stroke-width="1.5" />
+      <circle cx="150" cy="18" r="5" fill="#78350f" />
+
+      <!-- Right clamp -->
+      <rect x="270" y="0" width="30" height="36" rx="8" fill="url(#scGold)" stroke="#78350f" stroke-width="2" />
+      <circle cx="285" cy="18" r="6" fill="#451a03" />
+    </g>
+  </g>
+
+  <!-- Technical Callout Cards on the Sides -->
+  <!-- Left Callout: Tornillos Canulados con Aumentación -->
+  <g transform="translate(60, 580)">
+    <rect x="0" y="0" width="340" height="240" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <g transform="translate(20, 25)">
+      <text font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#38bdf8">
+        Tornillo Pedicular Canulado
+      </text>
+      <text y="20" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#94a3b8">
+        Ø 4.5, 5.0 y 6.0 mm • Doble Rosca Autorroscante
+      </text>
+      
+      <g transform="translate(0, 45)" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#cbd5e1">
+        <circle cx="4" cy="5" r="3" fill="#38bdf8" />
+        <text x="14" y="9">Aleta larga con reducción integrada</text>
+
+        <circle cx="4" cy="27" r="3" fill="#38bdf8" />
+        <text x="14" y="31">Ranura lateral distal para cementación (PMMA)</text>
+
+        <circle cx="4" cy="49" r="3" fill="#38bdf8" />
+        <text x="14" y="53">Poliaxialidad esférica multidireccional ± 30°</text>
+
+        <circle cx="4" cy="71" r="3" fill="#38bdf8" />
+        <text x="14" y="75">Máxima fijación cortical y trabecular</text>
+
+        <circle cx="4" cy="93" r="3" fill="#38bdf8" />
+        <text x="14" y="97">Longitudes disponibles: 30 mm a 50 mm</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Callout: Conector Transverso y Barras -->
+  <g transform="translate(800, 580)">
+    <rect x="0" y="0" width="340" height="240" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <g transform="translate(20, 25)">
+      <text font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#fde047">
+        Cross Link &amp; Barras Rectas 5.5
+      </text>
+      <text y="20" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#94a3b8">
+        Estabilidad Torsional y Angular de Alto Rendimiento
+      </text>
+      
+      <g transform="translate(0, 45)" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#cbd5e1">
+        <circle cx="4" cy="5" r="3" fill="#fde047" />
+        <text x="14" y="9">Conector transverso preensamblado</text>
+
+        <circle cx="4" cy="27" r="3" fill="#fde047" />
+        <text x="14" y="31">Rango telescópico: 40–60 mm y 60–90 mm</text>
+
+        <circle cx="4" cy="49" r="3" fill="#fde047" />
+        <text x="14" y="53">Barras de 60 a 400 mm para escoliosis y trauma</text>
+
+        <circle cx="4" cy="71" r="3" fill="#fde047" />
+        <text x="14" y="75">Tornillos de cierre con doble rosca anti-cruce</text>
+
+        <circle cx="4" cy="93" r="3" fill="#fde047" />
+        <text x="14" y="97">Titanio Grado Médico Ti-6Al-4V (ASTM F136)</text>
+      </g>
+    </g>
+  </g>
+</svg>

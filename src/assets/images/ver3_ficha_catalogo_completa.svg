@@ -1,0 +1,398 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="purpleHeaderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4c1d95" />
+      <stop offset="60%" stop-color="#6d28d9" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+
+    <linearGradient id="orangeBannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+
+    <linearGradient id="goldImplant" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="35%" stop-color="#eab308" />
+      <stop offset="80%" stop-color="#ca8a04" />
+      <stop offset="100%" stop-color="#854d0e" />
+    </linearGradient>
+
+    <linearGradient id="blueImplant" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="40%" stop-color="#0284c7" />
+      <stop offset="80%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#0c4a6e" />
+    </linearGradient>
+
+    <filter id="brochureCardShadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <!-- Clean textured background -->
+  <rect width="1200" height="820" fill="#f8fafc" />
+
+  <!-- TOP HEADER BANNER -->
+  <g transform="translate(0, 0)">
+    <!-- Orange accent band -->
+    <rect x="0" y="55" width="380" height="38" fill="url(#orangeBannerGrad)" />
+    <text x="35" y="80" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="16">
+      Sistema MIS para Restauración de Fracturas Vertebrales y Aumentación
+    </text>
+
+    <!-- Logo Vertres Top Left -->
+    <g transform="translate(35, 12)">
+      <!-- 3 dots icon in purple circle/hexagon -->
+      <rect x="0" y="0" width="34" height="34" rx="8" fill="#5b21b6" />
+      <circle cx="17" cy="11" r="3.2" fill="#ffffff" />
+      <circle cx="11" cy="22" r="3.2" fill="#ffffff" />
+      <circle cx="23" cy="22" r="3.2" fill="#ffffff" />
+      
+      <text x="44" y="27" fill="#4c1d95" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="30" letter-spacing="-0.5">
+        Vertres
+      </text>
+    </g>
+
+    <!-- Top Right Orange decorative triangle/tab -->
+    <polygon points="1130,0 1200,0 1200,70" fill="#ea580c" />
+  </g>
+
+  <!-- TOP HERO INTRO & MACRO PHOTO SECTION -->
+  <g transform="translate(35, 110)">
+    <!-- Left Hero Photo Card: Implants & Delivery instrument -->
+    <g transform="translate(0, 0)" filter="url(#brochureCardShadow)">
+      <rect x="0" y="0" width="340" height="170" rx="12" fill="#e2e8f0" stroke="#cbd5e1" />
+      
+      <!-- Inserter instrument shaft -->
+      <rect x="30" y="30" width="280" height="12" rx="4" fill="#334155" />
+      <circle cx="50" cy="36" r="16" fill="#1e293b" />
+      <rect x="42" y="30" width="16" height="12" rx="2" fill="#ffffff" opacity="0.3" />
+
+      <!-- Implants Showcase in Macro -->
+      <!-- Implant 1: Open Gold Tripod -->
+      <g transform="translate(245, 60)">
+        <polygon points="15,45 30,10 42,42" fill="url(#goldImplant)" stroke="#a16207" stroke-width="1.2" />
+        <polygon points="15,45 38,78 45,46" fill="url(#goldImplant)" stroke="#a16207" stroke-width="1.2" />
+        <text x="30" y="98" fill="#713f12" font-family="sans-serif" font-weight="800" font-size="9" text-anchor="middle">50-7000</text>
+      </g>
+
+      <!-- Implant 2: Closed Blue Cylinder -->
+      <g transform="translate(200, 68)">
+        <rect x="0" y="0" width="16" height="65" rx="4" fill="url(#blueImplant)" stroke="#0284c7" stroke-width="1.2" />
+        <line x1="4" y1="12" x2="12" y2="12" stroke="#082f49" stroke-width="2" />
+        <line x1="4" y1="24" x2="12" y2="24" stroke="#082f49" stroke-width="2" />
+        <text x="8" y="80" fill="#0369a1" font-family="sans-serif" font-weight="800" font-size="9" text-anchor="middle">50-7001</text>
+      </g>
+
+      <!-- Implant 3: Open Small Titanium -->
+      <g transform="translate(70, 85)">
+        <polygon points="10,32 20,8 28,30" fill="#94a3b8" stroke="#475569" stroke-width="1" />
+        <polygon points="10,32 25,54 30,32" fill="#94a3b8" stroke="#475569" stroke-width="1" />
+      </g>
+    </g>
+
+    <!-- Intro Text Paragraph -->
+    <g transform="translate(360, 15)" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#475569">
+      <text x="0" y="0">
+        <tspan font-weight="800" fill="#0f172a">Sistema MIS</tspan> (Mínimamente Invasivo) intracorporal y controlable, el
+      </text>
+      <text x="0" y="16">diseño tridimensional restaura el cuerpo vertebral y su</text>
+      <text x="0" y="32">altura, aplicable al segmento raquídeo entre (T6-L5).</text>
+
+      <text x="0" y="60">
+        <tspan font-weight="800" fill="#0f172a">Vertres</tspan> crea un espacio óptimo en el cuerpo vertebral
+      </text>
+      <text x="0" y="76">para técnica de aumentación en su uso previsto con</text>
+      <text x="0" y="92">cemento óseo de PMMA. <tspan font-weight="800" fill="#0f172a">Vertres</tspan> brinda una distribución</text>
+      <text x="0" y="108">adecuada del cemento, generando un soporte estable</text>
+      <text x="0" y="124">para máxima funcionalidad y alivio del dolor.</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 1: INDICACIONES, CONTRAINDICACIONES, CARACTERÍSTICAS -->
+  <g transform="translate(35, 305)">
+    <!-- 1. INDICACIONES -->
+    <g transform="translate(0, 0)">
+      <!-- Purple pill header -->
+      <path d="M 0 0 L 220 0 L 240 28 L 0 28 Z" fill="#581c87" />
+      <text x="18" y="19" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="14">
+        Indicaciones:
+      </text>
+
+      <g transform="translate(0, 36)" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#334155">
+        <circle cx="4" cy="5" r="3" fill="#6b21a8" />
+        <text x="14" y="8" font-weight="600">Tratamiento de fracturas dolorosas por compresión según</text>
+        <text x="14" y="21" font-weight="600">clasificación de Magerl (de tipo A1, A2 y A3) o hundimiento</text>
+        <text x="14" y="34" font-weight="600">vertebral en pacientes con:</text>
+
+        <circle cx="4" cy="52" r="3" fill="#6b21a8" />
+        <text x="14" y="55">Fragilidad ósea generada por osteoporosis o lesiones</text>
+        <text x="14" y="68">traumáticas.</text>
+
+        <circle cx="4" cy="85" r="3" fill="#6b21a8" />
+        <text x="14" y="88">Patologías tumorales osteolíticas metastásicas o mieloma.</text>
+      </g>
+    </g>
+
+    <!-- 2. CONTRAINDICACIONES -->
+    <g transform="translate(0, 140)">
+      <path d="M 0 0 L 220 0 L 240 28 L 0 28 Z" fill="#581c87" />
+      <text x="18" y="19" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="14">
+        Contraindicaciones:
+      </text>
+
+      <g transform="translate(0, 36)" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#334155">
+        <circle cx="4" cy="5" r="3" fill="#6b21a8" />
+        <text x="14" y="8">Afectaciones de la columna vertebral que precisen de</text>
+        <text x="14" y="21">reconstrucción raquídea anterior</text>
+
+        <circle cx="4" cy="38" r="3" fill="#6b21a8" />
+        <text x="14" y="41">Procesos Infecciosos generalizados o infecciones</text>
+        <text x="14" y="54">vertebrales localizadas de tipo agudo o crónico.</text>
+      </g>
+    </g>
+
+    <!-- 3. CARACTERÍSTICAS -->
+    <g transform="translate(0, 248)">
+      <path d="M 0 0 L 220 0 L 240 28 L 0 28 Z" fill="#581c87" />
+      <text x="18" y="19" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="14">
+        Características:
+      </text>
+
+      <g transform="translate(0, 36)" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#334155">
+        <circle cx="4" cy="5" r="3" fill="#6b21a8" />
+        <text x="14" y="8">Procedimiento mínimamente invasivo (MIS).</text>
+
+        <circle cx="4" cy="22" r="3" fill="#6b21a8" />
+        <text x="14" y="25">Acceso transpedicular.</text>
+
+        <circle cx="4" cy="39" r="3" fill="#6b21a8" />
+        <text x="14" y="42">Despliegue del implante controlable.</text>
+
+        <circle cx="4" cy="56" r="3" fill="#6b21a8" />
+        <text x="14" y="59">Mecanismo de expansión tridimensional para restaurar el</text>
+        <text x="14" y="72">cuerpo vertebral y su altura.</text>
+
+        <circle cx="4" cy="89" r="3" fill="#6b21a8" />
+        <text x="14" y="92">Material: Ti-6Al-4V ELI.</text>
+
+        <circle cx="4" cy="106" r="3" fill="#6b21a8" />
+        <text x="14" y="109">Tamaños diámetro: 5.0 mm y 5.8 mm.</text>
+
+        <circle cx="4" cy="123" r="3" fill="#6b21a8" />
+        <text x="14" y="126">Diseño con canulación interna para técnica de aumento</text>
+        <text x="14" y="139">gradual y segura.</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: EXPANSION DIAGRAMS & REAL PHOTOS OF IMPLANT -->
+  <g transform="translate(370, 305)">
+    <!-- Tripod Front Angles (150°, 105°, 105°) -->
+    <g transform="translate(35, 0)">
+      <text x="45" y="0" fill="#475569" font-family="sans-serif" font-weight="700" font-size="14" text-anchor="middle">150º</text>
+      
+      <!-- Hub & Wings -->
+      <circle cx="45" cy="55" r="12" fill="url(#blueImplant)" />
+      <rect x="35" y="12" width="20" height="40" rx="8" fill="url(#blueImplant)" stroke="#0284c7" />
+      
+      <g transform="rotate(115, 45, 55) translate(35, 12)">
+        <rect x="0" y="0" width="20" height="40" rx="8" fill="url(#blueImplant)" stroke="#0284c7" />
+      </g>
+      <g transform="rotate(-115, 45, 55) translate(35, 12)">
+        <rect x="0" y="0" width="20" height="40" rx="8" fill="url(#blueImplant)" stroke="#0284c7" />
+      </g>
+
+      <text x="-8" y="120" fill="#475569" font-family="sans-serif" font-weight="700" font-size="13">105º</text>
+      <text x="80" y="120" fill="#475569" font-family="sans-serif" font-weight="700" font-size="13">105º</text>
+
+      <!-- Height double arrow -->
+      <line x1="125" y1="15" x2="125" y2="105" stroke="#0f172a" stroke-width="1.8" />
+      <polygon points="122,20 125,15 128,20" fill="#0f172a" />
+      <polygon points="122,100 125,105 128,100" fill="#0f172a" />
+    </g>
+
+    <!-- Real Photo Silhouette: Implante Expandido -->
+    <g transform="translate(25, 170)">
+      <polygon points="5,45 45,5 65,38" fill="url(#goldImplant)" stroke="#ca8a04" stroke-width="1.5" />
+      <polygon points="5,45 55,85 70,42" fill="url(#goldImplant)" stroke="#ca8a04" stroke-width="1.5" />
+      <rect x="62" y="36" width="35" height="14" fill="#a16207" />
+      <text x="65" y="112" fill="#0f172a" font-family="system-ui, sans-serif" font-weight="800" font-size="12" text-anchor="middle">
+        Implante expandido
+      </text>
+    </g>
+
+    <!-- Transition Arrow Up -->
+    <g transform="translate(90, 310)">
+      <line x1="0" y1="35" x2="0" y2="0" stroke="#0f172a" stroke-width="2" />
+      <polygon points="-4,6 0,0 4,6" fill="#0f172a" />
+    </g>
+
+    <!-- Real Photo Silhouette: Implante Cerrado -->
+    <g transform="translate(30, 360)">
+      <rect x="0" y="0" width="105" height="28" rx="5" fill="url(#blueImplant)" stroke="#0284c7" stroke-width="1.5" />
+      <rect x="15" y="8" width="28" height="8" rx="2" fill="#0c4a6e" />
+      <rect x="52" y="8" width="16" height="8" rx="2" fill="#0c4a6e" />
+      <circle cx="82" cy="12" r="3" fill="#0c4a6e" />
+      <text x="52" y="48" fill="#0f172a" font-family="system-ui, sans-serif" font-weight="800" font-size="12" text-anchor="middle">
+        Implante cerrado
+      </text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: PASOS QUIRÚRGICOS 1 A 6 -->
+  <g transform="translate(595, 110)">
+    
+    <!-- Paso 1 -->
+    <g transform="translate(0, 0)" filter="url(#brochureCardShadow)">
+      <rect x="0" y="0" width="260" height="85" rx="10" fill="#ffffff" stroke="#e2e8f0" />
+      <!-- Circle 1 -->
+      <circle cx="20" cy="20" r="16" fill="#581c87" />
+      <text x="20" y="25" fill="#ffffff" font-family="sans-serif" font-weight="900" font-size="14" text-anchor="middle">1</text>
+      <!-- Label -->
+      <text x="48" y="24" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="12">Abordaje y</text>
+      <text x="48" y="38" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="12">toma pedicular</text>
+      <!-- Illustration icon -->
+      <ellipse cx="200" cy="45" rx="30" ry="20" fill="#e2e8f0" stroke="#94a3b8" />
+      <line x1="230" y1="15" x2="195" y2="45" stroke="#ef4444" stroke-width="2" />
+    </g>
+
+    <!-- Paso 2 -->
+    <g transform="translate(280, 0)" filter="url(#brochureCardShadow)">
+      <rect x="0" y="0" width="285" height="85" rx="10" fill="#ffffff" stroke="#e2e8f0" />
+      <circle cx="20" cy="20" r="16" fill="#581c87" />
+      <text x="20" y="25" fill="#ffffff" font-family="sans-serif" font-weight="900" font-size="14" text-anchor="middle">2</text>
+      <text x="48" y="24" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="12">Preparación canal</text>
+      <text x="48" y="38" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="12">para la implantación</text>
+      <!-- Instrument drill icon -->
+      <line x1="165" y1="52" x2="255" y2="30" stroke="#475569" stroke-width="3" />
+      <circle cx="255" cy="30" r="8" fill="#1e293b" />
+    </g>
+
+    <!-- Paso 3 -->
+    <g transform="translate(0, 100)" filter="url(#brochureCardShadow)">
+      <rect x="0" y="0" width="260" height="85" rx="10" fill="#ffffff" stroke="#e2e8f0" />
+      <circle cx="20" cy="20" r="16" fill="#581c87" />
+      <text x="20" y="25" fill="#ffffff" font-family="sans-serif" font-weight="900" font-size="14" text-anchor="middle">3</text>
+      <text x="48" y="32" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="12">Implantación Vertres</text>
+      <!-- Shaft inserter -->
+      <line x1="140" y1="52" x2="245" y2="40" stroke="#0284c7" stroke-width="3" />
+      <rect x="130" y="48" width="16" height="8" rx="2" fill="url(#blueImplant)" />
+    </g>
+
+    <!-- Paso 4 -->
+    <g transform="translate(280, 100)" filter="url(#brochureCardShadow)">
+      <rect x="0" y="0" width="285" height="85" rx="10" fill="#ffffff" stroke="#e2e8f0" />
+      <circle cx="20" cy="20" r="16" fill="#581c87" />
+      <text x="20" y="25" fill="#ffffff" font-family="sans-serif" font-weight="900" font-size="14" text-anchor="middle">4</text>
+      <text x="48" y="22" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="12">Expansión</text>
+      <text x="48" y="35" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="12">Tridimensional</text>
+      <text x="48" y="48" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="12">segura y progresiva</text>
+      <!-- Vertebra with expanded implant -->
+      <ellipse cx="230" cy="50" rx="30" ry="22" fill="#e2e8f0" />
+      <polygon points="215,48 228,32 235,46" fill="url(#blueImplant)" />
+      <polygon points="215,48 230,64 238,50" fill="url(#blueImplant)" />
+    </g>
+
+    <!-- Paso 5 -->
+    <g transform="translate(0, 200)" filter="url(#brochureCardShadow)">
+      <rect x="0" y="0" width="260" height="85" rx="10" fill="#ffffff" stroke="#e2e8f0" />
+      <circle cx="20" cy="20" r="16" fill="#581c87" />
+      <text x="20" y="25" fill="#ffffff" font-family="sans-serif" font-weight="900" font-size="14" text-anchor="middle">5</text>
+      <text x="48" y="24" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="12">Preparación e inyección</text>
+      <text x="48" y="38" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="12">de cemento óseo PMMA</text>
+      <!-- Syringe icon -->
+      <rect x="150" y="45" width="40" height="12" rx="2" fill="#cbd5e1" stroke="#64748b" />
+      <line x1="190" y1="51" x2="240" y2="51" stroke="#38bdf8" stroke-width="2.5" />
+    </g>
+
+    <!-- Paso 6 -->
+    <g transform="translate(280, 200)" filter="url(#brochureCardShadow)">
+      <rect x="0" y="0" width="285" height="85" rx="10" fill="#ffffff" stroke="#e2e8f0" />
+      <circle cx="20" cy="20" r="16" fill="#581c87" />
+      <text x="20" y="25" fill="#ffffff" font-family="sans-serif" font-weight="900" font-size="14" text-anchor="middle">6</text>
+      <text x="48" y="24" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="12">Liberación</text>
+      <text x="48" y="38" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="12">del Vertres</text>
+      <!-- Restored vertebra with PMMA consolidated block -->
+      <ellipse cx="230" cy="50" rx="32" ry="22" fill="#e2e8f0" stroke="#94a3b8" />
+      <circle cx="230" cy="50" r="12" fill="#94a3b8" opacity="0.8" />
+    </g>
+
+    <!-- PRESENTACIONES TABLE (BOTTOM OF COLUMN 3) -->
+    <g transform="translate(0, 305)">
+      <!-- Purple Table Header -->
+      <path d="M 0 0 L 565 0 L 565 32 L 0 32 Z" fill="#581c87" />
+      <text x="18" y="22" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="16">
+        Presentaciones*
+      </text>
+
+      <!-- Table Structure -->
+      <rect x="0" y="32" width="565" height="235" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+      
+      <!-- Columns Lines -->
+      <line x1="280" y1="32" x2="280" y2="267" stroke="#e2e8f0" stroke-width="1" />
+      <line x1="422" y1="32" x2="422" y2="267" stroke="#e2e8f0" stroke-width="1" />
+
+      <!-- Row Lines -->
+      <line x1="0" y1="67" x2="565" y2="67" stroke="#e2e8f0" stroke-width="1" />
+      <line x1="0" y1="102" x2="565" y2="102" stroke="#e2e8f0" stroke-width="1" />
+      <line x1="0" y1="137" x2="565" y2="137" stroke="#e2e8f0" stroke-width="1" />
+      <line x1="0" y1="172" x2="565" y2="172" stroke="#e2e8f0" stroke-width="1" />
+      <line x1="0" y1="207" x2="565" y2="207" stroke="#e2e8f0" stroke-width="1" />
+
+      <!-- Row 1: Headers -->
+      <text x="15" y="54" fill="#334155" font-family="sans-serif" font-weight="700" font-size="12">Referencia</text>
+      <text x="351" y="54" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="13" text-anchor="middle">50-7000</text>
+      <text x="493" y="54" fill="#0f172a" font-family="sans-serif" font-weight="800" font-size="13" text-anchor="middle">50-7001</text>
+
+      <!-- Row 2: Color -->
+      <text x="15" y="89" fill="#64748b" font-family="sans-serif" font-size="12">Color</text>
+      <text x="351" y="89" fill="#ca8a04" font-family="sans-serif" font-weight="800" font-size="13" text-anchor="middle">Dorado</text>
+      <text x="493" y="89" fill="#0284c7" font-family="sans-serif" font-weight="800" font-size="13" text-anchor="middle">Azul</text>
+
+      <!-- Row 3: Diámetro sin expandir -->
+      <text x="15" y="124" fill="#64748b" font-family="sans-serif" font-size="12">Diámetro sin expandir (mm).</text>
+      <text x="351" y="124" fill="#0f172a" font-family="sans-serif" font-size="13" text-anchor="middle">5.0</text>
+      <text x="493" y="124" fill="#0f172a" font-family="sans-serif" font-size="13" text-anchor="middle">5.8</text>
+
+      <!-- Row 4: Longitud -->
+      <text x="15" y="159" fill="#64748b" font-family="sans-serif" font-size="12">Longitud (mm).</text>
+      <text x="351" y="159" fill="#0f172a" font-family="sans-serif" font-size="13" text-anchor="middle">25</text>
+      <text x="493" y="159" fill="#0f172a" font-family="sans-serif" font-size="13" text-anchor="middle">28</text>
+
+      <!-- Row 5: Altura total Expandida -->
+      <text x="15" y="194" fill="#64748b" font-family="sans-serif" font-size="12">Altura total Expandida (mm).</text>
+      <text x="351" y="194" fill="#0f172a" font-family="sans-serif" font-weight="700" font-size="13" text-anchor="middle">15.0</text>
+      <text x="493" y="194" fill="#0f172a" font-family="sans-serif" font-weight="700" font-size="13" text-anchor="middle">17.0</text>
+
+      <!-- Row 6: Diámetro Mínimo Canal Pedicular -->
+      <text x="15" y="240" fill="#64748b" font-family="sans-serif" font-size="12">Diámetro Mínimo Canal Pedicular (mm).</text>
+      <text x="351" y="240" fill="#0f172a" font-family="sans-serif" font-weight="700" font-size="13" text-anchor="middle">6.1</text>
+      <text x="493" y="240" fill="#0f172a" font-family="sans-serif" font-weight="700" font-size="13" text-anchor="middle">6.4</text>
+    </g>
+
+    <!-- FOOTER LOGOS MAFFHEALTH & OSSYN -->
+    <g transform="translate(370, 595)">
+      <!-- MaffHealth ribbon -->
+      <path d="M 6 18 C 0 8 12 0 20 6 C 26 10 24 18 30 24" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" fill="none" />
+      <path d="M 20 6 C 28 0 38 8 32 16 C 28 22 34 30 26 34" stroke="#8b5cf6" stroke-width="4.5" stroke-linecap="round" fill="none" />
+      <text x="42" y="24" fill="#1e293b" font-family="system-ui, sans-serif" font-weight="800" font-size="18">
+        Maff<tspan fill="#0284c7">Health</tspan>
+      </text>
+      <!-- Divider bar -->
+      <line x1="140" y1="8" x2="140" y2="28" stroke="#cbd5e1" stroke-width="2" />
+      <!-- Ossyn logo -->
+      <text x="150" y="24" fill="#1e293b" font-family="system-ui, sans-serif" font-weight="900" font-size="20">
+        Ossyn
+      </text>
+    </g>
+
+  </g>
+
+  <!-- Page Number Footer Bottom Left -->
+  <text x="35" y="800" fill="#64748b" font-family="system-ui, sans-serif" font-weight="700" font-size="12">
+    1 • Catálogo Oficial de Dispositivos Médicos de Columna
+  </text>
+</svg>

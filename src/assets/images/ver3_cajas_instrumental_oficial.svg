@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="traySteel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#f1f5f9" />
+      <stop offset="70%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <linearGradient id="instrumentSteel" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="50%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+
+    <linearGradient id="tHandleBlack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <pattern id="trayHoles" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="2.2" fill="#0f172a" opacity="0.8" />
+    </pattern>
+
+    <pattern id="trayHolesSlotted" width="28" height="14" patternUnits="userSpaceOnUse">
+      <rect x="4" y="4" width="14" height="4" rx="2" fill="#0f172a" opacity="0.75" />
+    </pattern>
+
+    <filter id="trayShadow" x="-3%" y="-3%" width="106%" height="108%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.22" />
+    </filter>
+  </defs>
+
+  <!-- Clean Background -->
+  <rect width="1200" height="850" fill="#ffffff" />
+
+  <!-- HEADER -->
+  <g transform="translate(45, 45)">
+    <!-- Title in Official Warm Amber -->
+    <text x="0" y="32" fill="#E67E22" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="30" letter-spacing="-0.5">
+      Sistema MIS para Restauración de Fracturas Vertebrales y Aumentación
+    </text>
+
+    <!-- Brand Logo Left: Ver3 VERTRES -->
+    <g transform="translate(0, 55)">
+      <rect x="0" y="0" width="38" height="38" rx="10" fill="#1e293b" />
+      <circle cx="19" cy="13" r="3.5" fill="#ffffff" />
+      <circle cx="13" cy="24" r="3.5" fill="#ffffff" />
+      <circle cx="25" cy="24" r="3.5" fill="#ffffff" />
+      
+      <text x="46" y="24" fill="#0f172a" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" letter-spacing="-0.5">
+        Ver<tspan fill="#0f172a">3</tspan>
+      </text>
+      <text x="47" y="36" fill="#0f172a" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="10" letter-spacing="1.5">
+        VERTRES
+      </text>
+    </g>
+
+    <!-- Brand Logo Right: MaffHealth -->
+    <g transform="translate(930, 0)">
+      <path d="M 12 28 C 4 14 20 0 32 8 C 40 14 36 26 44 34 C 52 40 64 30 56 18" stroke="#E67E22" stroke-width="7" stroke-linecap="round" fill="none" />
+      <path d="M 32 8 C 42 0 58 12 50 24 C 42 32 48 44 38 50 C 28 54 18 44 24 34" stroke="#8b5cf6" stroke-width="7" stroke-linecap="round" fill="none" />
+      <text x="68" y="35" fill="#1e293b" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="26">
+        Maff<tspan fill="#0284c7">Health</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- SUBTITLE / DESCRIPTION -->
+  <text x="45" y="185" fill="#475569" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="15">
+    Caja de Instrumental Quirúrgico Autoclavable Ver3® Vertres • Bandejas de Esterilización en Acero Inoxidable
+  </text>
+
+  <!-- TRAY 1 (TOP RIGHT CONTAINER) -->
+  <g transform="translate(480, 205)" filter="url(#trayShadow)">
+    <!-- Perforated Steel Case Body -->
+    <rect x="0" y="0" width="675" height="340" rx="20" fill="url(#traySteel)" stroke="#94a3b8" stroke-width="3" />
+    <rect x="15" y="15" width="645" height="310" rx="14" fill="#cbd5e1" opacity="0.3" />
+    
+    <!-- Perforations Pattern -->
+    <rect x="25" y="25" width="625" height="290" rx="10" fill="url(#trayHoles)" />
+
+    <!-- Corner latches and handles -->
+    <rect x="4" y="4" width="28" height="28" rx="8" fill="#64748b" opacity="0.4" />
+    <rect x="643" y="4" width="28" height="28" rx="8" fill="#64748b" opacity="0.4" />
+    <rect x="4" y="308" width="28" height="28" rx="8" fill="#64748b" opacity="0.4" />
+    <rect x="643" y="308" width="28" height="28" rx="8" fill="#64748b" opacity="0.4" />
+
+    <!-- INSTRUMENTS IN TRAY 1 -->
+    <!-- Row 1: Cannulas with Large Ergonomic T-Handles -->
+    <g transform="translate(40, 50)">
+      <!-- T-Handle 1 -->
+      <path d="M 0 0 C 0 -12 18 -20 36 -20 C 54 -20 72 -12 72 0 L 52 35 L 20 35 Z" fill="url(#tHandleBlack)" stroke="#0f172a" stroke-width="1.5" />
+      <rect x="16" y="-12" width="40" height="12" rx="4" fill="#0f172a" />
+      <!-- Metallic Shaft -->
+      <rect x="65" y="10" width="480" height="9" rx="3" fill="url(#instrumentSteel)" stroke="#64748b" stroke-width="0.8" />
+      <!-- Silicone holder block -->
+      <rect x="490" y="0" width="30" height="28" rx="4" fill="#475569" />
+    </g>
+
+    <!-- Row 2: Trocar / Needle Shafts with Cannula Tube -->
+    <g transform="translate(80, 115)">
+      <!-- Small Handle -->
+      <rect x="0" y="2" width="55" height="24" rx="8" fill="url(#tHandleBlack)" />
+      <!-- Long metallic shaft -->
+      <rect x="55" y="9" width="480" height="8" rx="2" fill="url(#instrumentSteel)" stroke="#64748b" stroke-width="0.8" />
+      <line x1="55" y1="13" x2="535" y2="13" stroke="#ffffff" stroke-width="1.2" />
+      <!-- Silicone clips -->
+      <rect x="220" y="2" width="24" height="22" rx="3" fill="#475569" />
+      <rect x="470" y="2" width="24" height="22" rx="3" fill="#475569" />
+    </g>
+
+    <!-- Row 3: Second Ergonomic Inserter Handle -->
+    <g transform="translate(40, 175)">
+      <!-- Ergonomic Winged T-Handle -->
+      <path d="M 0 0 C 0 -12 18 -20 36 -20 C 54 -20 72 -12 72 0 L 52 35 L 20 35 Z" fill="url(#tHandleBlack)" stroke="#0f172a" stroke-width="1.5" />
+      <rect x="16" y="-12" width="40" height="12" rx="4" fill="#0f172a" />
+      <!-- Metallic tube -->
+      <rect x="65" y="10" width="480" height="9" rx="3" fill="url(#instrumentSteel)" stroke="#64748b" stroke-width="0.8" />
+      <!-- Silicone clip -->
+      <rect x="490" y="0" width="30" height="28" rx="4" fill="#475569" />
+    </g>
+
+    <!-- Row 4: Dilators and graduated probe rods -->
+    <g transform="translate(100, 245)">
+      <rect x="0" y="4" width="45" height="18" rx="4" fill="url(#tHandleBlack)" />
+      <rect x="45" y="8" width="470" height="7" rx="2" fill="url(#instrumentSteel)" stroke="#64748b" stroke-width="0.8" />
+      <!-- Laser marked graduations -->
+      <line x1="200" y1="8" x2="200" y2="15" stroke="#475569" stroke-width="1" />
+      <line x1="220" y1="8" x2="220" y2="15" stroke="#475569" stroke-width="1" />
+      <line x1="240" y1="8" x2="240" y2="15" stroke="#475569" stroke-width="1" />
+      <line x1="260" y1="8" x2="260" y2="15" stroke="#475569" stroke-width="1" />
+      <line x1="280" y1="8" x2="280" y2="15" stroke="#475569" stroke-width="1" />
+    </g>
+
+    <!-- Label badge -->
+    <rect x="25" y="300" width="220" height="24" rx="6" fill="#1e293b" opacity="0.85" />
+    <text x="135" y="316" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="11" text-anchor="middle">
+      Bandeja 1: Cánulas MIS y Trocares
+    </text>
+  </g>
+
+  <!-- TRAY 2 (BOTTOM LEFT / CENTER CONTAINER) -->
+  <g transform="translate(45, 530)" filter="url(#trayShadow)">
+    <!-- Perforated Steel Case Body -->
+    <rect x="0" y="0" width="675" height="280" rx="20" fill="url(#traySteel)" stroke="#94a3b8" stroke-width="3" />
+    <rect x="15" y="15" width="645" height="250" rx="14" fill="#cbd5e1" opacity="0.3" />
+    
+    <!-- Perforations Slotted Pattern -->
+    <rect x="25" y="25" width="625" height="230" rx="10" fill="url(#trayHolesSlotted)" />
+
+    <!-- Corner latches -->
+    <rect x="4" y="4" width="26" height="26" rx="8" fill="#64748b" opacity="0.4" />
+    <rect x="645" y="4" width="26" height="26" rx="8" fill="#64748b" opacity="0.4" />
+
+    <!-- INSTRUMENTS IN TRAY 2 -->
+    <!-- Top Row: Calibrated Push Rods and Wire guides -->
+    <g transform="translate(50, 45)">
+      <rect x="0" y="0" width="40" height="20" rx="3" fill="#64748b" />
+      <rect x="40" y="6" width="380" height="6" rx="2" fill="url(#instrumentSteel)" stroke="#64748b" stroke-width="0.8" />
+      <rect x="40" y="22" width="380" height="6" rx="2" fill="url(#instrumentSteel)" stroke="#64748b" stroke-width="0.8" />
+    </g>
+
+    <!-- Bottom Left: Ergonomic Expansion Crank Handle in T -->
+    <g transform="translate(70, 110)">
+      <!-- Large Vertical T-Handle -->
+      <rect x="0" y="0" width="34" height="95" rx="10" fill="url(#tHandleBlack)" stroke="#0f172a" stroke-width="1.5" />
+      <rect x="6" y="12" width="22" height="24" rx="4" fill="#0f172a" />
+      <rect x="6" y="58" width="22" height="24" rx="4" fill="#0f172a" />
+      <!-- Expansion Coupling Knob -->
+      <polygon points="34,35 60,18 60,65" fill="#334155" stroke="#0f172a" stroke-width="1.2" />
+      <!-- Inserter Drive Rod -->
+      <rect x="60" y="40" width="260" height="10" rx="2" fill="url(#instrumentSteel)" stroke="#64748b" stroke-width="0.8" />
+      <!-- Mechanical graduations -->
+      <circle cx="160" cy="45" r="8" fill="#64748b" />
+    </g>
+
+    <!-- Bottom Right: Secondary Inserter & Cement Delivery Adapter -->
+    <g transform="translate(420, 100)">
+      <!-- Handle -->
+      <path d="M 0 0 C 0 -10 16 -18 32 -18 C 48 -18 64 -10 64 0 L 48 30 L 16 30 Z" fill="url(#tHandleBlack)" stroke="#0f172a" stroke-width="1.5" />
+      <!-- Shaft -->
+      <rect x="-160" y="10" width="160" height="10" rx="2" fill="url(#instrumentSteel)" stroke="#64748b" stroke-width="0.8" />
+      <!-- Rotating knob -->
+      <circle cx="32" cy="5" r="14" fill="#334155" stroke="#0f172a" />
+    </g>
+
+    <!-- Label badge -->
+    <rect x="25" y="240" width="260" height="24" rx="6" fill="#1e293b" opacity="0.85" />
+    <text x="155" y="256" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="11" text-anchor="middle">
+      Bandeja 2: Inserción, Expansión y Cemento
+    </text>
+  </g>
+
+  <!-- SIDEBAR INFO PANEL (RIGHT SIDE OF TRAY 2) -->
+  <g transform="translate(755, 560)">
+    <rect width="400" height="240" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+    
+    <text x="24" y="34" fill="#0f172a" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="15">
+      Especificaciones del Instrumental
+    </text>
+    
+    <g transform="translate(24, 60)" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#475569">
+      <circle cx="4" cy="4" r="3" fill="#E67E22" />
+      <text x="16" y="8" font-weight="600">Material Instrumental: Acero Quirúrgico AISI 316L</text>
+
+      <circle cx="4" cy="34" r="3" fill="#E67E22" />
+      <text x="16" y="38" font-weight="600">Empuñaduras: Polímero Ergonómico Radel® Esterilizable</text>
+
+      <circle cx="4" cy="64" r="3" fill="#E67E22" />
+      <text x="16" y="68" font-weight="600">Autoclavable: Ciclos a vapor 134ºC (Norma Hospitalaria)</text>
+
+      <circle cx="4" cy="94" r="3" fill="#E67E22" />
+      <text x="16" y="98" font-weight="600">Canulación Coaxial: Compatible con Cemento PMMA</text>
+
+      <circle cx="4" cy="124" r="3" fill="#E67E22" />
+      <text x="16" y="128" font-weight="600">Graduaciones Láser: Medición de profundidad en mm</text>
+    </g>
+
+    <!-- Certifications -->
+    <rect x="24" y="200" width="352" height="26" rx="6" fill="#ecfdf5" stroke="#a7f3d0" />
+    <text x="200" y="217" fill="#065f46" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="11" text-anchor="middle">
+      ✓ Certificación ISO 13485 &amp; Marcado CE de Grado Médico
+    </text>
+  </g>
+
+</svg>

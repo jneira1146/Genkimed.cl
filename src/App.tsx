@@ -8,14 +8,42 @@ import { ProductDetailModal } from './components/ProductDetailModal';
 import { TechnicalDatasheetModal } from './components/TechnicalDatasheetModal';
 import { QuoteFunnelModal } from './components/QuoteFunnelModal';
 import { QuickQuoteBar } from './components/QuickQuoteBar';
+import { Ver3VideoModal } from './components/Ver3VideoModal';
+import { ImageLightboxModal, LightboxImageItem } from './components/ImageLightboxModal';
+import { getProductLightboxImages } from './utils/lightboxHelper';
 import { PRODUCTS } from './data/products';
-import { Product, ProductCategory, QuoteItem } from './types';
+import { Product, ProductCategory, ProductBrand, QuoteItem } from './types';
 import { MessageCircle, ArrowUp, Building2, ArrowRight, ShieldCheck, FileSpreadsheet } from 'lucide-react';
 
 export default function App() {
   const [products] = useState<Product[]>(PRODUCTS);
   const [selectedDetailProduct, setSelectedDetailProduct] = useState<Product | null>(null);
   const [selectedDatasheetProduct, setSelectedDatasheetProduct] = useState<Product | null>(null);
+  const [selectedVideoProduct, setSelectedVideoProduct] = useState<Product | null>(null);
+  
+  // Image Lightbox State
+  const [lightboxState, setLightboxState] = useState<{
+    isOpen: boolean;
+    images: LightboxImageItem[];
+    initialIndex: number;
+  }>({
+    isOpen: false,
+    images: [],
+    initialIndex: 0,
+  });
+
+  const handleOpenLightbox = (product: Product, initialImageSrc?: string) => {
+    const { images, initialIndex } = getProductLightboxImages(product, initialImageSrc);
+    setLightboxState({
+      isOpen: true,
+      images,
+      initialIndex,
+    });
+  };
+
+  const handleCloseLightbox = () => {
+    setLightboxState((prev) => ({ ...prev, isOpen: false }));
+  };
   
   // 2 Distinct Pages: 'empresa' | 'productos' (Nuestra Empresa is primary)
   const [activePage, setActivePage] = useState<'empresa' | 'productos'>(() => {
@@ -41,7 +69,7 @@ export default function App() {
     }
   });
   const [isQuoteFunnelOpen, setIsQuoteFunnelOpen] = useState(false);
-  const [selectedCatalogBrand, setSelectedCatalogBrand] = useState<'all' | 'Fixapro' | 'Alveos'>('all');
+  const [selectedCatalogBrand, setSelectedCatalogBrand] = useState<ProductBrand>('all');
   const [selectedCategoryFilter, setSelectedCategoryFilter] = useState<ProductCategory>('all');
 
   // Hash change synchronization for browser history (back/forward)
@@ -98,10 +126,14 @@ export default function App() {
     }
   };
 
-  const handleNavigateBrand = (brand: 'Fixapro' | 'Alveos') => {
+  const handleNavigateBrand = (brand: ProductBrand) => {
     setActivePage('productos');
     setSelectedCatalogBrand(brand);
-    setSelectedCategoryFilter('all');
+    if (brand === 'Columna' || brand === 'Ver3' || brand === 'Unomis') {
+      setSelectedCategoryFilter('spine_surgery');
+    } else {
+      setSelectedCategoryFilter('all');
+    }
     try {
       window.location.hash = '#productos';
     } catch {}
@@ -239,6 +271,8 @@ export default function App() {
               onSelectProduct={(prod) => setSelectedDetailProduct(prod)}
               onOpenDatasheet={(prod) => setSelectedDatasheetProduct(prod)}
               onAddToQuote={handleAddToQuote}
+              onOpenVideo={(prod) => setSelectedVideoProduct(prod)}
+              onOpenImage={handleOpenLightbox}
               quoteItems={quoteItems}
               onOpenQuickQuote={() => setIsQuoteFunnelOpen(true)}
             />
@@ -331,12 +365,40 @@ export default function App() {
         product={selectedDetailProduct}
         onClose={() => setSelectedDetailProduct(null)}
         onOpenDatasheet={(prod) => setSelectedDatasheetProduct(prod)}
+        onOpenVideo={(prod) => setSelectedVideoProduct(prod)}
+        onOpenImage={handleOpenLightbox}
       />
 
       {/* Technical Datasheet Printable Modal */}
       <TechnicalDatasheetModal
         product={selectedDatasheetProduct}
         onClose={() => setSelectedDatasheetProduct(null)}
+      />
+
+      {/* Ver3 3D Medical Video & Procedure Modal */}
+      <Ver3VideoModal
+        isOpen={Boolean(selectedVideoProduct)}
+        onClose={() => setSelectedVideoProduct(null)}
+        product={selectedVideoProduct}
+        onOpenDatasheet={() => {
+          if (selectedVideoProduct) {
+            setSelectedDatasheetProduct(selectedVideoProduct);
+          }
+        }}
+        onPreOrder={() => {
+          if (selectedVideoProduct) {
+            handleAddToQuote(selectedVideoProduct);
+          }
+        }}
+        onOpenImage={handleOpenLightbox}
+      />
+
+      {/* High-Resolution Image Lightbox Modal */}
+      <ImageLightboxModal
+        isOpen={lightboxState.isOpen}
+        onClose={handleCloseLightbox}
+        images={lightboxState.images}
+        initialIndex={lightboxState.initialIndex}
       />
 
       {/* Floating Action Buttons */}

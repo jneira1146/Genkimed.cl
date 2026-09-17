@@ -1,0 +1,638 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background and Gradients -->
+    <linearGradient id="opBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+
+    <linearGradient id="opOrangeBanner" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+
+    <linearGradient id="opPurpleHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a154b" />
+      <stop offset="100%" stop-color="#6b21a8" />
+    </linearGradient>
+
+    <linearGradient id="opPurpleSub" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#581c87" />
+      <stop offset="100%" stop-color="#7e22ce" />
+    </linearGradient>
+
+    <linearGradient id="opTitaniumScrew" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="30%" stop-color="#f1f5f9" />
+      <stop offset="70%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+
+    <linearGradient id="opGreenAnodized" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#15803d" />
+      <stop offset="40%" stop-color="#4ade80" />
+      <stop offset="100%" stop-color="#166534" />
+    </linearGradient>
+
+    <linearGradient id="opGoldCrosslink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="30%" stop-color="#fde047" />
+      <stop offset="70%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#78350f" />
+    </linearGradient>
+
+    <linearGradient id="opSpineBone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7" />
+      <stop offset="50%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#fef08a" />
+    </linearGradient>
+
+    <filter id="opShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1600" height="1050" fill="url(#opBg)" />
+  <rect x="0" y="0" width="1600" height="8" fill="#6b21a8" />
+
+  <!-- Top Logo & Header Area -->
+  <g transform="translate(45, 30)">
+    <!-- Openped Logo (Icon + Text) -->
+    <g transform="translate(0, 0)">
+      <!-- Purple icon circle with hollow center -->
+      <rect x="0" y="5" width="36" height="36" rx="10" fill="#4a154b" />
+      <circle cx="18" cy="23" r="8" fill="#ffffff" />
+      <text x="46" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="38" font-weight="900" fill="#4a154b" letter-spacing="-0.5">Openped</text>
+      <text x="220" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#ea580c">®</text>
+    </g>
+
+    <!-- MaffHealth | Ossyn top right logo block -->
+    <g transform="translate(1330, 5)">
+      <!-- MaffHealth ribbon icon -->
+      <path d="M12 8 C18 0, 32 6, 26 18 C22 24, 14 30, 8 36 C2 30, -4 24, 0 16 C4 6, 16 0, 22 10" fill="#f97316" opacity="0.9" />
+      <path d="M22 8 C28 0, 42 6, 36 18 C32 24, 24 30, 18 36 C12 30, 6 24, 10 16 C14 6, 26 0, 32 10" fill="#0284c7" opacity="0.8" />
+      <text x="50" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#1e293b">Maff<tspan fill="#0284c7">Health</tspan></text>
+      <line x1="165" y1="8" x2="165" y2="34" stroke="#cbd5e1" stroke-width="1.5" />
+      <text x="178" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" fill="#0f172a">Ossyn</text>
+    </g>
+  </g>
+
+  <!-- Orange Banner -->
+  <g transform="translate(0, 82)">
+    <path d="M 0 0 L 730 0 C 755 0, 770 15, 760 38 L 740 54 L 0 54 Z" fill="url(#opOrangeBanner)" />
+    <text x="45" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="25" font-weight="800" fill="#ffffff" letter-spacing="0.2">
+      Sistema de Fijación Pedicular Posterior de Columna
+    </text>
+  </g>
+
+  <!-- LEFT COLUMN: Spine Model & Product Introduction (x: 45..440) -->
+  <g transform="translate(45, 155)">
+    <!-- Spine Construct Photo Frame -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="380" height="320" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#opShadow)" />
+      
+      <!-- Vertebra anatomy background graphic -->
+      <g transform="translate(25, 20)">
+        <!-- Vertebral body 1 -->
+        <ellipse cx="165" cy="80" rx="110" ry="45" fill="url(#opSpineBone)" stroke="#cbd5e1" stroke-width="1.5" />
+        <ellipse cx="165" cy="180" rx="115" ry="50" fill="url(#opSpineBone)" stroke="#cbd5e1" stroke-width="1.5" />
+        <path d="M55 80 L50 180 C50 210, 280 210, 280 180 L275 80 Z" fill="#fef08a" opacity="0.6" />
+
+        <!-- Spinal canal hole -->
+        <ellipse cx="165" cy="72" rx="42" ry="18" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1" />
+        <ellipse cx="165" cy="172" rx="44" ry="20" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1" />
+
+        <!-- Bilateral Titanium Fixation Construct -->
+        <!-- Left Rod (5.5mm) -->
+        <rect x="80" y="25" width="14" height="230" rx="7" fill="url(#opTitaniumScrew)" stroke="#475569" stroke-width="1" />
+        <!-- Right Rod (5.5mm) -->
+        <rect x="235" y="25" width="14" height="230" rx="7" fill="url(#opTitaniumScrew)" stroke="#475569" stroke-width="1" />
+
+        <!-- Left Screw 1 (Top) -->
+        <circle cx="87" cy="70" r="16" fill="url(#opTitaniumScrew)" stroke="#334155" stroke-width="1.5" />
+        <circle cx="87" cy="70" r="8" fill="#475569" />
+        <line x1="87" y1="70" x2="35" y2="90" stroke="#64748b" stroke-width="6" stroke-linecap="round" />
+        
+        <!-- Left Screw 2 (Bottom) -->
+        <circle cx="87" cy="170" r="16" fill="url(#opTitaniumScrew)" stroke="#334155" stroke-width="1.5" />
+        <circle cx="87" cy="170" r="8" fill="#475569" />
+        <line x1="87" y1="170" x2="35" y2="195" stroke="#64748b" stroke-width="6" stroke-linecap="round" />
+
+        <!-- Right Screw 1 (Top) -->
+        <circle cx="242" cy="70" r="16" fill="url(#opTitaniumScrew)" stroke="#334155" stroke-width="1.5" />
+        <circle cx="242" cy="70" r="8" fill="#475569" />
+        <line x1="242" y1="70" x2="295" y2="90" stroke="#64748b" stroke-width="6" stroke-linecap="round" />
+
+        <!-- Right Screw 2 (Bottom) -->
+        <circle cx="242" cy="170" r="16" fill="url(#opTitaniumScrew)" stroke="#334155" stroke-width="1.5" />
+        <circle cx="242" cy="170" r="8" fill="#475569" />
+        <line x1="242" y1="170" x2="295" y2="195" stroke="#64748b" stroke-width="6" stroke-linecap="round" />
+
+        <!-- Cross Link Transverse Connector (Middle bridge) -->
+        <rect x="80" y="115" width="168" height="12" rx="4" fill="url(#opGoldCrosslink)" stroke="#78350f" stroke-width="1" />
+        <circle cx="87" cy="121" r="10" fill="#b45309" stroke="#78350f" stroke-width="1.5" />
+        <circle cx="242" cy="121" r="10" fill="#b45309" stroke="#78350f" stroke-width="1.5" />
+        <circle cx="165" cy="121" r="6" fill="#fde047" stroke="#92400e" stroke-width="1" />
+      </g>
+
+      <!-- Badge overlay -->
+      <rect x="15" y="275" width="350" height="30" rx="8" fill="#0f172a" opacity="0.85" />
+      <text x="190" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">
+        Montaje de 4 Tornillos • 2 Barras Ø 5.5 • Cross Link
+      </text>
+    </g>
+
+    <!-- Introductory Paragraph Text -->
+    <g transform="translate(0, 335)">
+      <rect x="0" y="0" width="380" height="175" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#opShadow)" />
+      <foreignObject x="15" y="12" width="350" height="155">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: system-ui, -apple-system, sans-serif; font-size: 11.5px; line-height: 1.45; color: #334155; text-align: justify;">
+          <p style="margin: 0 0 6px 0;">
+            Sistema de tornillos para la fijación pedicular posterior de columna, fabricado en aleación de Titanio, el sistema está conformado por barras de Ø 5.5 mm y conector transverso.
+          </p>
+          <p style="margin: 0 0 6px 0;">
+            Openped cuenta con: tornillos pediculares autorroscantes de aleta larga, canulados y no canulados de: <strong>Ø 4.5, 5.0 y 6.0 mm</strong> con poliaxialidad de <strong>hasta ± 30°</strong>.
+          </p>
+          <p style="margin: 0;">
+            El Diseño del tornillo presenta doble rosca para máxima fijación ósea, cortical y esponjosa. La versión canulada del tornillo Openped posibilita la <strong>técnica de aumentación</strong>.
+          </p>
+        </div>
+      </foreignObject>
+    </g>
+
+    <!-- Indicaciones Header & List -->
+    <g transform="translate(0, 525)">
+      <!-- Header Banner -->
+      <rect x="0" y="0" width="220" height="34" rx="8" fill="url(#opPurpleHeader)" />
+      <text x="18" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="900" fill="#ffffff">Indicaciones:</text>
+
+      <rect x="0" y="42" width="380" height="235" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#opShadow)" />
+      <g transform="translate(15, 62)" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b" font-weight="600">
+        <circle cx="5" cy="5" r="3.5" fill="#6b21a8" />
+        <text x="16" y="9">Fijación Pedicular Posterior en esqueléticamente maduros</text>
+
+        <circle cx="5" cy="30" r="3.5" fill="#6b21a8" />
+        <text x="16" y="34">Estenosis de canal raquídeo</text>
+
+        <circle cx="5" cy="55" r="3.5" fill="#6b21a8" />
+        <text x="16" y="59">Escoliosis y deformidades complejas</text>
+
+        <circle cx="5" cy="80" r="3.5" fill="#6b21a8" />
+        <text x="16" y="84">Discopatía degenerativa</text>
+
+        <circle cx="5" cy="105" r="3.5" fill="#6b21a8" />
+        <text x="16" y="109">Inestabilidades degenerativas</text>
+
+        <circle cx="5" cy="130" r="3.5" fill="#6b21a8" />
+        <text x="16" y="134">Inestabilidad posterior a descompresión</text>
+
+        <circle cx="5" cy="155" r="3.5" fill="#6b21a8" />
+        <text x="16" y="159">Fracturas del tipo A1 y tipos relacionados del grupo B y C</text>
+
+        <circle cx="5" cy="180" r="3.5" fill="#6b21a8" />
+        <text x="16" y="184">Tumores sin afectación anterior</text>
+      </g>
+    </g>
+
+    <!-- Contraindicaciones Block -->
+    <g transform="translate(0, 815)">
+      <rect x="0" y="0" width="260" height="34" rx="8" fill="url(#opPurpleHeader)" />
+      <text x="18" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#ffffff">Contraindicaciones:</text>
+
+      <rect x="0" y="42" width="380" height="85" rx="12" fill="#fff1f2" stroke="#fecdd3" stroke-width="1.5" />
+      <g transform="translate(15, 60)" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#9f1239">
+        <circle cx="5" cy="6" r="3.5" fill="#e11d48" />
+        <text x="16" y="9" font-weight="700">Fracturas y tumores con afectación importante de la</text>
+        <text x="16" y="26" font-weight="700">porción anterior del cuerpo vertebral, donde es necesario</text>
+        <text x="16" y="43" font-weight="700">una estabilización anterior o reconstrucción de columna.</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- CENTER COLUMN: Características & Product Hardware Anatomy (x: 450..920) -->
+  <g transform="translate(450, 155)">
+    <!-- Header: Características -->
+    <rect x="0" y="0" width="200" height="34" rx="8" fill="url(#opPurpleHeader)" />
+    <text x="18" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="900" fill="#ffffff">Características:</text>
+
+    <!-- Feature list box -->
+    <rect x="0" y="42" width="460" height="235" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#opShadow)" />
+    <g transform="translate(16, 62)" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#0f172a">
+      <circle cx="5" cy="5" r="3.5" fill="#6b21a8" />
+      <text x="16" y="9"><strong>Material:</strong> Aleación de Titanio Grado Médico Ti-6Al-4V</text>
+
+      <circle cx="5" cy="27" r="3.5" fill="#6b21a8" />
+      <text x="16" y="31"><strong>Bajo perfil</strong> para reducir volumen sobre masas laterales</text>
+
+      <circle cx="5" cy="49" r="3.5" fill="#6b21a8" />
+      <text x="16" y="53"><strong>Tornillos autorroscantes</strong>, canulados y no canulados de: <strong>Ø 4.5, 5.0 y 6.0 mm</strong></text>
+
+      <circle cx="5" cy="71" r="3.5" fill="#6b21a8" />
+      <text x="16" y="75"><strong>Diseño con doble rosca:</strong> cortical proximal y esponjosa distal</text>
+
+      <circle cx="5" cy="93" r="3.5" fill="#6b21a8" />
+      <text x="16" y="97"><strong>Tornillos pediculares:</strong> poli-axialidad tridimensional de <strong>hasta ± 30°</strong></text>
+
+      <circle cx="5" cy="115" r="3.5" fill="#6b21a8" />
+      <text x="16" y="119"><strong>Ranura lateral distal</strong> en canulados para <strong>técnicas de aumentación (PMMA)</strong></text>
+
+      <circle cx="5" cy="137" r="3.5" fill="#6b21a8" />
+      <text x="16" y="141"><strong>Aletas extendidas</strong> con reducción integrada de descenso progresivo</text>
+
+      <circle cx="5" cy="159" r="3.5" fill="#6b21a8" />
+      <text x="16" y="163"><strong>Tornillos de cierre</strong> autorroscante y doble rosca anti-trasroscado</text>
+
+      <circle cx="5" cy="181" r="3.5" fill="#6b21a8" />
+      <text x="16" y="185"><strong>Barras rectas 5.5 mm:</strong> Alta rigidez y resistencia mecánica</text>
+
+      <circle cx="5" cy="203" r="3.5" fill="#6b21a8" />
+      <text x="16" y="207"><strong>Cross Link preensamblado:</strong> Conector transverso 40–60 mm y 60–90 mm</text>
+    </g>
+
+    <!-- Center Product Visuals Area -->
+    <g transform="translate(0, 295)">
+      <rect x="0" y="0" width="460" height="425" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#opShadow)" />
+
+      <!-- Screw Anatomy & Extended Tabs Drawing -->
+      <!-- Left: Polyaxial Screw with Green Head Ø5.5 -->
+      <g transform="translate(45, 80) rotate(-45)">
+        <!-- Screw shank double thread -->
+        <rect x="0" y="0" width="14" height="110" rx="4" fill="url(#opTitaniumScrew)" stroke="#475569" stroke-width="1" />
+        <!-- Thread lines -->
+        <path d="M0 30 L14 36 M0 45 L14 51 M0 60 L14 66 M0 75 L14 81 M0 90 L14 96" stroke="#475569" stroke-width="2" />
+        <!-- Distal fenestration slot -->
+        <rect x="4" y="80" width="6" height="18" rx="3" fill="#1e293b" />
+        <!-- Tip -->
+        <polygon points="0,110 14,110 7,125" fill="url(#opTitaniumScrew)" stroke="#475569" stroke-width="1" />
+        <!-- Green anodized Polyaxial U-Head -->
+        <rect x="-8" y="-32" width="30" height="34" rx="6" fill="url(#opGreenAnodized)" stroke="#14532d" stroke-width="1.5" />
+        <rect x="-2" y="-32" width="18" height="22" rx="4" fill="#0f172a" opacity="0.25" />
+        <text x="7" y="-12" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="900" fill="#ffffff" text-anchor="middle">Ø 5.5</text>
+      </g>
+
+      <!-- Setscrews (Tornillos de Cierre) -->
+      <g transform="translate(130, 45)">
+        <text x="65" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#1e293b" text-anchor="middle">
+          Tornillos de cierre
+        </text>
+        <text x="65" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#64748b" text-anchor="middle">
+          autorroscante y doble rosca
+        </text>
+
+        <!-- 4 setscrew icons in cascade -->
+        <circle cx="35" cy="40" r="12" fill="url(#opTitaniumScrew)" stroke="#334155" stroke-width="1.5" />
+        <polygon points="35,34 40,37 40,43 35,46 30,43 30,37" fill="#1e293b" />
+
+        <circle cx="58" cy="55" r="12" fill="url(#opTitaniumScrew)" stroke="#334155" stroke-width="1.5" />
+        <polygon points="58,49 63,52 63,58 58,61 53,58 53,52" fill="#1e293b" />
+
+        <circle cx="82" cy="70" r="12" fill="url(#opTitaniumScrew)" stroke="#334155" stroke-width="1.5" />
+        <polygon points="82,64 87,67 87,73 82,76 77,73 77,67" fill="#1e293b" />
+
+        <circle cx="106" cy="85" r="12" fill="url(#opTitaniumScrew)" stroke="#334155" stroke-width="1.5" />
+        <polygon points="106,79 111,82 111,88 106,91 101,88 101,82" fill="#1e293b" />
+      </g>
+
+      <!-- Center-Right: Long Reduction Tab Screw (Aletas Extendidas) -->
+      <g transform="translate(325, 40)">
+        <!-- Extended Breakaway Tabs (U-Shape long fork) -->
+        <path d="M 0 0 L 8 0 L 8 85 L 26 85 L 26 0 L 34 0 L 34 95 C 34 105, 0 105, 0 95 Z" fill="url(#opTitaniumScrew)" stroke="#475569" stroke-width="1.5" />
+        <!-- Score / Breakaway groove marks -->
+        <line x1="0" y1="75" x2="8" y2="75" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="2,2" />
+        <line x1="26" y1="75" x2="34" y2="75" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="2,2" />
+
+        <!-- Polyaxial Ball Joint Sphere -->
+        <circle cx="17" cy="115" r="14" fill="url(#opTitaniumScrew)" stroke="#334155" stroke-width="1.5" />
+
+        <!-- Screw Shank (Threaded shaft) -->
+        <rect x="10" y="125" width="14" height="155" rx="4" fill="url(#opTitaniumScrew)" stroke="#475569" stroke-width="1" />
+        <!-- Threads -->
+        <path d="M10 135 L24 140 M10 148 L24 153 M10 161 L24 166 M10 174 L24 179 M10 187 L24 192 M10 200 L24 205 M10 213 L24 218 M10 226 L24 231 M10 239 L24 244 M10 252 L24 257" stroke="#475569" stroke-width="2" />
+        <!-- Augmentation Slots distal -->
+        <rect x="14" y="245" width="6" height="22" rx="3" fill="#1e293b" />
+        <polygon points="10,280 24,280 17,298" fill="url(#opTitaniumScrew)" stroke="#475569" stroke-width="1" />
+
+        <!-- Dimension callout text -->
+        <text x="45" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#6b21a8">Aletas de</text>
+        <text x="45" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#6b21a8">reducción</text>
+        <line x1="36" y1="50" x2="42" y2="50" stroke="#6b21a8" stroke-width="1" />
+      </g>
+
+      <!-- Straight Rods Section -->
+      <g transform="translate(120, 220)">
+        <!-- 3 straight rods of 5.5 mm -->
+        <rect x="0" y="0" width="8" height="140" rx="4" fill="url(#opTitaniumScrew)" stroke="#334155" stroke-width="1" />
+        <rect x="16" y="10" width="8" height="130" rx="4" fill="url(#opTitaniumScrew)" stroke="#334155" stroke-width="1" />
+        <rect x="32" y="25" width="8" height="115" rx="4" fill="url(#opTitaniumScrew)" stroke="#334155" stroke-width="1" />
+        
+        <text x="20" y="162" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#0f172a" text-anchor="middle">
+          Barras rectas 5.5 (mm)
+        </text>
+        <text x="20" y="176" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" fill="#475569" text-anchor="middle">
+          • Instrumentos "Inteligentes"
+        </text>
+      </g>
+    </g>
+
+    <!-- Transverse Connector (Cross Link) Detailed Photo Box -->
+    <g transform="translate(0, 735)">
+      <rect x="0" y="0" width="460" height="205" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#opShadow)" />
+      
+      <!-- Gold anodized Cross Link drawing -->
+      <g transform="translate(60, 45)">
+        <!-- Left Rod Grip hook -->
+        <path d="M 0 10 C 0 -10, 35 -10, 35 10 L 35 45 C 35 65, 0 65, 0 45 Z" fill="url(#opGoldCrosslink)" stroke="#78350f" stroke-width="1.5" />
+        <circle cx="17" cy="27" r="10" fill="#451a03" />
+        <!-- Locking screw -->
+        <circle cx="17" cy="27" r="5" fill="#fde047" stroke="#78350f" stroke-width="1" />
+
+        <!-- Center telescoping connecting bar -->
+        <rect x="35" y="22" width="270" height="14" rx="4" fill="url(#opGoldCrosslink)" stroke="#78350f" stroke-width="1.5" />
+        
+        <!-- Center lock mechanism -->
+        <rect x="155" y="15" width="30" height="28" rx="6" fill="#b45309" stroke="#78350f" stroke-width="1.5" />
+        <circle cx="170" cy="29" r="6" fill="#fef08a" stroke="#78350f" stroke-width="1" />
+
+        <!-- Right Rod Grip hook -->
+        <path d="M 305 10 C 305 -10, 340 -10, 340 10 L 340 45 C 340 65, 305 65, 305 45 Z" fill="url(#opGoldCrosslink)" stroke="#78350f" stroke-width="1.5" />
+        <circle cx="322" cy="27" r="10" fill="#451a03" />
+        <!-- Locking screw -->
+        <circle cx="322" cy="27" r="5" fill="#fde047" stroke="#78350f" stroke-width="1" />
+      </g>
+
+      <!-- Label -->
+      <g transform="translate(230, 160)" text-anchor="middle">
+        <text font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="800" fill="#0f172a">
+          • Conector transverso pre ensamblado o (Cross Link)
+        </text>
+        <text y="18" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ea580c">
+          40 – 60 mm y 60 – 90 mm.
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT COLUMN: Official Presentations Table (x: 930..1565) -->
+  <g transform="translate(930, 110)">
+    <!-- Header Banner -->
+    <rect x="0" y="0" width="635" height="38" rx="8" fill="url(#opPurpleHeader)" />
+    <text x="20" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="900" fill="#ffffff" letter-spacing="0.3">
+      Presentaciones*
+    </text>
+
+    <!-- Table Container -->
+    <rect x="0" y="46" width="635" height="850" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#opShadow)" />
+
+    <!-- Table Header Row -->
+    <rect x="0" y="46" width="635" height="30" rx="0" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.5" />
+    <g transform="translate(15, 66)" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="800" fill="#334155">
+      <text x="0" y="0">Referencia</text>
+      <text x="95" y="0">Ø</text>
+      <text x="140" y="0">Descripción Oficial</text>
+    </g>
+
+    <!-- Table Rows (37 items cleanly laid out with alternating bands) -->
+    <g transform="translate(0, 76)" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">
+      
+      <!-- Group 1: Canulados de Reducción (12 items) -->
+      <!-- Row 1 -->
+      <rect x="0" y="0" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="14" font-weight="700" fill="#0284c7">40184530</text>
+      <text x="110" y="14" font-weight="700" fill="#0f172a">Ø4.5</text>
+      <text x="155" y="14" fill="#334155">Tornillo pedicular de reducción / Canulado / Doble rosca / Autorroscante 30 mm</text>
+
+      <!-- Row 2 -->
+      <rect x="0" y="20" width="635" height="20" fill="#f8fafc" />
+      <text x="15" y="34" font-weight="700" fill="#0284c7">40184535</text>
+      <text x="110" y="34" font-weight="700" fill="#0f172a">Ø4.5</text>
+      <text x="155" y="34" fill="#334155">Tornillo pedicular de reducción / Canulado / Doble rosca / Autorroscante 35 mm</text>
+
+      <!-- Row 3 -->
+      <rect x="0" y="40" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="54" font-weight="700" fill="#0284c7">40184540</text>
+      <text x="110" y="54" font-weight="700" fill="#0f172a">Ø4.5</text>
+      <text x="155" y="54" fill="#334155">Tornillo pedicular de reducción / Canulado / Doble rosca / Autorroscante 40 mm</text>
+
+      <!-- Row 4 -->
+      <rect x="0" y="60" width="635" height="20" fill="#f8fafc" />
+      <text x="15" y="74" font-weight="700" fill="#0284c7">40185030</text>
+      <text x="110" y="74" font-weight="700" fill="#0f172a">Ø5.0</text>
+      <text x="155" y="74" fill="#334155">Tornillo pedicular de reducción / Canulado / Doble rosca / Autorroscante 30 mm</text>
+
+      <!-- Row 5 -->
+      <rect x="0" y="80" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="94" font-weight="700" fill="#0284c7">40185035</text>
+      <text x="110" y="94" font-weight="700" fill="#0f172a">Ø5.0</text>
+      <text x="155" y="94" fill="#334155">Tornillo pedicular de reducción / Canulado / Doble rosca / Autorroscante 35 mm</text>
+
+      <!-- Row 6 -->
+      <rect x="0" y="100" width="635" height="20" fill="#f8fafc" />
+      <text x="15" y="114" font-weight="700" fill="#0284c7">40185040</text>
+      <text x="110" y="114" font-weight="700" fill="#0f172a">Ø5.0</text>
+      <text x="155" y="114" fill="#334155">Tornillo pedicular de reducción / Canulado / Doble rosca / Autorroscante 40 mm</text>
+
+      <!-- Row 7 -->
+      <rect x="0" y="120" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="134" font-weight="700" fill="#0284c7">40185045</text>
+      <text x="110" y="134" font-weight="700" fill="#0f172a">Ø5.0</text>
+      <text x="155" y="134" fill="#334155">Tornillo pedicular de reducción / Canulado / Doble rosca / Autorroscante 45 mm</text>
+
+      <!-- Row 8 -->
+      <rect x="0" y="140" width="635" height="20" fill="#f8fafc" />
+      <text x="15" y="154" font-weight="700" fill="#0284c7">40185050</text>
+      <text x="110" y="154" font-weight="700" fill="#0f172a">Ø5.0</text>
+      <text x="155" y="154" fill="#334155">Tornillo pedicular de reducción / Canulado / Doble rosca / Autorroscante 50 mm</text>
+
+      <!-- Row 9 -->
+      <rect x="0" y="160" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="174" font-weight="700" fill="#0284c7">40186035</text>
+      <text x="110" y="174" font-weight="700" fill="#0f172a">Ø6.0</text>
+      <text x="155" y="174" fill="#334155">Tornillo pedicular de reducción / Canulado / Doble rosca / Autorroscante 35 mm</text>
+
+      <!-- Row 10 -->
+      <rect x="0" y="180" width="635" height="20" fill="#f8fafc" />
+      <text x="15" y="194" font-weight="700" fill="#0284c7">40186040</text>
+      <text x="110" y="194" font-weight="700" fill="#0f172a">Ø6.0</text>
+      <text x="155" y="194" fill="#334155">Tornillo pedicular de reducción / Canulado / Doble rosca / Autorroscante 40 mm</text>
+
+      <!-- Row 11 -->
+      <rect x="0" y="200" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="214" font-weight="700" fill="#0284c7">40186045</text>
+      <text x="110" y="214" font-weight="700" fill="#0f172a">Ø6.0</text>
+      <text x="155" y="214" fill="#334155">Tornillo pedicular de reducción / Canulado / Doble rosca / Autorroscante 45 mm</text>
+
+      <!-- Row 12 -->
+      <rect x="0" y="220" width="635" height="20" fill="#f8fafc" />
+      <text x="15" y="234" font-weight="700" fill="#0284c7">40186050</text>
+      <text x="110" y="234" font-weight="700" fill="#0f172a">Ø6.0</text>
+      <text x="155" y="234" fill="#334155">Tornillo pedicular de reducción / Canulado / Doble rosca / Autorroscante 50 mm</text>
+
+      <!-- Group 2: Tornillos Sólidos (No canulados) (12 items) -->
+      <!-- Row 13 -->
+      <rect x="0" y="240" width="635" height="20" fill="#fdf4ff" />
+      <text x="15" y="254" font-weight="700" fill="#7c3aed">40174530</text>
+      <text x="110" y="254" font-weight="700" fill="#0f172a">Ø4.5</text>
+      <text x="155" y="254" fill="#1e1b4b">Tornillo pedicular / Doble rosca / Autorroscante 30 mm</text>
+
+      <!-- Row 14 -->
+      <rect x="0" y="260" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="274" font-weight="700" fill="#7c3aed">40174535</text>
+      <text x="110" y="274" font-weight="700" fill="#0f172a">Ø4.5</text>
+      <text x="155" y="274" fill="#1e1b4b">Tornillo pedicular / Doble rosca / Autorroscante 35 mm</text>
+
+      <!-- Row 15 -->
+      <rect x="0" y="280" width="635" height="20" fill="#fdf4ff" />
+      <text x="15" y="294" font-weight="700" fill="#7c3aed">40174540</text>
+      <text x="110" y="294" font-weight="700" fill="#0f172a">Ø4.5</text>
+      <text x="155" y="294" fill="#1e1b4b">Tornillo pedicular / Doble rosca / Autorroscante 40 mm</text>
+
+      <!-- Row 16 -->
+      <rect x="0" y="300" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="314" font-weight="700" fill="#7c3aed">40175030</text>
+      <text x="110" y="314" font-weight="700" fill="#0f172a">Ø5.0</text>
+      <text x="155" y="314" fill="#1e1b4b">Tornillo pedicular / Doble rosca / Autorroscante 30 mm</text>
+
+      <!-- Row 17 -->
+      <rect x="0" y="320" width="635" height="20" fill="#fdf4ff" />
+      <text x="15" y="334" font-weight="700" fill="#7c3aed">40175035</text>
+      <text x="110" y="334" font-weight="700" fill="#0f172a">Ø5.0</text>
+      <text x="155" y="334" fill="#1e1b4b">Tornillo pedicular / Doble rosca / Autorroscante 35 mm</text>
+
+      <!-- Row 18 -->
+      <rect x="0" y="340" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="354" font-weight="700" fill="#7c3aed">40175040</text>
+      <text x="110" y="354" font-weight="700" fill="#0f172a">Ø5.0</text>
+      <text x="155" y="354" fill="#1e1b4b">Tornillo pedicular / Doble rosca / Autorroscante 40 mm</text>
+
+      <!-- Row 19 -->
+      <rect x="0" y="360" width="635" height="20" fill="#fdf4ff" />
+      <text x="15" y="374" font-weight="700" fill="#7c3aed">40175045</text>
+      <text x="110" y="374" font-weight="700" fill="#0f172a">Ø5.0</text>
+      <text x="155" y="374" fill="#1e1b4b">Tornillo pedicular / Doble rosca / Autorroscante 45 mm</text>
+
+      <!-- Row 20 -->
+      <rect x="0" y="380" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="394" font-weight="700" fill="#7c3aed">40175050</text>
+      <text x="110" y="394" font-weight="700" fill="#0f172a">Ø5.0</text>
+      <text x="155" y="394" fill="#1e1b4b">Tornillo pedicular / Doble rosca / Autorroscante 50 mm</text>
+
+      <!-- Row 21 -->
+      <rect x="0" y="400" width="635" height="20" fill="#fdf4ff" />
+      <text x="15" y="414" font-weight="700" fill="#7c3aed">40176035</text>
+      <text x="110" y="414" font-weight="700" fill="#0f172a">Ø6.0</text>
+      <text x="155" y="414" fill="#1e1b4b">Tornillo pedicular / Doble rosca / Autorroscante 35 mm</text>
+
+      <!-- Row 22 -->
+      <rect x="0" y="420" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="434" font-weight="700" fill="#7c3aed">40176040</text>
+      <text x="110" y="434" font-weight="700" fill="#0f172a">Ø6.0</text>
+      <text x="155" y="434" fill="#1e1b4b">Tornillo pedicular / Doble rosca / Autorroscante 40 mm</text>
+
+      <!-- Row 23 -->
+      <rect x="0" y="440" width="635" height="20" fill="#fdf4ff" />
+      <text x="15" y="454" font-weight="700" fill="#7c3aed">40176045</text>
+      <text x="110" y="454" font-weight="700" fill="#0f172a">Ø6.0</text>
+      <text x="155" y="454" fill="#1e1b4b">Tornillo pedicular / Doble rosca / Autorroscante 45 mm</text>
+
+      <!-- Row 24 -->
+      <rect x="0" y="460" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="474" font-weight="700" fill="#7c3aed">40176050</text>
+      <text x="110" y="474" font-weight="700" fill="#0f172a">Ø6.0</text>
+      <text x="155" y="474" fill="#1e1b4b">Tornillo pedicular / Doble rosca / Autorroscante 50 mm</text>
+
+      <!-- Group 3: Conectores Transversos (Cross Link) (2 items) -->
+      <!-- Row 25 -->
+      <rect x="0" y="480" width="635" height="21" fill="#fffbeb" />
+      <text x="15" y="495" font-weight="800" fill="#b45309">40050000</text>
+      <text x="110" y="495" font-weight="700" fill="#b45309">/</text>
+      <text x="155" y="495" font-weight="700" fill="#92400e">Conector Transverso 40 ~ 60 mm (Cross Link Preensamblado)</text>
+
+      <!-- Row 26 -->
+      <rect x="0" y="501" width="635" height="21" fill="#fffbeb" />
+      <text x="15" y="516" font-weight="800" fill="#b45309">40057000</text>
+      <text x="110" y="516" font-weight="700" fill="#b45309">/</text>
+      <text x="155" y="516" font-weight="700" fill="#92400e">Conector Transverso 60 ~ 90 mm (Cross Link Preensamblado)</text>
+
+      <!-- Group 4: Barras Rectas 5.5 mm (9 items) -->
+      <!-- Row 27 -->
+      <rect x="0" y="522" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="536" font-weight="700" fill="#059669">40047060</text>
+      <text x="110" y="536" font-weight="700" fill="#0f172a">Ø5.5</text>
+      <text x="155" y="536" fill="#065f46">Barra Recta 60 mm</text>
+
+      <!-- Row 28 -->
+      <rect x="0" y="542" width="635" height="20" fill="#f0fdf4" />
+      <text x="15" y="556" font-weight="700" fill="#059669">40047080</text>
+      <text x="110" y="556" font-weight="700" fill="#0f172a">Ø5.5</text>
+      <text x="155" y="556" fill="#065f46">Barra Recta 80 mm</text>
+
+      <!-- Row 29 -->
+      <rect x="0" y="562" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="576" font-weight="700" fill="#059669">40047100</text>
+      <text x="110" y="576" font-weight="700" fill="#0f172a">Ø5.5</text>
+      <text x="155" y="576" fill="#065f46">Barra Recta 100 mm</text>
+
+      <!-- Row 30 -->
+      <rect x="0" y="582" width="635" height="20" fill="#f0fdf4" />
+      <text x="15" y="596" font-weight="700" fill="#059669">40047120</text>
+      <text x="110" y="596" font-weight="700" fill="#0f172a">Ø5.5</text>
+      <text x="155" y="596" fill="#065f46">Barra Recta 120 mm</text>
+
+      <!-- Row 31 -->
+      <rect x="0" y="602" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="616" font-weight="700" fill="#059669">40040200</text>
+      <text x="110" y="616" font-weight="700" fill="#0f172a">Ø5.5</text>
+      <text x="155" y="616" fill="#065f46">Barra Recta 200 mm</text>
+
+      <!-- Row 32 -->
+      <rect x="0" y="622" width="635" height="20" fill="#f0fdf4" />
+      <text x="15" y="636" font-weight="700" fill="#059669">40040250</text>
+      <text x="110" y="636" font-weight="700" fill="#0f172a">Ø5.5</text>
+      <text x="155" y="636" fill="#065f46">Barra Recta 250 mm</text>
+
+      <!-- Row 33 -->
+      <rect x="0" y="642" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="656" font-weight="700" fill="#059669">40040300</text>
+      <text x="110" y="656" font-weight="700" fill="#0f172a">Ø5.5</text>
+      <text x="155" y="656" fill="#065f46">Barra Recta 300 mm</text>
+
+      <!-- Row 34 -->
+      <rect x="0" y="662" width="635" height="20" fill="#f0fdf4" />
+      <text x="15" y="676" font-weight="700" fill="#059669">40040350</text>
+      <text x="110" y="676" font-weight="700" fill="#0f172a">Ø5.5</text>
+      <text x="155" y="676" fill="#065f46">Barra Recta 350 mm</text>
+
+      <!-- Row 35 -->
+      <rect x="0" y="682" width="635" height="20" fill="#ffffff" />
+      <text x="15" y="696" font-weight="700" fill="#059669">40040400</text>
+      <text x="110" y="696" font-weight="700" fill="#0f172a">Ø5.5</text>
+      <text x="155" y="696" fill="#065f46">Barra Recta 400 mm</text>
+
+      <!-- Group 5: Tornillo de Cierre (1 item) -->
+      <!-- Row 36 -->
+      <rect x="0" y="702" width="635" height="24" fill="#eff6ff" />
+      <text x="15" y="718" font-weight="800" fill="#1d4ed8">40044005</text>
+      <text x="110" y="718" font-weight="700" fill="#1d4ed8">/</text>
+      <text x="155" y="718" font-weight="700" fill="#1e40af">Tornillo de cierre autorroscante y doble rosca (Torque Control)</text>
+    </g>
+
+    <!-- Table Bottom Note -->
+    <g transform="translate(15, 825)" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">
+      <text x="0" y="0">
+        * Especificaciones oficiales de manufactura médica ASTM F136 / ISO 5832-3.
+      </text>
+      <text x="0" y="16">
+        Distribución oficial y soporte clínico en Chile por Genkimed SpA y MaffHealth / Ossyn.
+      </text>
+    </g>
+  </g>
+
+  <!-- Page Footer Watermark -->
+  <g transform="translate(45, 1020)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#94a3b8">
+      Página 3 • Catálogo de Dispositivos Quirúrgicos de Columna • Genkimed SpA
+    </text>
+  </g>
+</svg>

@@ -11,6 +11,31 @@ import tapesImg from '../assets/images/fixapro_cinta_medica_1788470942070.jpg';
 import bandageImg from '../assets/images/fixapro_venda_elastica_1788470133493.jpg';
 import alveosSuctionImg from '../assets/images/alveos_sonda_aspiracion_1788469371748.jpg';
 import alveosNebulizerImg from '../assets/images/alveos_nebulizador_1788469487644.jpg';
+import ver3ExpansionTechImg from '../assets/images/ver3_implant_gold_blue_1789393297131.jpg';
+import ver3CatalogSpecImg from '../assets/images/ver3_procedure_spine_1789393307797.jpg';
+import ver3SurgicalBoxImg from '../assets/images/ver3_tray_set_1789393321448.jpg';
+import ver3BrochureSheetRender from '../assets/images/ver3_brochure_sheet_1789315268176.jpg';
+import ver3SurgicalTrayRealRender from '../assets/images/ver3_surgical_tray_real_1789315283694.jpg';
+import ver3ExpansionRender from '../assets/images/ver3_expansion_diagram_1789315307326.jpg';
+import ver3ImplantRender from '../assets/images/ver3_implant_render_1789171932391.jpg';
+import ver3ProcedureRender from '../assets/images/ver3_vertebra_procedure_1789171950061.jpg';
+import ver3FluoroscopyRender from '../assets/images/ver3_fluoroscopy_xray_1789171966544.jpg';
+import ver3InstrumentTrayRender from '../assets/images/ver3_instrument_set_1789171983847.jpg';
+import unomisScrewsCbtImg from '../assets/images/unomis_screws_cbt_1789393571531.jpg';
+import unomisTraySetImg from '../assets/images/unomis_tray_set_1789393584375.jpg';
+import unomisScrewImg from '../assets/images/unomis_screw_system_1789392871757.jpg';
+import unomisInstrumentImg from '../assets/images/unomis_instrument_set_1789392884900.jpg';
+import unomisSpineImg from '../assets/images/unomis_cbt_spine_1789392897207.jpg';
+import unomisVideoThumbImg from '../assets/images/unomis_video_thumbnail.jpg';
+import unomisBrochureSheetImg from '../assets/images/unomis_brochure_official_sheet_1789394025044.jpg';
+import unomisScrewReductionMacroImg from '../assets/images/unomis_screw_reduction_macro_1789394040018.jpg';
+import unomisRodsAndSetscrewsImg from '../assets/images/unomis_rods_and_setscrews_1789394053076.jpg';
+import unomisCbtSpineTechniqueImg from '../assets/images/unomis_cbt_spine_technique_1789394066752.jpg';
+import openpedScrewSystemImg from '../assets/images/openped_screw_system_1789647805973.jpg';
+import openpedSpineConstructImg from '../assets/images/openped_spine_construct_1789647817689.jpg';
+import openpedCrosslinkMacroImg from '../assets/images/openped_crosslink_macro_1789647829791.jpg';
+import openpedSurgicalTrayImg from '../assets/images/openped_surgical_tray_1789647844191.jpg';
+import openpedReductionScrewImg from '../assets/images/openped_reduction_screw_1789647857074.jpg';
 
 export const CATEGORIES: CategoryInfo[] = [
   {
@@ -18,7 +43,17 @@ export const CATEGORIES: CategoryInfo[] = [
     label: 'Catálogo General Genkimed SpA',
     shortLabel: 'Todos',
     iconName: 'LayoutGrid',
-    description: 'Catálogo integral de insumos clínicos, líneas Fixapro® y Alveos® para instituciones de salud.'
+    description: 'Catálogo integral de insumos clínicos, líneas Fixapro®, Alveos®, Ver3®, Unomis® y OpenPed® para instituciones de salud.'
+  },
+  {
+    id: 'spine_surgery',
+    label: 'Ossyn',
+    shortLabel: 'Ossyn',
+    iconName: 'Activity',
+    image: openpedSpineConstructImg,
+    badge: 'Próximamente • 3 Sistemas',
+    comingSoon: true,
+    description: 'Categoría Quirúrgica de Columna Ossyn: Soluciones avanzadas de alta tecnología que comprenden el Sistema de Restauración Vertebral Expansible Ver3® Vertres, el Sistema de Fijación Pedicular Percutánea y CBT Unomis® MISS, y el Sistema de Fijación Pedicular Posterior OpenPed® con tornillos de reducción y aumentación PMMA.'
   },
   {
     id: 'wound_care',
@@ -535,10 +570,591 @@ export const PRODUCTS: Product[] = [
     inStock: true,
     featured: true,
     badge: 'Línea Vendas Fixapro®'
+  },
+  {
+    id: 'ver3-vertres-mis',
+    name: 'Sistema MIS para Restauración de Fracturas Vertebrales y Aumentación Ver3® Vertres',
+    subtitle: 'Implante intracorporal de titanio Ti-6Al-4V ELI expansible tridimensional con técnica de aumentación PMMA (T6-L5)',
+    brand: 'Línea Columna MIS • Ver3® Vertres',
+    category: 'spine_surgery',
+    dimensions: 'Ø 5.0 mm (Dorado) & Ø 5.8 mm (Azul) • Altura 15-17 mm',
+    presentation: 'Implante estéril de titanio Ti-6Al-4V ELI en sobre sellado grado médico + Set de instrumental quirúrgico autoclavable',
+    unitPerBox: 1,
+    masterBoxUnits: 10,
+    shortDescription: 'Sistema MIS (Mínimamente Invasivo) intracorporal y controlable para restauración anatómica de altura vertebral y aumentación con cemento óseo PMMA. Especial para fracturas por compresión y osteoporosis.',
+    description: 'El Sistema Ver3® Vertres (MaffHealth / Ossyn) es una solución quirúrgica mínimamente invasiva (MIS) intracorporal y controlable, cuyo diseño de expansión tridimensional restaura anatómicamente el cuerpo vertebral y su altura original en el segmento raquídeo comprendido entre T6 y L5.\n\nVertres crea un espacio óptimo y seguro en el cuerpo vertebral colapsado para la técnica de aumentación en su uso previsto con cemento óseo de PMMA. Brinda una distribución homogénea y contenida del cemento, generando un soporte biomecánico estable para máxima funcionalidad y alivio rápido y duradero del dolor en pacientes con fracturas vertebrales dolorosas por compresión (según clasificación de Magerl de tipo A1, A2 y A3), fragilidad ósea generada por osteoporosis severa, lesiones traumáticas o patologías tumorales osteolíticas metastásicas y mieloma.\n\nDisponible en dos referencias codificadas por color: REF 50-7000 (Color Dorado, Ø 5.0 mm sin expandir, longitud 25 mm, altura total expandida 15.0 mm, canal pedicular mín. 6.1 mm) y REF 50-7001 (Color Azul, Ø 5.8 mm sin expandir, longitud 28 mm, altura total expandida 17.0 mm, canal pedicular mín. 6.4 mm).',
+    features: [
+      'Procedimiento mínimamente invasivo (MIS) con abordaje transpedicular guiado por fluoroscopía',
+      'Despliegue mecánico del implante completamente controlable, milimétrico y reversible',
+      'Mecanismo de expansión tridimensional (brazos a 150°, 105° y 105°) que restaura activamente la altura del cuerpo vertebral colapsado',
+      'Fabricado en aleación de titanio Ti-6Al-4V ELI (Extra Low Interstitial) de máxima biocompatibilidad y resistencia a la fatiga',
+      'Diseño con canulación interna patentada para técnica de aumentación gradual y segura con cemento óseo PMMA',
+      'Dos presentaciones codificadas por color: Dorado (Ø 5.0 mm / Altura 15 mm) y Azul (Ø 5.8 mm / Altura 17 mm)',
+      'Set completo de instrumental quirúrgico ergonómico en caja de esterilización (trocares, dilatadores, cánulas de trabajo, aplicadores y mangos en T)',
+      'Minimiza sustancialmente el riesgo de extravasación de cemento óseo hacia el canal raquídeo o plexos venosos'
+    ],
+    clinicalIndications: [
+      'Tratamiento de fracturas dolorosas por compresión según clasificación de Magerl (de tipo A1, A2 y A3)',
+      'Hundimiento y colapso de cuerpo vertebral en pacientes con fragilidad ósea por osteoporosis',
+      'Fracturas vertebrales por lesiones traumáticas sin disrupción del muro posterior',
+      'Patologías tumorales osteolíticas metastásicas o mieloma múltiple con inestabilidad focal',
+      'Segmento raquídeo aplicable: columna torácica y lumbar desde T6 hasta L5'
+    ],
+    technicalSpecs: {
+      material: 'Aleación de Titanio Grado Médico Ti-6Al-4V ELI (ASTM F136)',
+      adhesive: 'Fijación mecánica osteo-estructural asistida por Cemento Óseo PMMA',
+      permeability: 'Canulación interna axial para inyección controlada de cemento',
+      sterilization: 'Rayos Gamma / Óxido de Etileno (Implante en doble barrera estéril)',
+      shelfLife: '5 años desde fecha de esterilización',
+      latexFree: true,
+      hypoallergenic: true,
+      radiotransparent: false
+    },
+    applicationSteps: [
+      '1. Abordaje y toma pedicular: Punción transpedicular bajo visión radioscópica biplanar hasta alcanzar el tercio anterior del cuerpo vertebral.',
+      '2. Preparación del canal para la implantación: Introducción de aguja guía, dilatadores seriados y cánula de trabajo coaxial.',
+      '3. Implantación Vertres: Inserción del implante cerrado en la posición anatómica predeterminada.',
+      '4. Expansión tridimensional segura y progresiva: Accionamiento del mecanismo mecánico de despliegue para restaurar la altura vertebral y crear la cavidad.',
+      '5. Preparación e inyección de cemento óseo PMMA: Inyección a baja presión a través de la canulación interna para bañar y estabilizar el implante.',
+      '6. Liberación del Vertres: Desacople del instrumental aplicador tras la polimerización del cemento y retiro atraumático de cánulas.'
+    ],
+    removalProtocol: 'Dispositivo permanente osteo-integrado. El instrumental quirúrgico reutilizable se desmonta, lava con detergente enzimático neutro y autoclaviza a 134°C conforme a norma hospitalaria.',
+    certifications: [
+      'Certificación ISO 13485 (Sistemas de Gestión de Dispositivos Médicos)',
+      'Marcado de Conformidad CE (MaffHealth / Ossyn)',
+      'Fabricación Grado Médico Ti-6Al-4V ELI',
+      'En proceso de incorporación a Convenio Marco / Mercado Público'
+    ],
+    image: ver3ExpansionTechImg,
+    inStock: false,
+    featured: true,
+    badge: 'Próximamente',
+    hasVideo: true,
+    videoInfo: {
+      title: 'Vertres - Sistema de Expansión Tridimensional Intracorporal MIS',
+      subtitle: 'Video quirúrgico oficial y técnica de restauración anatómica de fracturas por compresión vertebral (VCF)',
+      duration: 'Video Oficial',
+      author: 'MaffHealth / Ossyn',
+      videoUrl: 'https://youtu.be/obF2R_95aLo',
+      chapters: [
+        {
+          time: '00:00 - 00:06',
+          seconds: 0,
+          title: 'Fase 1: Morfología & Expansión Tridimensional',
+          description: 'Estructura biomecánica en titanio Ti-6Al-4V ELI con trípode expansor retráctil (150º / 105º) y apertura axial controlada.',
+          image: ver3ExpansionTechImg
+        },
+        {
+          time: '00:06 - 00:12',
+          seconds: 6,
+          title: 'Fase 2: Instrumental y Acceso Transpedicular MIS',
+          description: 'Punción percutánea bajo escopía con aguja trocar ergonómica y cánula dilatadora coaxial hacia T6-L5 en bandejas de esterilización.',
+          image: ver3SurgicalBoxImg
+        },
+        {
+          time: '00:12 - 00:18',
+          seconds: 12,
+          title: 'Fase 3: Elevación Activa y Restauración Anatómica',
+          description: 'Despliegue milimétrico con mango graduado en T: restauración de altura vertebral y corrección de cifosis.',
+          image: ver3ExpansionRender
+        },
+        {
+          time: '00:18 - 00:24',
+          seconds: 18,
+          title: 'Fase 4: Control Fluoroscópico C-Arm y Cemento PMMA',
+          description: 'Inyección contenida de cemento óseo interbloqueando la jaula y consolidación de la vértebra.',
+          image: ver3FluoroscopyRender
+        }
+      ]
+    },
+    galleryImages: [
+      ver3ExpansionTechImg,
+      ver3CatalogSpecImg,
+      ver3SurgicalBoxImg,
+      ver3BrochureSheetRender,
+      ver3SurgicalTrayRealRender,
+      ver3ExpansionRender,
+      ver3ImplantRender,
+      ver3ProcedureRender
+    ],
+    availableFormats: [
+      {
+        format: 'Referencia 50-7000 (Color Dorado)',
+        inches: 'Ø 5.0 mm x L 25 mm',
+        boxUnits: 1,
+        targetArea: 'Vértebras Toracolumbares (T6 - L2) / Pedículos estándar',
+        clinicalUse: 'Diámetro sin expandir: 5.0 mm | Altura expandida: 15.0 mm | Canal pedicular mín: 6.1 mm',
+        technique: 'Abordaje MIS transpedicular unipedicular o bipedicular + Cemento PMMA',
+        badge: 'REF 50-7000 (Dorado)',
+        refCode: '50-7000',
+        image: ver3ExpansionTechImg
+      },
+      {
+        format: 'Referencia 50-7001 (Color Azul)',
+        inches: 'Ø 5.8 mm x L 28 mm',
+        boxUnits: 1,
+        targetArea: 'Vértebras Lumbares (L1 - L5) / Cuerpos vertebrales mayores',
+        clinicalUse: 'Diámetro sin expandir: 5.8 mm | Altura expandida: 17.0 mm | Canal pedicular mín: 6.4 mm',
+        technique: 'Abordaje MIS transpedicular + Expansión tridimensional 17 mm + Cemento PMMA',
+        badge: 'REF 50-7001 (Azul)',
+        refCode: '50-7001',
+        image: ver3CatalogSpecImg
+      }
+    ]
+  },
+  {
+    id: 'unomis-spine-system',
+    name: 'Sistema de Fijación Pedicular Posterior MISS Unomis®',
+    subtitle: 'Fijación Pedicular Mínimamente Invasiva con Trayectoria Cortical CBT y Percutánea en Aleación Ti-6Al-4V (MaffHealth / Ossyn)',
+    brand: 'Línea Columna MIS • Unomis® MISS',
+    category: 'spine_surgery',
+    dimensions: 'Tornillos Ø 5.0 a 7.0 mm (L 30-60 mm) | Barras Bullet Ø 5.5 mm | Poliaxialidad ±30°',
+    presentation: 'Sistema Completo de Implantes Estériles Ti-6Al-4V + Set Instrumental Multipropósito Autoclavable',
+    unitPerBox: 1,
+    masterBoxUnits: 1,
+    shortDescription: 'Sistema de concepto MIS (Mínimamente Invasivo) para fijación posterior del segmento raquídeo (T6-L5). Permite técnicas CBT (Trayectoria de Hueso Cortical) o Transpedicular tradicional, con incisión de tan solo 1.8 mm para 4 tornillos, 2 barras y 4 tuercas de cierre. Tornillos canulados y fenestrados con dos pasos de rosca diferentes para fijación mejorada en hueso cortical y esponjoso.',
+    description: 'El Sistema de Fijación Pedicular UNOMIS® de MaffHealth y Ossyn es una solución quirúrgica flexible de concepto MIS (Mínimamente Invasivo) para una óptima fijación posterior del segmento raquídeo entre T6 y L5. Permite al cirujano utilizarlo indistintamente en la Técnica CBT (Trayectoria de Hueso Cortical) o en la técnica Transpedicular percutánea.\n\nEn la Trayectoria Cortical (CBT) se incrementa significativamente la fijación debido al mayor contacto en la interface implante-hueso en la zona densa del arco posterior de la columna. El diseño especializado del tornillo Unomis cuenta con dos pasos de rosca diferentes: uno más fino para hueso cortical denso y uno más amplio para hueso esponjoso, maximizando la fuerza de fijación y el torque de inserción.\n\nSu abordaje mínimamente invasivo permite una incisión de apenas 1.8 mm para implantar 4 tornillos, 2 barras y 4 tuercas. Los tornillos cuentan con bajo perfil, cabeza con diseño en U, poliaxialidad de hasta ±30°, aletas extendidas con reducción integrada, canulación axial y fenestración distal para alambre guía flexible de aleación níquel-titanio (Nitinol). Las barras preconformadas de 5.5 mm incorporan punta tipo proyectil (bullet tip) para un deslizamiento subfascial suave, y los tornillos de cierre ofrecen rosca autorroscante doble anti-trasroscado.',
+    features: [
+      'Concepto MIS (Mínimamente Invasivo): permite incisión de tan solo 1.8 mm para implantar 4 tornillos, 2 barras y 4 tuercas',
+      'Diseño especial del tornillo para técnica Trayectoria de Hueso Cortical / CBT (Cortical Bone Trajectory) y Transpedicular (T6-L5)',
+      'Mayor contacto en la interfaz de hueso cortical en la zona densa del arco posterior de la columna vertebral',
+      'Dos pasos de rosca diferentes: uno más fino para hueso cortical denso y uno más amplio para hueso esponjoso',
+      'Material: Aleación de Titanio Grado Médico Ti-6Al-4V de máxima resistencia a la fatiga y biocompatibilidad',
+      'Bajo perfil anatómico con cabeza en diseño en U para evitar conflictos facetarios',
+      'Tornillos en diámetros Ø 5.0, 5.5, 6.0, 6.5 y 7.0 mm con longitudes de 30 mm a 60 mm',
+      'Canulados y fenestrados, autorroscantes para avance atraumático y seguro',
+      'Tornillo poliaxial con rango de angulación multidireccional de hasta ± 30°',
+      'Aletas extendidas con reducción integrada para descenso percutáneo directo de la barra sin torres voluminosas',
+      'Alambre guía flexible en aleación níquel y titanio (Nitinol) sin memoria ni efecto rebote',
+      'Barras pre-conformadas de Ø 5.5 mm con diseño MIS y punta tipo proyectil (bullet tip) para inserción subfascial suave',
+      'Tornillos de cierre autorroscante y doble rosca (Ref 40044005) para bloqueo confiable y rápido en un solo paso',
+      'Set Instrumental Multipropósito en caja rígida perforada autoclavable con 2 bandejas modulares de silicona'
+    ],
+    clinicalIndications: [
+      'Pacientes con osteoporosis y osteopenia con necesidad de anclaje óseo superior',
+      'Enfermedades degenerativas de un único nivel (espondilolistesis, inestabilidad raquídea)',
+      'Estenosis del canal multinivel lumbar y toracolumbar',
+      'Cirugías de revisión y rescate de instrumentaciones previas',
+      'Enfermedad del segmento adyacente post-artrodesis',
+      'Fijación complementaria en artrodesis intersomática (TLIF, PLIF) con abordaje de línea media MIS'
+    ],
+    technicalSpecs: {
+      material: 'Titanio Grado Médico Ti-6Al-4V (ASTM F136 / ISO 5832-3)',
+      adhesive: 'No aplica (Implante osteo-integrable permanente)',
+      permeability: 'Canulado y Fenestrado para aguja guía e inyección de cemento si se requiere',
+      sterilization: 'Implantes en empaque estéril por radiación Gamma / Instrumental Autoclavable a 134°C',
+      shelfLife: '5 años en empaque estéril indemne',
+      latexFree: true,
+      hypoallergenic: true,
+      radiotransparent: false
+    },
+    applicationSteps: [
+      '1. Planificación & Marcación: Identificación radioscópica biplanar de los pedículos y selección de técnica (CBT línea media o percutánea).',
+      '2. Punción Percutánea & Aguja Guía: Inserción del trocar ergonómico con mango en T y avance del alambre guía de aleación níquel-titanio (Nitinol).',
+      '3. Dilatación Coaxial & Preparación: Paso de dilatadores coaxiales seriados y macholado córtico-esponjoso guiado.',
+      '4. Inserción de Tornillos Unomis: Inserción del tornillo autorroscante fenestrado guiado por aleta de reducción con verificación visual clara.',
+      '5. Paso de Barra Bullet 5.5 mm: Deslizamiento subfascial guiado de la barra de punta proyectil a través de las aletas de reducción.',
+      '6. Reducción & Bloqueo en 1 Paso: Descenso activo de la barra en la cabeza poliaxial (±30°) y apriete definitivo del tornillo de cierre autorroscante y doble rosca.'
+    ],
+    removalProtocol: 'Implante permanente osteo-integrado. El set instrumental reutilizable se procesa en central de esterilización hospitalaria (lavado enzimático y autoclave a 134°C).',
+    certifications: [
+      'Certificación ISO 13485 (Sistemas de Gestión de Calidad en Dispositivos Médicos)',
+      'Marcado CE de Conformidad Médica Quirúrgica (MaffHealth / Ossyn)',
+      'Fabricación Grado Médico Ti-6Al-4V (ASTM F136 / ISO 5832-3)',
+      'En proceso de incorporación a Convenio Marco / Mercado Público'
+    ],
+    image: unomisBrochureSheetImg,
+    inStock: false,
+    featured: true,
+    badge: 'Próximamente',
+    hasVideo: true,
+    videoInfo: {
+      title: 'Sistema de Fijación UNOMIS® - Fijación Pedicular Posterior MISS & Técnica CBT',
+      subtitle: 'Video oficial de GENKIMED SpA y MaffHealth: abordaje percutáneo, técnica de trayectoria cortical (CBT) y set instrumental multipropósito.',
+      duration: 'Video Oficial',
+      author: 'GENKIMED / MaffHealth',
+      videoUrl: 'https://youtu.be/QdgECEaHqFI',
+      chapters: [
+        {
+          time: '00:00 - 00:30',
+          seconds: 0,
+          title: 'Fase 1: Trayectoria Cortical (CBT) vs Técnica Tradicional',
+          description: 'Comparación anatómica y ventajas biomecánicas del abordaje en línea media CBT para mayor anclaje en hueso cortical denso.',
+          image: unomisCbtSpineTechniqueImg
+        },
+        {
+          time: '00:30 - 01:00',
+          seconds: 30,
+          title: 'Fase 2: Punción Percutánea, Agujas Guía y Canulación Pedicular',
+          description: 'Inserción del trocar con mango en T, avance del alambre Kirschner de Nitinol y preparación con cánula coaxial.',
+          image: unomisTraySetImg
+        },
+        {
+          time: '01:00 - 01:45',
+          seconds: 60,
+          title: 'Fase 3: Tornillos Córtico-Esponjosos y Aletas de Reducción',
+          description: 'Colocación del tornillo autorroscante fenestrado (Ø 5.0-7.0 mm) con poliaxialidad ±30° y captura directa de la barra.',
+          image: unomisScrewReductionMacroImg
+        },
+        {
+          time: '01:45 - 02:30',
+          seconds: 105,
+          title: 'Fase 4: Paso de Barras Bullet 5.5 mm y Bloqueo en 1 Paso',
+          description: 'Inserción de la barra precurvada con punta proyectil y apriete del tornillo de cierre autorroscante de doble rosca.',
+          image: unomisRodsAndSetscrewsImg
+        }
+      ]
+    },
+    galleryImages: [
+      unomisBrochureSheetImg,
+      unomisScrewReductionMacroImg,
+      unomisScrewsCbtImg,
+      unomisRodsAndSetscrewsImg,
+      unomisTraySetImg,
+      unomisCbtSpineTechniqueImg,
+      unomisScrewImg,
+      unomisInstrumentImg,
+      unomisSpineImg,
+      unomisVideoThumbImg
+    ],
+    availableFormats: [
+      {
+        format: 'Ficha Técnica Oficial Unomis® MISS (MaffHealth / Ossyn)',
+        inches: 'Catálogo de Especificaciones y Tabla de Referencias',
+        boxUnits: 1,
+        targetArea: 'Información Técnica Oficial para Cirujanos de Columna',
+        clinicalUse: 'Brochure clínico oficial que detalla la biomecánica CBT, dos pasos de rosca cortical/esponjosa, tabla de referencias completas y códigos de producto.',
+        technique: 'Documento técnico oficial con tablas dimensionales completas',
+        badge: 'Folleto Oficial',
+        refCode: 'CAT-UNOMIS-2026',
+        image: unomisBrochureSheetImg
+      },
+      {
+        format: 'Tornillos UNOMIS Ø 5.0 mm (L: 30, 35, 40, 45 mm)',
+        inches: 'Ø 5.0 mm x L 30 - 45 mm • Poliaxial ±30°',
+        boxUnits: 1,
+        targetArea: 'Pedículos Toracolumbares y Vértebras Lumbares Altas',
+        clinicalUse: 'Tornillos córtico-esponjosos autorroscantes, canulados y fenestrados con aletas de reducción integrada y diseño de cabeza en U de bajo perfil.',
+        technique: 'Técnica CBT o abordaje percutáneo transpedicular',
+        badge: 'REF 40315030 - 45',
+        refCode: '40315030-45',
+        image: unomisScrewReductionMacroImg
+      },
+      {
+        format: 'Tornillos UNOMIS Ø 5.5 mm (L: 30, 35, 40, 45, 50 mm)',
+        inches: 'Ø 5.5 mm x L 30 - 50 mm • Poliaxial ±30°',
+        boxUnits: 1,
+        targetArea: 'Segmento Lumbar L1 - L4 en Técnica CBT / Transpedicular',
+        clinicalUse: 'Calibre más utilizado en técnica CBT. Dos pasos de rosca: fino en cortical posterior y amplio en esponjosa para máximo pull-out.',
+        technique: 'Abordaje de línea media con incisión de 1.8 mm',
+        badge: 'REF 40315530 - 50',
+        refCode: '40315530-50',
+        image: unomisScrewReductionMacroImg
+      },
+      {
+        format: 'Tornillos UNOMIS Ø 6.0 mm (L: 30, 35, 40, 45, 50, 55 mm)',
+        inches: 'Ø 6.0 mm x L 30 - 55 mm • Poliaxial ±30°',
+        boxUnits: 1,
+        targetArea: 'Vértebras Lumbares L3 - L5 y Cirugías de Revisión',
+        clinicalUse: 'Mayor diámetro para anclaje superior en hueso osteoporótico y vértebras lumbares bajas.',
+        technique: 'Técnica CBT o fijación percutánea posterior',
+        badge: 'REF 40316030 - 55',
+        refCode: '40316030-55',
+        image: unomisScrewsCbtImg
+      },
+      {
+        format: 'Tornillos UNOMIS Ø 6.5 & Ø 7.0 mm (L: 30 a 60 mm)',
+        inches: 'Ø 6.5 & 7.0 mm x L 30 - 60 mm • Poliaxial ±30°',
+        boxUnits: 1,
+        targetArea: 'Vértebra L5, Sacro S1 y Casos de Revisión / Osteoporosis Severa',
+        clinicalUse: 'Calibres mayores para máxima estabilidad y torque de fijación en hueso de baja densidad.',
+        technique: 'Fijación lumbosacra de alta resistencia biomecánica',
+        badge: 'REF 40316530 - 40317050',
+        refCode: '403165-70',
+        image: unomisScrewsCbtImg
+      },
+      {
+        format: 'Barras Predobladas Ø 5.5 mm Punta Proyectil (L: 40 a 100 mm)',
+        inches: 'Ø 5.5 mm x L 40, 45, 50, 60, 70, 80, 90, 100 mm',
+        boxUnits: 1,
+        targetArea: 'Fijación Uninivel y Multinivel Lumbar',
+        clinicalUse: 'Curvatura lordótica preformada y punta tipo proyectil (bullet tip) con extremo ranurado para inserción subfascial percutánea suave.',
+        technique: 'Inserción subfascial guiada a través de aletas de reducción',
+        badge: 'REF 41003040 - 100',
+        refCode: '41003040-100',
+        image: unomisRodsAndSetscrewsImg
+      },
+      {
+        format: 'Barras Rectas Ø 5.5 mm Punta Cónica (L: 110 a 160 mm)',
+        inches: 'Ø 5.5 mm x L 110, 120, 130, 140, 150, 160 mm',
+        boxUnits: 1,
+        targetArea: 'Construcciones Multinivel y Corrección de Deformidades',
+        clinicalUse: 'Barras rectas de titanio con punta cónica y extremo ranurado para construcciones multinivel.',
+        technique: 'Paso percutáneo o mini-open',
+        badge: 'REF 410006110 - 160',
+        refCode: '410006110-160',
+        image: unomisRodsAndSetscrewsImg
+      },
+      {
+        format: 'Tornillos de Cierre Autorroscante y Doble Rosca (Set Screws)',
+        inches: 'Rosca Métrica Especial con Huella Hexalobular Anti-trasroscado',
+        boxUnits: 1,
+        targetArea: 'Bloqueo Definitivo de Barra en Tulipán Poliaxial',
+        clinicalUse: 'Bloqueo seguro en un solo paso con rosca inversa y doble paso que evita el trasroscado accidental.',
+        technique: 'Apriete final controlado con limitador de torque dinamométrico',
+        badge: 'REF 40044005',
+        refCode: '40044005',
+        image: unomisRodsAndSetscrewsImg
+      },
+      {
+        format: 'Set Instrumental Multipropósito Autoclavable Unomis®',
+        inches: 'Caja Contenedor Rígido + 2 Bandejas Modulares de Silicona',
+        boxUnits: 1,
+        targetArea: 'Pabellón Quirúrgico de Columna / Instrumental de Cirujano',
+        clinicalUse: 'Set completo: mangos en T ergonómicos verde y azul, destornilladores canulados, trocar, dilatadores coaxiales, alambres guía Nitinol y llave dinamométrica.',
+        technique: 'Esterilización en autoclave a 134°C. Instrumental ergonómico y de precisión',
+        badge: 'Set Instrumental',
+        refCode: 'UNOMIS-SET',
+        image: unomisTraySetImg
+      }
+    ]
+  },
+  {
+    id: 'openped-spine-system',
+    name: 'Sistema de Fijación Pedicular Posterior OpenPed®',
+    subtitle: 'Sistema de tornillos poliaxiales de titanio Ti-6Al-4V con aleta de reducción, canulación para aumentación PMMA, barras 5.5 mm y conector transverso Cross Link',
+    brand: 'OpenPed®',
+    category: 'spine_surgery',
+    dimensions: 'Tornillos Ø 4.5 - 6.0 mm (L: 30 - 50 mm) • Barras Ø 5.5 mm • Cross Link 40-90 mm',
+    presentation: 'Sistema Quirúrgico Modular de Columna • Implantes de Titanio Grado Médico + Set Instrumental Inteligente',
+    unitPerBox: 1,
+    masterBoxUnits: 1,
+    shortDescription: 'Sistema de fijación pedicular posterior de aleación Ti-6Al-4V con tornillos poliaxiales (±30°) de aleta larga de reducción, versiones canuladas con ranura distal para aumentación con PMMA y no canuladas, barras rectas de Ø 5.5 mm y conector transverso Cross Link telescópico.',
+    description: 'El Sistema de Fijación Pedicular Posterior de Columna OpenPed® (MaffHealth / Ossyn) constituye una plataforma quirúrgica integral y de alta resistencia biomecánica, desarrollada específicamente para procedimientos de artrodesis y estabilización torácica, lumbar y sacra en pacientes esqueléticamente maduros.\n\nConstruido en aleación de Titanio Grado Médico (Ti-6Al-4V según normativas internacionales ASTM F136 e ISO 5832-3), el sistema incorpora tornillos pediculares autorroscantes de perfil optimizado con aletas integradas de reducción, concebidos para facilitar el descenso progresivo y controlado de la barra sin forzar la interfase hueso-implante en espondilolistesis y fracturas complejas.\n\nLa versión canulada dispone de una fenestración lateral distal especialmente diseñada para la inyección segura y controlada de cemento óseo biocompatible (PMMA), brindando un anclaje superior y minimizando el riesgo de aflojamiento o pull-out en pacientes con densidad mineral ósea disminuida (osteopenia u osteoporosis severa). Su poliaxialidad multidireccional de hasta ± 30° agiliza la captura de las barras rectas de Ø 5.5 mm (disponibles en longitudes de 60 a 400 mm).\n\nPara maximizar la estabilidad torsional y rigidez transversal de montajes uni y multinivel, el sistema incorpora conectores transversos preensamblados Cross Link en dos rangos telescópicos (40–60 mm y 60–90 mm) junto a tornillos de cierre autorroscantes de rosca inversa y doble paso que suprimen el trasroscado accidental.',
+    features: [
+      'Aleación de Titanio Grado Médico Ti-6Al-4V de máxima resistencia a fatiga y biocompatibilidad (ASTM F136 / ISO 5832-3).',
+      'Tornillos poliaxiales autorroscantes con aletas extendidas de reducción para reducción anatómica progresiva de la barra.',
+      'Versión Canulada con fenestración distal para inyección controlada de cemento óseo PMMA (Aumentación en osteoporosis).',
+      'Versión No Canulada (Sólida) de alto torque de inserción para hueso cortical y esponjoso estándar.',
+      'Doble rosca con paso fino proximal para anclaje cortical superior y paso amplio distal para soporte esponjoso.',
+      'Cabezal poliaxial esférico con ángulo de articulación multidireccional de hasta ± 30° para fácil alineación con la barra.',
+      'Conectores transversos Cross Link preensamblados telescópicos en 40~60 mm (REF 40050000) y 60~90 mm (REF 40057000).',
+      'Barras rectas de Titanio Ø 5.5 mm en longitudes estándar (60 a 120 mm) y extendidas (200 a 400 mm) para deformidades y trauma.',
+      'Tornillo de cierre (Set Screw) con rosca métrica especial y huella hexagonal/torx anti-trasroscado (REF 40044005).',
+      'Set instrumental inteligente autoclavable con mango dinamométrico regulado a 8 N·m, destornilladores canulados y torre reductora.'
+    ],
+    clinicalIndications: [
+      'Espondilolistesis ístmica, degenerativa o traumática que requiera reducción progresiva de la traslación vertebral.',
+      'Estenosis del canal lumbar con inestabilidad biomecánica o espondilosis sintomática multinivel.',
+      'Fracturas y luxaciones toracolumbares y lumbosacras con compromiso de muro medio o posterior.',
+      'Deformidades del raquis (escoliosis del adulto, cifosis degenerativa y desbalance sagital).',
+      'Cirugía de revisión por falla o aflojamiento de instrumentaciones previas (re-operaciones).',
+      'Pseudoartrosis y fallas de fusión intersomática previa en segmento toracolumbar.',
+      'Inestabilidades post-descompresión, laminectomía extensa o discectomía amplia.',
+      'Pacientes con osteoporosis u osteopenia documentada candidatos a aumentación cementada con PMMA mediante tornillo canulado.'
+    ],
+    technicalSpecs: {
+      material: 'Aleación de Titanio Ti-6Al-4V Grado Médico (ASTM F136 / ISO 5832-3)',
+      adhesive: 'No aplica (Implante osteointegrable de fijación interna rígida)',
+      permeability: 'Implante biocompatible, no magnético, químicamente inerte y compatible con RMN postquirúrgica',
+      sterilization: 'Implantes provistos estériles o no estériles en empaque individual / Instrumental autoclavable a 134°C',
+      shelfLife: '5 años para implantes en empaque estéril indemnne',
+      latexFree: true,
+      hypoallergenic: true,
+      radiotransparent: false
+    },
+    applicationSteps: [
+      'Posicionamiento del paciente en decúbito prono sobre marco radiotransparente y comprobación radioscópica AP y Lateral.',
+      'Abordaje posterior estándar o mini-open hasta exponer los puntos de entrada anatómicos pediculares.',
+      'Apertura del punto de entrada cortical con punzón o gubia, seguida del sondaje pedicular con palpador táctil.',
+      'En pacientes con osteopenia, inserción de tornillo pedicular canulado de reducción OpenPed® guiado sobre K-wire.',
+      'Para casos que requieran aumentación, conexión de cánula dosificadora de cemento e inyección lenta de PMMA bajo fluoroscopía continua.',
+      'Modelado sagital de la barra recta Ø 5.5 mm adaptando la lordosis lumbar anatómica e inserción en el canal en U.',
+      'Descenso gradual de la barra mediante tornillo de cierre a través de las aletas de reducción hasta el asiento definitivo.',
+      'Ajuste final del conector transverso Cross Link con torquímetro dinamométrico calibrado y separación limpia de las aletas de reducción.'
+    ],
+    removalProtocol: 'Dispositivo osteointegrado permanente. Retiro indicado únicamente bajo criterio clínico calificado (infección profunda tardía, reintervención o indicación expresa del especialista). Instrumental quirúrgico reutilizable procesable en central de esterilización hospitalaria.',
+    certifications: [
+      'Certificación ISO 13485 (Sistemas de Gestión de Calidad para Dispositivos Médicos)',
+      'Marcado CE de Conformidad Médica para Implantes Quirúrgicos (MaffHealth / Ossyn)',
+      'Aleación Ti-6Al-4V según normas ASTM F136 e ISO 5832-3',
+      'Cumplimiento de Estándar de Biocompatibilidad ISO 10993',
+      'En proceso de homologación técnica para Mercado Público / Cenabast'
+    ],
+    image: openpedScrewSystemImg,
+    inStock: false,
+    featured: true,
+    badge: 'Próximamente',
+    hasVideo: false,
+    galleryImages: [
+      openpedScrewSystemImg,
+      openpedSpineConstructImg,
+      openpedReductionScrewImg,
+      openpedCrosslinkMacroImg,
+      openpedSurgicalTrayImg
+    ],
+    availableFormats: [
+      {
+        format: 'Tornillo Canulado con Aleta de Reducción Ø 4.5 mm (L: 30, 35, 40 mm)',
+        inches: 'Ø 4.5 mm x Longitudes 30, 35, 40 mm • Poliaxial ±30° • Ranura Aumentación PMMA',
+        boxUnits: 1,
+        targetArea: 'Pedículos Torácicos Medios e Inferiores / Columna Pediátrica y del Adulto',
+        clinicalUse: 'Tornillo canulado autorroscante con aleta larga separable y orificio para K-wire o cemento PMMA.',
+        technique: 'Inserción transpedicular con aleta reductora y opción de cementación distal',
+        badge: 'REF 40184530 - 40',
+        refCode: '40184530-40',
+        image: openpedReductionScrewImg
+      },
+      {
+        format: 'Tornillo Canulado con Aleta de Reducción Ø 5.0 mm (L: 30, 35, 40, 45, 50 mm)',
+        inches: 'Ø 5.0 mm x Longitudes 30, 35, 40, 45, 50 mm • Poliaxial ±30° • Con Aumentación',
+        boxUnits: 1,
+        targetArea: 'Vértebras Torácicas Bajas (T9-T12) y Lumbares Altas (L1-L2)',
+        clinicalUse: 'Calibre intermedio de alta versatilidad clínica para osteosíntesis toracolumbar y fracturas por compresión.',
+        technique: 'Reducción progresiva de la barra mediante aleta extendida y fijación fenestrada',
+        badge: 'REF 40185030 - 50',
+        refCode: '40185030-50',
+        image: openpedReductionScrewImg
+      },
+      {
+        format: 'Tornillo Canulado con Aleta de Reducción Ø 6.0 mm (L: 35, 40, 45, 50 mm)',
+        inches: 'Ø 6.0 mm x Longitudes 35, 40, 45, 50 mm • Poliaxial ±30° • Aumentable PMMA',
+        boxUnits: 1,
+        targetArea: 'Vértebras Lumbares Medias y Bajas (L3-L5) y Promontorio Sacro S1',
+        clinicalUse: 'Máximo diámetro y agarre en cuerpos vertebrales de gran volumen. Ranura para cementación en hueso osteopénico.',
+        technique: 'Anclaje de alta resistencia para espondilolistesis y fusiones lumbosacras',
+        badge: 'REF 40186035 - 50',
+        refCode: '40186035-50',
+        image: openpedReductionScrewImg
+      },
+      {
+        format: 'Tornillo Sólido (No Canulado) con Aleta de Reducción Ø 4.5 mm (L: 30, 35, 40 mm)',
+        inches: 'Ø 4.5 mm x Longitudes 30, 35, 40 mm • Titanio Sólido Ti-6Al-4V • Poliaxial ±30°',
+        boxUnits: 1,
+        targetArea: 'Raquis Torácico y Vértebras con Morfología Estrecha',
+        clinicalUse: 'Estructura sólida maciza de titanio para soporte estricto sin necesidad de paso de alambre guía o cemento.',
+        technique: 'Inserción directa previa preparación de trayecto con punzón y macho',
+        badge: 'REF 40174530 - 40',
+        refCode: '40174530-40',
+        image: openpedScrewSystemImg
+      },
+      {
+        format: 'Tornillo Sólido (No Canulado) con Aleta de Reducción Ø 5.0 mm (L: 30, 35, 40, 45, 50 mm)',
+        inches: 'Ø 5.0 mm x Longitudes 30, 35, 40, 45, 50 mm • Titanio Sólido • Aleta Desmontable',
+        boxUnits: 1,
+        targetArea: 'Transición Toracolumbar T11 - L2 y Deformidades del Adulto',
+        clinicalUse: 'Excelente rigidez torsional y resistencia a fuerzas de cizallamiento con aletas para reducción de deformidad.',
+        technique: 'Guía de barra asistida por aletas largas con ruptura limpia posterior',
+        badge: 'REF 40175030 - 50',
+        refCode: '40175030-50',
+        image: openpedScrewSystemImg
+      },
+      {
+        format: 'Tornillo Sólido (No Canulado) con Aleta de Reducción Ø 6.0 mm (L: 35, 40, 45, 50 mm)',
+        inches: 'Ø 6.0 mm x Longitudes 35, 40, 45, 50 mm • Titanio Sólido • Poliaxial ±30°',
+        boxUnits: 1,
+        targetArea: 'Vértebras Lumbares y Fijación Sacra en Hueso de Buena Densidad',
+        clinicalUse: 'Diseñado para pacientes sin necesidad de aumentación que requieran alta solidez en artrodesis lumbar.',
+        technique: 'Fijación transpedicular rígida de alta estabilidad biomecánica',
+        badge: 'REF 40176035 - 50',
+        refCode: '40176035-50',
+        image: openpedScrewSystemImg
+      },
+      {
+        format: 'Conector Transverso Cross Link Preensamblado (Rango 40 ~ 60 mm)',
+        inches: 'Extensión Telescópica 40 a 60 mm • Compatible Barras Ø 5.5 mm',
+        boxUnits: 1,
+        targetArea: 'Puente Transversal en Construcciones Torácicas y Lumbares Cortas',
+        clinicalUse: 'Conector preensamblado que une rígidamente ambas barras longitudinales para evitar rotación y aumentar la rigidez torsional.',
+        technique: 'Bloqueo rápido con prisionero central y mordazas con tornillos de apriete',
+        badge: 'REF 40050000',
+        refCode: '40050000',
+        image: openpedCrosslinkMacroImg
+      },
+      {
+        format: 'Conector Transverso Cross Link Preensamblado (Rango 60 ~ 90 mm)',
+        inches: 'Extensión Telescópica 60 a 90 mm • Compatible Barras Ø 5.5 mm',
+        boxUnits: 1,
+        targetArea: 'Puente Transversal en Raquis Lumbar Ancho y Zona Lumbosacra',
+        clinicalUse: 'Diseño extendido para fijaciones amplias o cuando la separación interpendicular es superior a 60 mm.',
+        technique: 'Fijación transversal en cuadrilátero biomecánico',
+        badge: 'REF 40057000',
+        refCode: '40057000',
+        image: openpedCrosslinkMacroImg
+      },
+      {
+        format: 'Barras Rectas de Titanio Ø 5.5 mm (L: 60, 80, 100, 120 mm)',
+        inches: 'Ø 5.5 mm x Longitudes 60, 80, 100, 120 mm • Ti-6Al-4V',
+        boxUnits: 1,
+        targetArea: 'Fijaciones Uninivel y Binivel Lumbar y Torácico',
+        clinicalUse: 'Barras cilíndricas de titanio grado médico con acabado pulido, moldeables con curvador in-situ o bender de mesa.',
+        technique: 'Fijación longitudinal sagital con perfiles de lordosis anatómica',
+        badge: 'REF 40047060 - 120',
+        refCode: '40047060-120',
+        image: openpedCrosslinkMacroImg
+      },
+      {
+        format: 'Barras Rectas de Titanio Ø 5.5 mm (L: 200, 250, 300, 350, 400 mm)',
+        inches: 'Ø 5.5 mm x Longitudes 200, 250, 300, 350, 400 mm • Construcción Larga',
+        boxUnits: 1,
+        targetArea: 'Construcciones Multinivel, Escoliosis, Cifosis y Trauma Extenso',
+        clinicalUse: 'Barras de gran longitud para corrección de deformidades tridimensionales del raquis.',
+        technique: 'Corrección secuencial de deformidad con moldeado multiaxial',
+        badge: 'REF 40040200 - 400',
+        refCode: '40040200-400',
+        image: openpedCrosslinkMacroImg
+      },
+      {
+        format: 'Tornillo de Cierre Autorroscante (Set Screw OpenPed®)',
+        inches: 'Rosca Inversa Métrica Especial y Huella Hexalobular Anti-splay',
+        boxUnits: 1,
+        targetArea: 'Bloqueo Definitivo de Barra en Tulipán Poliaxial de Reducción',
+        clinicalUse: 'Bloqueo seguro que previene la apertura de los brazos del cabezal y garantiza compresión uniforme sobre la barra.',
+        technique: 'Apriete final con limitador de torque dinamométrico a 8 N·m',
+        badge: 'REF 40044005',
+        refCode: '40044005',
+        image: openpedReductionScrewImg
+      },
+      {
+        format: 'Set Instrumental Quirúrgico Modular e Inteligente OpenPed®',
+        inches: 'Caja Contenedor de Aluminio Anodizado + Bandejas con Silicona Perforada',
+        boxUnits: 1,
+        targetArea: 'Pabellón Quirúrgico de Columna / Instrumental de Cirujano',
+        clinicalUse: 'Set completo con torquímetro dinamométrico calibrado, destornilladores canulados, torre reductora, sonda pedicular, macho de rosca y modelador de barras.',
+        technique: 'Esterilización en autoclave a 134°C. Instrumental ergonómico de alta precisión',
+        badge: 'Set Instrumental',
+        refCode: 'OPENPED-SET',
+        image: openpedSurgicalTrayImg
+      }
+    ]
   }
 ];
 
 export const CLINICAL_RECOMMENDATIONS: ClinicalProcedureRecommendation[] = [
+  {
+    id: 'rec-openped-spine',
+    procedureName: 'Fijación Pedicular Posterior de Columna con Tornillos de Reducción y Aumentación (OpenPed®)',
+    specialty: 'Cirugía de Columna / Traumatología Raquídea / Neurocirugía',
+    recommendedProductIds: ['openped-spine-system'],
+    clinicalRationale: 'El sistema OpenPed® proporciona una solución versátil y robusta para la estabilización toracolumbar y lumbosacra en pacientes esqueléticamente maduros. Sus tornillos con aletas de reducción facilitan el descenso atraumático de la barra en espondilolistesis y fracturas, mientras que la canulación con fenestraciones distales permite aumentación con cemento PMMA en pacientes con calidad ósea comprometida. El conector transverso Cross Link confiere máxima rigidez torsional en montajes uni y multinivel.',
+    bestPracticeTip: 'En pacientes con osteopenia u osteoporosis, utilizar la versión canulada de OpenPed® con inyección de cemento PMMA de viscosidad media-alta bajo control radioscópico continuo para prevenir fugas y asegurar un anclaje óptimo.'
+  },
+  {
+    id: 'rec-unomis-cbt-spine',
+    procedureName: 'Fijación Pedicular Posterior Mínimamente Invasiva MISS (CBT y Percutánea)',
+    specialty: 'Cirugía de Columna / Neurocirugía / Traumatología / Pabellón Central',
+    recommendedProductIds: ['unomis-spine-system'],
+    clinicalRationale: 'El sistema Unomis® permite estabilización pedicular posterior con abordaje en línea media mediante técnica CBT (Trayectoria Cortical), maximizando el contacto con hueso cortical de alta densidad en pacientes osteopénicos o con cirugías previas, complementado con tornillos de reducción integrada y barras bullet de 5.5 mm.',
+    bestPracticeTip: 'Aprovechar las aletas con agujas guías patentadas para verificar bajo radioscopía la correcta orientación transpedicular sin generar sombra ni interferencia en el campo quirúrgico.'
+  },
+  {
+    id: 'rec-vertebral-fracture',
+    procedureName: 'Restauración de Fracturas Vertebrales y Cifoplastia MIS (T6-L5)',
+    specialty: 'Traumatología de Columna / Neurocirugía / Pabellón de Especialidades',
+    recommendedProductIds: ['ver3-vertres-mis'],
+    clinicalRationale: 'El sistema Ver3® Vertres restaura mecánicamente la altura del cuerpo vertebral mediante expansión tridimensional controlable de titanio Ti-6Al-4V ELI, creando una cavidad confinada que optimiza la distribución de cemento óseo PMMA y alivia el dolor de inmediato.',
+    bestPracticeTip: 'Comprobar la indemnidad del muro posterior mediante TC o radioscopía previa para prevenir extravasación del cemento hacia el canal raquídeo.'
+  },
   {
     id: 'rec-respiratory-suction',
     procedureName: 'Aspiración de Secreciones Traqueales / Manejo de Vía Aérea',

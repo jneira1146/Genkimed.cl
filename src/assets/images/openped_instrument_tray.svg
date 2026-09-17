@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="itBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+
+    <linearGradient id="itMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="30%" stop-color="#f8fafc" />
+      <stop offset="70%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+
+    <linearGradient id="itBlueSilicone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+
+    <linearGradient id="itPurpleHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a154b" />
+      <stop offset="100%" stop-color="#6b21a8" />
+    </linearGradient>
+
+    <filter id="itShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <rect width="1000" height="750" fill="url(#itBg)" />
+
+  <g transform="translate(50, 40)">
+    <rect x="0" y="0" width="160" height="28" rx="6" fill="#4a154b" />
+    <text x="80" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">
+      SET INSTRUMENTAL
+    </text>
+    <text x="0" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="900" fill="#0f172a">
+      Caja de Cirugía e Instrumental Inteligente OpenPed®
+    </text>
+    <text x="0" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#64748b">
+      Contenedor Quirúrgico Autoclavable a 134°C con Módulos de Precisión y Mangos Ergonómicos
+    </text>
+  </g>
+
+  <!-- Surgical Tray Container -->
+  <g transform="translate(80, 150)">
+    <!-- Container outer rim -->
+    <rect x="0" y="0" width="840" height="520" rx="20" fill="#1e293b" stroke="#334155" stroke-width="4" filter="url(#itShadow)" />
+    <!-- Silicone Blue Perforated Mat -->
+    <rect x="20" y="20" width="800" height="480" rx="14" fill="url(#itBlueSilicone)" />
+
+    <!-- Grid of perforated autoclave holes -->
+    <g opacity="0.25" fill="#0c4a6e">
+      <circle cx="50" cy="50" r="4" /><circle cx="80" cy="50" r="4" /><circle cx="110" cy="50" r="4" /><circle cx="140" cy="50" r="4" />
+      <circle cx="170" cy="50" r="4" /><circle cx="200" cy="50" r="4" /><circle cx="230" cy="50" r="4" /><circle cx="260" cy="50" r="4" />
+      <circle cx="50" cy="80" r="4" /><circle cx="80" cy="80" r="4" /><circle cx="110" cy="80" r="4" /><circle cx="140" cy="80" r="4" />
+    </g>
+
+    <!-- Instruments Array inside tray -->
+    <!-- 1. Torque Wrench Handle (Dinamométrico) -->
+    <g transform="translate(60, 60)">
+      <!-- Ergonomic T-handle -->
+      <rect x="0" y="25" width="160" height="28" rx="14" fill="#0f172a" stroke="#cbd5e1" stroke-width="2" />
+      <rect x="15" y="30" width="130" height="18" rx="9" fill="#f97316" />
+      <!-- Shaft -->
+      <rect x="70" y="53" width="20" height="360" rx="6" fill="url(#itMetal)" stroke="#334155" stroke-width="1.5" />
+      <!-- Torque indicator dial -->
+      <circle cx="80" cy="110" r="22" fill="#0f172a" stroke="#fde047" stroke-width="2" />
+      <text x="80" y="114" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="900" fill="#fde047" text-anchor="middle">8.0 N·m</text>
+      <!-- Tip socket -->
+      <rect x="74" y="413" width="12" height="25" rx="3" fill="#334155" />
+      <text x="80" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">Torquímetro</text>
+    </g>
+
+    <!-- 2. Cannulated Screwdriver (Destornillador Canulado) -->
+    <g transform="translate(240, 60)">
+      <rect x="0" y="25" width="160" height="28" rx="14" fill="#0f172a" stroke="#cbd5e1" stroke-width="2" />
+      <rect x="15" y="30" width="130" height="18" rx="9" fill="#22c55e" />
+      <rect x="72" y="53" width="16" height="360" rx="5" fill="url(#itMetal)" stroke="#334155" stroke-width="1.5" />
+      <!-- Central lumen cannula hole -->
+      <line x1="80" y1="53" x2="80" y2="430" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3,3" />
+      <!-- Hexalobe Torx Tip -->
+      <polygon points="76,413 84,413 82,430 78,430" fill="#0f172a" />
+      <text x="80" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">Destornillador</text>
+    </g>
+
+    <!-- 3. Reduction Tower / Tube (Torre Reductora) -->
+    <g transform="translate(420, 75)">
+      <rect x="10" y="10" width="45" height="340" rx="8" fill="url(#itMetal)" stroke="#334155" stroke-width="2" />
+      <rect x="18" y="30" width="29" height="280" rx="4" fill="#0f172a" opacity="0.3" />
+      <text x="32" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">Torre de Reducción</text>
+    </g>
+
+    <!-- 4. Pedicle Probe & Tap (Sonda y Macho de Rosca) -->
+    <g transform="translate(520, 75)">
+      <!-- Ball tip probe -->
+      <rect x="25" y="10" width="10" height="340" rx="5" fill="url(#itMetal)" stroke="#334155" stroke-width="1" />
+      <circle cx="30" cy="350" r="7" fill="#fde047" stroke="#78350f" stroke-width="1.5" />
+      <text x="30" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">Sonda Pedicular</text>
+    </g>
+
+    <!-- 5. In-situ Rod Bender (Modelador de Barra) -->
+    <g transform="translate(620, 80)">
+      <!-- French rod bender arms -->
+      <path d="M20 20 L70 120 L70 300 M120 20 L70 120 L70 300" stroke="#cbd5e1" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="70" cy="120" r="18" fill="#f97316" stroke="#0f172a" stroke-width="2" />
+      <text x="70" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">Doblador de Barras</text>
+    </g>
+
+    <!-- Badge info on bottom right -->
+    <g transform="translate(480, 430)">
+      <rect x="0" y="0" width="310" height="40" rx="10" fill="#0f172a" opacity="0.9" stroke="#38bdf8" stroke-width="1" />
+      <text x="155" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" text-anchor="middle">
+        REF OPENPED-SET • MaffHealth / Ossyn
+      </text>
+    </g>
+  </g>
+</svg>

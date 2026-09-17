@@ -1,0 +1,344 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+
+    <linearGradient id="titaniumBlue" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="40%" stop-color="#0284c7" />
+      <stop offset="70%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#0c4a6e" />
+    </linearGradient>
+
+    <linearGradient id="titaniumGold" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="35%" stop-color="#eab308" />
+      <stop offset="70%" stop-color="#ca8a04" />
+      <stop offset="100%" stop-color="#854d0e" />
+    </linearGradient>
+
+    <linearGradient id="boneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f1f5f9" />
+      <stop offset="60%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+
+    <linearGradient id="pmmaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+
+    <linearGradient id="accentBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#334155" stroke-width="0.75" opacity="0.35" />
+    </pattern>
+  </defs>
+
+  <!-- Background with Grid -->
+  <rect width="1000" height="700" fill="url(#bgGrad)" />
+  <rect width="1000" height="700" fill="url(#gridPattern)" />
+
+  <!-- Ambient lights -->
+  <circle cx="280" cy="300" r="180" fill="#0284c7" opacity="0.12" filter="url(#softGlow)" />
+  <circle cx="750" cy="320" r="160" fill="#eab308" opacity="0.08" filter="url(#softGlow)" />
+
+  <!-- HEADER BAR -->
+  <g transform="translate(40, 36)">
+    <!-- Brand Title -->
+    <text x="0" y="24" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="22" letter-spacing="0.5">
+      Sistema MIS para Restauración de Fracturas Vertebrales y Aumentación
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="46" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="13">
+      Implante de Titanio Ti-6Al-4V ELI con Expansión Tridimensional Intracorporal (T6-L5) • Procedimiento MIS
+    </text>
+
+    <!-- Partner & Proximamente Badges -->
+    <g transform="translate(740, 0)">
+      <!-- Próximamente Badge -->
+      <rect x="0" y="2" width="180" height="34" rx="8" fill="url(#accentBadge)" filter="url(#softGlow)" />
+      <text x="90" y="24" fill="#090d16" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="13" text-anchor="middle" letter-spacing="1">
+        ★ PRÓXIMAMENTE
+      </text>
+    </g>
+  </g>
+
+  <!-- TOP RIGHT BRAND LOGO REPRODUCTION -->
+  <g transform="translate(760, 95)">
+    <!-- MaffHealth ribbon-like symbol -->
+    <path d="M 16 22 C 8 12 24 0 34 8 C 42 15 36 28 46 36 C 54 42 66 32 58 20" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.9" />
+    <path d="M 34 8 C 44 0 60 12 52 24 C 44 32 50 44 40 50 C 30 54 20 44 26 34" stroke="#0284c7" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.9" />
+    <text x="70" y="32" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="20">
+      Maff<tspan fill="#38bdf8">Health</tspan>
+    </text>
+    <text x="70" y="46" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="10" letter-spacing="0.5">
+      DISTRIBUCIÓN OFICIAL GENKIMED
+    </text>
+  </g>
+
+  <!-- LOGO Ver3 VERTRES -->
+  <g transform="translate(50, 105)">
+    <!-- Logo Icon: Hexagon with 3 dots -->
+    <rect x="0" y="0" width="46" height="46" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="23" cy="16" r="4" fill="#f59e0b" />
+    <circle cx="16" cy="29" r="4" fill="#38bdf8" />
+    <circle cx="30" cy="29" r="4" fill="#38bdf8" />
+    
+    <text x="56" y="28" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28">
+      Ver<tspan fill="#f59e0b">3</tspan>
+    </text>
+    <text x="57" y="42" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="11" letter-spacing="2">
+      VERTRES
+    </text>
+    
+    <!-- Specs snippet -->
+    <rect x="180" y="10" width="160" height="26" rx="6" fill="#0f172a" stroke="#334155" />
+    <text x="190" y="27" fill="#cbd5e1" font-family="monospace" font-size="11" font-weight="bold">
+      Material: Ti-6Al-4V ELI
+    </text>
+  </g>
+
+  <!-- SECTION 1: IMPLANT EXPANSION DIAGRAM -->
+  <g transform="translate(50, 180)">
+    <!-- Container Card -->
+    <rect width="890" height="220" rx="16" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+
+    <!-- Diagram Header -->
+    <text x="25" y="32" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="13" letter-spacing="0.5">
+      MECANISMO DE EXPANSIÓN TRIDIMENSIONAL INTRACORPORAL
+    </text>
+
+    <!-- Closed Implant (Left) -->
+    <g transform="translate(35, 75)">
+      <text x="0" y="0" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold">
+        1. Implante Cerrado (Acceso 5.0 / 5.8 mm)
+      </text>
+
+      <!-- Cylinder closed -->
+      <rect x="0" y="18" width="135" height="34" rx="6" fill="url(#titaniumBlue)" stroke="#7dd3fc" stroke-width="1.5" />
+      <!-- Internal Fenestrations & grooves -->
+      <line x1="20" y1="26" x2="60" y2="26" stroke="#082f49" stroke-width="3" stroke-linecap="round" />
+      <line x1="20" y1="44" x2="60" y2="44" stroke="#082f49" stroke-width="3" stroke-linecap="round" />
+      <circle cx="85" cy="35" r="4" fill="#082f49" />
+      <rect x="100" y="24" width="26" height="22" rx="3" fill="#0369a1" />
+      <line x1="108" y1="24" x2="108" y2="46" stroke="#7dd3fc" stroke-width="1" />
+      <line x1="116" y1="24" x2="116" y2="46" stroke="#7dd3fc" stroke-width="1" />
+
+      <text x="0" y="72" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="10">
+        Inserción transpedicular directa
+      </text>
+    </g>
+
+    <!-- Arrow 1 -->
+    <g transform="translate(195, 100)">
+      <path d="M 0 10 L 25 10 M 20 5 L 27 10 L 20 15" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="-5" y="30" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="bold">
+        Expansión
+      </text>
+    </g>
+
+    <!-- Partially Expanded (Isometric Side View) -->
+    <g transform="translate(245, 60)">
+      <text x="0" y="15" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold">
+        2. Despliegue Mecánico
+      </text>
+      <!-- Base sleeve -->
+      <rect x="10" y="48" width="60" height="24" rx="4" fill="url(#titaniumBlue)" stroke="#38bdf8" />
+      <!-- Expanding tripod wings -->
+      <path d="M 70 60 L 120 28 L 135 34 L 75 64 Z" fill="url(#titaniumBlue)" stroke="#7dd3fc" stroke-width="1.2" />
+      <path d="M 70 60 L 120 90 L 135 84 L 75 58 Z" fill="url(#titaniumBlue)" stroke="#7dd3fc" stroke-width="1.2" />
+      <line x1="120" y1="28" x2="120" y2="90" stroke="#f59e0b" stroke-dasharray="3 3" stroke-width="1" />
+      <!-- Actuation rod -->
+      <line x1="0" y1="60" x2="110" y2="60" stroke="#94a3b8" stroke-width="3" />
+    </g>
+
+    <!-- Arrow 2 -->
+    <g transform="translate(405, 100)">
+      <path d="M 0 10 L 25 10 M 20 5 L 27 10 L 20 15" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- Fully Expanded Tripod Cross-Section with Angles (150° / 105° / 105°) -->
+    <g transform="translate(460, 50)">
+      <text x="15" y="15" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold">
+        3. Configuración Expandida 3D
+      </text>
+      
+      <!-- Angle label Top 150° -->
+      <text x="75" y="32" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900" text-anchor="middle">
+        150°
+      </text>
+
+      <!-- Center hub -->
+      <circle cx="75" cy="85" r="10" fill="#0284c7" stroke="#38bdf8" stroke-width="2" />
+      <circle cx="75" cy="85" r="4" fill="#ffffff" />
+
+      <!-- Top Wing (Vertical Arm) -->
+      <path d="M 70 76 L 70 38 C 70 32 80 32 80 38 L 80 76 Z" fill="url(#titaniumBlue)" stroke="#7dd3fc" stroke-width="1.5" />
+      <line x1="75" y1="42" x2="75" y2="70" stroke="#ffffff" stroke-width="1.5" />
+
+      <!-- Bottom-Left Wing (at ~225° / 105° rel) -->
+      <path d="M 68 89 L 36 122 C 31 127 25 119 29 114 L 62 82 Z" fill="url(#titaniumBlue)" stroke="#7dd3fc" stroke-width="1.5" />
+      
+      <!-- Bottom-Right Wing (at ~315° / 105° rel) -->
+      <path d="M 82 89 L 114 122 C 119 127 125 119 121 114 L 88 82 Z" fill="url(#titaniumBlue)" stroke="#7dd3fc" stroke-width="1.5" />
+
+      <!-- Angle labels bottom -->
+      <text x="28" y="146" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="bold">
+        105°
+      </text>
+      <text x="105" y="146" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="bold">
+        105°
+      </text>
+
+      <!-- Height Indicator Arrow -->
+      <g transform="translate(138, 30)">
+        <line x1="0" y1="5" x2="0" y2="105" stroke="#f59e0b" stroke-width="2" />
+        <polygon points="-4,9 0,2 4,9" fill="#f59e0b" />
+        <polygon points="-4,101 0,108 4,101" fill="#f59e0b" />
+        <text x="8" y="58" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="900">
+          15 - 17 mm
+        </text>
+      </g>
+    </g>
+
+    <!-- Table of Presentations (Right side) -->
+    <g transform="translate(640, 48)">
+      <text x="0" y="15" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800">
+        ESPECIFICACIONES DE CALIBRE
+      </text>
+
+      <!-- Table Container -->
+      <rect x="0" y="24" width="225" height="110" rx="8" fill="#1e293b" stroke="#475569" />
+      
+      <!-- Header row -->
+      <rect x="0" y="24" width="225" height="26" rx="8" fill="#334155" />
+      <text x="10" y="41" fill="#94a3b8" font-size="10" font-weight="bold">Parámetro</text>
+      <text x="120" y="41" fill="#facc15" font-size="10" font-weight="bold">Dorado</text>
+      <text x="175" y="41" fill="#38bdf8" font-size="10" font-weight="bold">Azul</text>
+
+      <!-- Row 1: Diámetro sin expansión -->
+      <line x1="0" y1="50" x2="225" y2="50" stroke="#475569" stroke-width="0.5" />
+      <text x="10" y="66" fill="#cbd5e1" font-size="10">Ø Sin expansión</text>
+      <rect x="110" y="54" width="45" height="18" rx="4" fill="#854d0e" fill-opacity="0.4" />
+      <text x="132" y="67" fill="#fef08a" font-size="10" font-weight="900" text-anchor="middle">5.0 mm</text>
+      <rect x="165" y="54" width="45" height="18" rx="4" fill="#0369a1" fill-opacity="0.4" />
+      <text x="187" y="67" fill="#7dd3fc" font-size="10" font-weight="900" text-anchor="middle">5.8 mm</text>
+
+      <!-- Row 2: Altura expandida -->
+      <line x1="0" y1="76" x2="225" y2="76" stroke="#475569" stroke-width="0.5" />
+      <text x="10" y="92" fill="#cbd5e1" font-size="10">Altura expandida</text>
+      <text x="132" y="93" fill="#fef08a" font-size="10" font-weight="900" text-anchor="middle">15.0 mm</text>
+      <text x="187" y="93" fill="#7dd3fc" font-size="10" font-weight="900" text-anchor="middle">17.0 mm</text>
+
+      <!-- Row 3: Canal pedicular min -->
+      <line x1="0" y1="102" x2="225" y2="102" stroke="#475569" stroke-width="0.5" />
+      <text x="10" y="118" fill="#94a3b8" font-size="9">Canal pedicular mín.</text>
+      <text x="132" y="118" fill="#e2e8f0" font-size="9" text-anchor="middle">6.1 mm</text>
+      <text x="187" y="118" fill="#e2e8f0" font-size="9" text-anchor="middle">6.4 mm</text>
+    </g>
+  </g>
+
+  <!-- SECTION 2: SURGICAL PROCEDURE STEPS (Bottom Bar) -->
+  <g transform="translate(50, 425)">
+    <!-- Container -->
+    <rect width="890" height="235" rx="16" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="1.5" />
+
+    <text x="25" y="28" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="12" letter-spacing="0.5">
+      TÉCNICA QUIRÚRGICA: RESTAURACIÓN VERTEBRAL Y CEMENTACIÓN PMMA
+    </text>
+
+    <!-- Step 1: Pedicular Approach -->
+    <g transform="translate(25, 45)">
+      <rect width="195" height="165" rx="10" fill="#1e293b" stroke="#334155" />
+      <circle cx="24" cy="24" r="12" fill="#0284c7" />
+      <text x="24" y="28" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+      <text x="44" y="28" fill="#f1f5f9" font-size="11" font-weight="bold">Abordaje Pedicular</text>
+
+      <!-- Vertebra top view diagram -->
+      <g transform="translate(45, 50) scale(0.65)">
+        <!-- Vertebral body -->
+        <ellipse cx="75" cy="100" rx="45" ry="32" fill="url(#boneGrad)" stroke="#64748b" stroke-width="2" />
+        <circle cx="75" cy="55" r="18" fill="#0f172a" stroke="#64748b" stroke-width="2" />
+        <!-- Transverse & spinous processes -->
+        <path d="M 30 75 L 0 60 L 25 50" fill="none" stroke="#64748b" stroke-width="4" stroke-linejoin="round" />
+        <path d="M 120 75 L 150 60 L 125 50" fill="none" stroke="#64748b" stroke-width="4" stroke-linejoin="round" />
+        <path d="M 75 37 L 75 0" stroke="#64748b" stroke-width="6" stroke-linecap="round" />
+        <!-- Pedicular Access trajectory (red dashed arrow) -->
+        <line x1="140" y1="50" x2="65" y2="105" stroke="#ef4444" stroke-width="3.5" stroke-dasharray="6 4" stroke-linecap="round" />
+        <polygon points="62,107 72,106 67,97" fill="#ef4444" />
+      </g>
+      <text x="15" y="150" fill="#94a3b8" font-size="9.5">Acceso transpedicular mínimamente invasivo (MIS)</text>
+    </g>
+
+    <!-- Step 2: Implant Placement & Canal Prep -->
+    <g transform="translate(240, 45)">
+      <rect width="195" height="165" rx="10" fill="#1e293b" stroke="#334155" />
+      <circle cx="24" cy="24" r="12" fill="#0284c7" />
+      <text x="24" y="28" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">2</text>
+      <text x="44" y="28" fill="#f1f5f9" font-size="11" font-weight="bold">Colocación Vertres</text>
+
+      <!-- Vertebra sagittal profile with closed implant -->
+      <g transform="translate(30, 50) scale(0.65)">
+        <!-- Vertebral lateral shape collapsed -->
+        <path d="M 10 50 L 80 55 L 80 110 L 10 100 Z" fill="url(#boneGrad)" stroke="#64748b" stroke-width="2" />
+        <!-- Cannula inserting closed implant -->
+        <line x1="140" y1="40" x2="50" y2="78" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round" />
+        <rect x="25" y="70" width="30" height="14" rx="3" fill="url(#titaniumBlue)" stroke="#38bdf8" />
+      </g>
+      <text x="15" y="150" fill="#94a3b8" font-size="9.5">Inserción guiada en fractura por compresión</text>
+    </g>
+
+    <!-- Step 3: 3D Controlled Expansion -->
+    <g transform="translate(455, 45)">
+      <rect width="195" height="165" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+      <circle cx="24" cy="24" r="12" fill="#f59e0b" />
+      <text x="24" y="28" fill="#090d16" font-size="12" font-weight="900" text-anchor="middle">3</text>
+      <text x="44" y="28" fill="#facc15" font-size="11" font-weight="bold">Expansión 3D</text>
+
+      <!-- Vertebra restored height with expanded implant -->
+      <g transform="translate(30, 50) scale(0.65)">
+        <!-- Vertebral body expanded height -->
+        <path d="M 10 35 L 80 35 L 80 115 L 10 115 Z" fill="url(#boneGrad)" stroke="#f59e0b" stroke-width="2" />
+        <!-- Expanded tripod implant inside -->
+        <line x1="45" y1="40" x2="45" y2="110" stroke="#f59e0b" stroke-width="4" />
+        <polygon points="35,75 55,42 55,108" fill="url(#titaniumBlue)" stroke="#7dd3fc" />
+      </g>
+      <text x="15" y="150" fill="#fef08a" font-size="9.5" font-weight="bold">Restaura altura y crea cavidad intracorporal</text>
+    </g>
+
+    <!-- Step 4: PMMA Cement Augmentation -->
+    <g transform="translate(670, 45)">
+      <rect width="195" height="165" rx="10" fill="#1e293b" stroke="#334155" />
+      <circle cx="24" cy="24" r="12" fill="#0284c7" />
+      <text x="24" y="28" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">4</text>
+      <text x="44" y="28" fill="#f1f5f9" font-size="11" font-weight="bold">Aumentación PMMA</text>
+
+      <!-- Vertebra filled with PMMA cement embedded implant -->
+      <g transform="translate(30, 50) scale(0.65)">
+        <path d="M 10 35 L 80 35 L 80 115 L 10 115 Z" fill="url(#boneGrad)" stroke="#64748b" stroke-width="2" />
+        <!-- PMMA cloud / cement ball -->
+        <circle cx="45" cy="75" r="28" fill="url(#pmmaGrad)" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 2" />
+        <!-- Embedded titanium wings -->
+        <polygon points="38,75 52,48 52,102" fill="url(#titaniumBlue)" stroke="#ffffff" stroke-width="1.5" />
+        <!-- Injection tube -->
+        <line x1="140" y1="40" x2="55" y2="72" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+      </g>
+      <text x="15" y="150" fill="#94a3b8" font-size="9.5">Soporte biomecánico estable y alivio del dolor</text>
+    </g>
+  </g>
+</svg>

@@ -16,7 +16,7 @@ import {
   Award,
   ChevronRight
 } from 'lucide-react';
-import { Product } from '../types';
+import { Product, ProductBrand } from '../types';
 import { Logo } from './Logo';
 
 interface NavbarProps {
@@ -24,8 +24,8 @@ interface NavbarProps {
   products: Product[];
   activePage: 'productos' | 'empresa';
   onNavigatePage: (page: 'productos' | 'empresa', subSection?: string) => void;
-  selectedBrand?: 'all' | 'Fixapro' | 'Alveos';
-  onNavigateBrand?: (brand: 'Fixapro' | 'Alveos') => void;
+  selectedBrand?: ProductBrand;
+  onNavigateBrand?: (brand: ProductBrand) => void;
   onOpenQuickQuote?: () => void;
   quoteCount?: number;
 }
@@ -59,7 +59,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     setIsSearchFocused(false);
   };
 
-  const handleBrandClick = (brand: 'Fixapro' | 'Alveos') => {
+  const handleBrandClick = (brand: ProductBrand) => {
     onNavigatePage('productos');
     if (onNavigateBrand) {
       onNavigateBrand(brand);
@@ -222,7 +222,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <div className="flex items-center pl-1 border-l border-slate-200/80 my-0.5">
                 <button
                   onClick={() => handleBrandClick('Fixapro')}
-                  className={`px-2.5 py-1.5 rounded-lg text-[11px] font-bold transition-all ${
+                  className={`px-2 py-1.5 rounded-lg text-[11px] font-bold transition-all ${
                     activePage === 'productos' && selectedBrand === 'Fixapro'
                       ? 'bg-pink-100/80 text-[#A8287F]'
                       : 'text-slate-500 hover:text-[#A8287F]'
@@ -233,7 +233,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </button>
                 <button
                   onClick={() => handleBrandClick('Alveos')}
-                  className={`px-2.5 py-1.5 rounded-lg text-[11px] font-bold transition-all ${
+                  className={`px-2 py-1.5 rounded-lg text-[11px] font-bold transition-all ${
                     activePage === 'productos' && selectedBrand === 'Alveos'
                       ? 'bg-blue-100/80 text-[#2066BA]'
                       : 'text-slate-500 hover:text-[#2066BA]'
@@ -241,6 +241,21 @@ export const Navbar: React.FC<NavbarProps> = ({
                   title="Filtrar por respiratorio y sondas Alveos"
                 >
                   Alveos®
+                </button>
+                <button
+                  onClick={() => handleBrandClick('Columna')}
+                  className={`px-2.5 py-1.5 rounded-lg text-[11px] font-bold transition-all flex items-center gap-1.5 ${
+                    activePage === 'productos' && (selectedBrand === 'Columna' || selectedBrand === 'Ossyn' || selectedBrand === 'Ver3' || selectedBrand === 'Unomis' || selectedBrand === 'OpenPed')
+                      ? 'bg-purple-950 text-white ring-1 ring-purple-400/50 shadow-xs'
+                      : 'text-slate-600 hover:text-purple-800'
+                  }`}
+                  title="Línea Quirúrgica de Columna Ossyn (Ver3® Vertres, Unomis® MISS & OpenPed®) - Próximamente"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-amber-400 via-emerald-400 to-purple-400 animate-pulse"></span>
+                  <span>Ossyn (Columna)</span>
+                  <span className="text-[9px] font-black uppercase px-1 py-0.2 rounded bg-amber-400 text-slate-950">
+                    Próx.
+                  </span>
                 </button>
               </div>
             </div>
@@ -344,13 +359,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </span>
               </button>
 
-              <div className="grid grid-cols-2 gap-1.5 pt-1">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5 pt-1">
                 <button
                   onClick={() => handleBrandClick('Fixapro')}
                   className="p-2 rounded-lg bg-white border border-slate-200 text-left text-[11px] text-slate-700 font-semibold flex items-center gap-1.5"
                 >
                   <span className="w-2 h-2 rounded-full bg-[#A8287F]"></span>
-                  <span>Fixapro®</span>
+                  <span>Fixapro® (Apósitos & Cintas)</span>
                 </button>
 
                 <button
@@ -358,7 +373,18 @@ export const Navbar: React.FC<NavbarProps> = ({
                   className="p-2 rounded-lg bg-white border border-slate-200 text-left text-[11px] text-slate-700 font-semibold flex items-center gap-1.5"
                 >
                   <span className="w-2 h-2 rounded-full bg-[#2066BA]"></span>
-                  <span>Alveos®</span>
+                  <span>Alveos® (Respiratorio)</span>
+                </button>
+
+                <button
+                  onClick={() => handleBrandClick('Columna')}
+                  className="p-2 rounded-lg bg-purple-50 border border-purple-200 text-left text-[11px] text-purple-950 font-bold flex items-center justify-between"
+                >
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-500 via-emerald-500 to-purple-500"></span>
+                    <span>Ossyn (Columna: Ver3®, Unomis® & OpenPed®)</span>
+                  </div>
+                  <span className="text-[9px] bg-amber-400 text-slate-950 font-black px-1.5 py-0.5 rounded border border-amber-500">Próximamente</span>
                 </button>
               </div>
             </div>

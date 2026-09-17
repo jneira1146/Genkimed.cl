@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="clBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+
+    <linearGradient id="clGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="35%" stop-color="#fde047" />
+      <stop offset="75%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#78350f" />
+    </linearGradient>
+
+    <linearGradient id="clTitanium" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="35%" stop-color="#f1f5f9" />
+      <stop offset="70%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+
+    <filter id="clShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <rect width="1000" height="700" fill="url(#clBg)" />
+
+  <g transform="translate(50, 40)">
+    <rect x="0" y="0" width="140" height="28" rx="6" fill="#ea580c" />
+    <text x="70" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">
+      OPENPED® MIS
+    </text>
+    <text x="0" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="900" fill="#0f172a">
+      Conectores Transversos Preensamblados (Cross Link)
+    </text>
+    <text x="0" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#64748b">
+      Rangos Telescópicos 40–60 mm y 60–90 mm • Bloqueo Rápido y Alta Rigidez Torsional
+    </text>
+  </g>
+
+  <!-- Cross Link Detailed Macro -->
+  <g transform="translate(100, 160)">
+    <!-- Frame Box -->
+    <rect x="0" y="0" width="800" height="260" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#clShadow)" />
+
+    <!-- Left Hook Clamp -->
+    <g transform="translate(60, 60)">
+      <!-- Clamp Body -->
+      <path d="M 0 20 C 0 -15, 60 -15, 60 20 L 60 80 C 60 115, 0 115, 0 80 Z" fill="url(#clGold)" stroke="#78350f" stroke-width="2" />
+      <!-- Rod Channel Hole for 5.5mm rod -->
+      <circle cx="30" cy="50" r="18" fill="#1e293b" />
+      <circle cx="30" cy="50" r="14" fill="url(#clTitanium)" stroke="#38bdf8" stroke-width="1" />
+      <text x="30" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="800" fill="#0f172a" text-anchor="middle">Ø 5.5</text>
+
+      <!-- Locking Set Screw -->
+      <circle cx="30" cy="-4" r="10" fill="#fde047" stroke="#78350f" stroke-width="1.5" />
+      <polygon points="30,-7 33,-5 33,-1 30,1 27,-1 27,-5" fill="#78350f" />
+    </g>
+
+    <!-- Telescoping Center Bridge -->
+    <g transform="translate(120, 95)">
+      <!-- Outer Sleeve (Female) -->
+      <rect x="0" y="0" width="280" height="30" rx="6" fill="url(#clGold)" stroke="#78350f" stroke-width="2" />
+      <!-- Inner Slide (Male) -->
+      <rect x="260" y="4" width="280" height="22" rx="4" fill="url(#clGold)" stroke="#78350f" stroke-width="1.5" />
+
+      <!-- Center Lock Mechanism Nut -->
+      <rect x="240" y="-12" width="48" height="54" rx="8" fill="#b45309" stroke="#78350f" stroke-width="2" />
+      <circle cx="264" cy="15" r="12" fill="#fde047" stroke="#78350f" stroke-width="1.5" />
+      <polygon points="264,9 269,12 269,18 264,21 259,18 259,12" fill="#78350f" />
+
+      <!-- Measurement graduation markings -->
+      <line x1="320" y1="4" x2="320" y2="12" stroke="#78350f" stroke-width="1.5" />
+      <line x1="350" y1="4" x2="350" y2="12" stroke="#78350f" stroke-width="1.5" />
+      <line x1="380" y1="4" x2="380" y2="12" stroke="#78350f" stroke-width="1.5" />
+      <line x1="410" y1="4" x2="410" y2="12" stroke="#78350f" stroke-width="1.5" />
+      <line x1="440" y1="4" x2="440" y2="12" stroke="#78350f" stroke-width="1.5" />
+    </g>
+
+    <!-- Right Hook Clamp -->
+    <g transform="translate(680, 60)">
+      <path d="M 0 20 C 0 -15, 60 -15, 60 20 L 60 80 C 60 115, 0 115, 0 80 Z" fill="url(#clGold)" stroke="#78350f" stroke-width="2" />
+      <circle cx="30" cy="50" r="18" fill="#1e293b" />
+      <circle cx="30" cy="50" r="14" fill="url(#clTitanium)" stroke="#38bdf8" stroke-width="1" />
+      <text x="30" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="800" fill="#0f172a" text-anchor="middle">Ø 5.5</text>
+
+      <circle cx="30" cy="-4" r="10" fill="#fde047" stroke="#78350f" stroke-width="1.5" />
+      <polygon points="30,-7 33,-5 33,-1 30,1 27,-1 27,-5" fill="#78350f" />
+    </g>
+
+    <!-- Badge Info -->
+    <rect x="230" y="210" width="340" height="34" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1" />
+    <text x="400" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="800" fill="#92400e" text-anchor="middle">
+      REF 40050000 (40~60 mm) • REF 40057000 (60~90 mm)
+    </text>
+  </g>
+
+  <!-- Straight Rods Specifications Bar -->
+  <g transform="translate(100, 450)">
+    <rect x="0" y="0" width="800" height="200" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#clShadow)" />
+    
+    <g transform="translate(30, 30)">
+      <text font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="900" fill="#0f172a">
+        Barras Rectas de Titanio Ø 5.5 mm (Aleación Ti-6Al-4V)
+      </text>
+      <text y="24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#64748b">
+        Diseñadas para fijación biomecánica estable y moldeado intraoperatorio sagital y coronal
+      </text>
+
+      <!-- Visual of the rods -->
+      <g transform="translate(0, 50)">
+        <rect x="0" y="0" width="740" height="12" rx="6" fill="url(#clTitanium)" stroke="#475569" stroke-width="1" />
+        <rect x="0" y="22" width="560" height="12" rx="6" fill="url(#clTitanium)" stroke="#475569" stroke-width="1" />
+        <rect x="0" y="44" width="380" height="12" rx="6" fill="url(#clTitanium)" stroke="#475569" stroke-width="1" />
+      </g>
+
+      <!-- Lengths summary pills -->
+      <g transform="translate(0, 120)" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">
+        <text fill="#0284c7">Longitudes Cortas / Medias:</text>
+        <text x="210" fill="#334155">60 mm • 80 mm • 100 mm • 120 mm</text>
+        
+        <text y="22" fill="#059669">Longitudes Extensas (Deformidad / Trauma):</text>
+        <text x="315" y="22" fill="#334155">200 mm • 250 mm • 300 mm • 350 mm • 400 mm</text>
+      </g>
+    </g>
+  </g>
+</svg>

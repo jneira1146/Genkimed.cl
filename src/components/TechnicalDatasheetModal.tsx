@@ -83,9 +83,16 @@ export const TechnicalDatasheetModal: React.FC<TechnicalDatasheetModalProps> = (
           {/* Product Identification Section */}
           <div className="space-y-3">
             <div className="bg-cyan-50/80 border border-cyan-200 p-4 rounded-xl">
-              <span className="text-[10px] font-bold text-cyan-800 uppercase tracking-wider block">
-                Nombre del Dispositivo Médico
-              </span>
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-[10px] font-bold text-cyan-800 uppercase tracking-wider block">
+                  Nombre del Dispositivo Médico
+                </span>
+                {product.badge && (
+                  <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-amber-400 text-slate-950 border border-amber-500">
+                    {product.badge}
+                  </span>
+                )}
+              </div>
               <h2 className="text-lg font-black text-slate-900">
                 {product.name}
               </h2>

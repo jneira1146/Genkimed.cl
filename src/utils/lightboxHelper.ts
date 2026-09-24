@@ -103,27 +103,27 @@ export function getProductLightboxImages(
           title = unomisDescriptions[idx].title;
           subtitle = unomisDescriptions[idx].subtitle;
         }
-      } else if (product.brand.toLowerCase().includes('openped') || product.id.includes('openped') || product.category === 'openped_spine') {
+      } else if (product.brand.toLowerCase().includes('openped') || product.id.includes('openped')) {
         const openpedDescriptions: Record<number, { title: string; subtitle: string }> = {
           0: {
-            title: 'Sistema OpenPed®: Tornillos Poliaxiales de Reducción en Titanio Ti-6Al-4V (Próximamente)',
-            subtitle: 'Doble rosca córtico-esponjosa, aleta extendida de reducción desmontable y canulación fenestrada para inyección de PMMA'
+            title: 'Sistema de Fijación Pedicular Posterior OpenPed®: Implantes de Titanio Grado Médico Ti-6Al-4V',
+            subtitle: 'Tornillos pediculares poliaxiales (±30°) de aleta larga de reducción, barras rectas de 5.5 mm y conector Cross Link telescópico'
           },
           1: {
-            title: 'Montaje Anatómico Biomecánico de Fijación Lumbar Posterior con Barras Ø 5.5 mm y Cross Link',
-            subtitle: 'Estabilidad tridimensional rígida con tornillos poliaxiales (±30°), puente transversal Cross Link y barras de titanio grado médico'
+            title: 'Montaje Biomecánico de Fijación Posterior OpenPed® en Cuadrilátero Rígido',
+            subtitle: 'Ensamble de 4 tornillos de reducción con barras rectas de Ø 5.5 mm y estabilizador transversal Cross Link para máxima rigidez torsional'
           },
           2: {
-            title: 'Detalle Macro: Aleta de Reducción, Ranura para Aumentación de Cemento y Huella Anti-trasroscado',
-            subtitle: 'Reducción controlada y progresiva de la barra mediante aletas largas y anclaje superior en hueso con osteoporosis'
+            title: 'Macro Detalle de Tornillo Canulado de Reducción con Fenestración para Cemento PMMA',
+            subtitle: 'Aletas largas integradas con ranura de ruptura precisa y canal de inyección para aumentación en pacientes con osteoporosis'
           },
           3: {
-            title: 'Conector Transverso Cross Link Preensamblado Telescópico y Barras Rectas de Titanio',
-            subtitle: 'Bloqueo transversal antirrotatorio en rangos 40-60 mm y 60-90 mm para barras de Ø 5.5 mm'
+            title: 'Conector Transverso Cross Link Telescópico Preensamblado OpenPed® (40~60 mm y 60~90 mm)',
+            subtitle: 'Mecanismo de traba dual de alta estabilidad angular que previene la desalineación o rotación del constructo espinal'
           },
           4: {
-            title: 'Set de Instrumental Quirúrgico Modular Inteligente OpenPed®',
-            subtitle: 'Contenedor de esterilización con bandejas de silicona, torquímetro dinamométrico regulado a 8 N·m, torres de reducción y destornilladores canulados'
+            title: 'Set de Instrumental Quirúrgico Modular e Inteligente OpenPed® en Bandeja Perforada Autoclavable',
+            subtitle: 'Torquímetro calibrado a 8 N·m, torre reductora de aletas, destornilladores canulados y doblador anatómico de barras'
           }
         };
 

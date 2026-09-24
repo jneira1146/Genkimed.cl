@@ -95,7 +95,7 @@ export const QuoteFunnelModal: React.FC<QuoteFunnelModalProps> = ({
     if (quoteItems.length > 0) {
       quoteItems.forEach((item, index) => {
         msg += `${index + 1}. *${item.productName}* (${item.dimensions})\n`;
-        msg += `   └ Marca: ${item.brand} | Cantidad: *${item.quantityBoxes} Cajas* (x${item.unitPerBox} u/caja)\n`;
+        msg += `   └ Marca: ${item.brand} | Cantidad: *${item.quantityBoxes} Cajas* (x${item.unitPerBox} u/caja)${item.onuCode ? ` | Cód. ONU: ${item.onuCode}` : ''}\n`;
       });
     }
 
@@ -368,8 +368,13 @@ export const QuoteFunnelModal: React.FC<QuoteFunnelModalProps> = ({
                               <h5 className="font-bold text-xs sm:text-sm text-slate-900 truncate">
                                 {item.productName}
                               </h5>
-                              <p className="text-[11px] text-slate-500">
-                                Presentación: Caja x{item.unitPerBox} uds
+                              <p className="text-[11px] text-slate-500 flex items-center gap-2 flex-wrap">
+                                <span>Presentación: Caja x{item.unitPerBox} uds</span>
+                                {item.onuCode && (
+                                  <span className="text-[10px] font-mono font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 px-1.5 py-0.5 rounded">
+                                    ONU: {item.onuCode}
+                                  </span>
+                                )}
                               </p>
                             </div>
                           </div>

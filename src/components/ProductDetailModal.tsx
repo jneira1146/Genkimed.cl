@@ -74,7 +74,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                   src={currentImage} 
                   alt={product.name} 
                   referrerPolicy="no-referrer"
-                  className={`w-full h-full ${product.brand.toLowerCase().includes('ver3') || product.brand.toLowerCase().includes('unomis') ? 'object-contain p-2 bg-white' : 'object-cover'} transition-all duration-300 group-hover:scale-105`}
+                  className={`w-full h-full ${product.brand.toLowerCase().includes('ver3') || product.brand.toLowerCase().includes('unomis') || product.brand.toLowerCase().includes('openped') ? 'object-contain p-2 bg-white' : 'object-cover'} transition-all duration-300 group-hover:scale-105`}
                   onError={(e) => {
                     if (product.image && e.currentTarget.src !== product.image) {
                       e.currentTarget.src = product.image;
@@ -148,7 +148,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                         <img 
                           src={img} 
                           alt={`Caja ${i + 1}`} 
-                          className={`w-full h-full ${product.brand.toLowerCase().includes('ver3') || product.brand.toLowerCase().includes('unomis') ? 'object-contain p-0.5' : 'object-cover'} rounded-lg`}
+                          className={`w-full h-full ${product.brand.toLowerCase().includes('ver3') || product.brand.toLowerCase().includes('unomis') || product.brand.toLowerCase().includes('openped') ? 'object-contain p-0.5' : 'object-cover'} rounded-lg`}
                           referrerPolicy="no-referrer" 
                           onError={(e) => {
                             if (product.image && e.currentTarget.src !== product.image) {
@@ -262,38 +262,32 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                       ? 'bg-amber-500' 
                       : product.brand.toLowerCase().includes('unomis')
                         ? 'bg-emerald-500'
-                        : product.brand.toLowerCase().includes('openped')
+                        : product.category === 'spine_surgery' || product.brand.toLowerCase().includes('columna')
                           ? 'bg-purple-600'
-                          : product.category === 'spine_surgery' || product.brand.toLowerCase().includes('columna')
-                            ? 'bg-purple-600'
-                            : product.brand.toLowerCase().includes('fixapro')
-                              ? 'bg-[#A8287F]'
-                              : 'bg-[#2066BA]'
+                          : product.brand.toLowerCase().includes('fixapro')
+                            ? 'bg-[#A8287F]'
+                            : 'bg-[#2066BA]'
                   }`}></span>
                   <span className={
                     product.brand.toLowerCase().includes('ver3') 
                       ? 'text-amber-700 font-extrabold' 
                       : product.brand.toLowerCase().includes('unomis')
                         ? 'text-emerald-700 font-extrabold'
-                        : product.brand.toLowerCase().includes('openped')
-                          ? 'text-purple-800 font-extrabold'
-                          : product.category === 'spine_surgery' || product.brand.toLowerCase().includes('columna')
-                            ? 'text-purple-700 font-extrabold'
-                            : product.brand.toLowerCase().includes('fixapro')
-                              ? 'text-[#A8287F]'
-                              : 'text-[#2066BA]'
+                        : product.category === 'spine_surgery' || product.brand.toLowerCase().includes('columna')
+                          ? 'text-purple-700 font-extrabold'
+                          : product.brand.toLowerCase().includes('fixapro')
+                            ? 'text-[#A8287F]'
+                            : 'text-[#2066BA]'
                   }>
                     {product.brand.toLowerCase().includes('ver3')
-                      ? 'Categoría Ossyn • Ver3® Vertres (Restauración Vertebral & PMMA)'
+                      ? 'Línea Columna MIS • Ver3® Vertres (Restauración Vertebral & PMMA)'
                       : product.brand.toLowerCase().includes('unomis')
-                        ? 'Categoría Ossyn • Unomis® MISS (Fijación Pedicular MIS & Técnica CBT)'
-                        : product.brand.toLowerCase().includes('openped')
-                          ? 'Categoría Ossyn • OpenPed® (Fijación Pedicular Posterior & Aumentación PMMA)'
-                          : product.category === 'spine_surgery'
-                            ? 'Categoría Ossyn • Cirugía de Columna'
-                            : product.brand.toLowerCase().includes('fixapro')
-                              ? 'Línea Fixapro® • Insumo Hospitalario & Clínico'
-                              : 'Línea Alveos® • Dispositivos Médicos & Terapia Respiratoria'}
+                        ? 'Línea Columna MIS • Unomis® MIS (Fijación Pedicular MIS & Técnica CBT)'
+                        : product.category === 'spine_surgery'
+                          ? 'Línea Columna MIS'
+                          : product.brand.toLowerCase().includes('fixapro')
+                            ? 'Línea Fixapro® • Insumo Hospitalario & Clínico'
+                            : 'Línea Alveos® • Dispositivos Médicos & Terapia Respiratoria'}
                   </span>
                 </div>
                 <div className="flex items-center gap-2.5 flex-wrap">
@@ -306,6 +300,13 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                         <span className="w-1.5 h-1.5 rounded-full bg-slate-950 animate-ping"></span>
                       )}
                       {product.badge}
+                    </span>
+                  )}
+                  {product.onuCode && (
+                    <span className="bg-emerald-100 text-emerald-950 text-[10px] font-bold px-2.5 py-0.5 rounded-md border border-emerald-300 shadow-2xs flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                      <span>Cód. ONU:</span>
+                      <strong className="font-mono font-black text-emerald-900">{product.onuCode}</strong>
                     </span>
                   )}
                 </div>
@@ -505,6 +506,11 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                                       {fmt.badge}
                                     </span>
                                   )}
+                                  {(fmt.onuCode || product.onuCode) && (
+                                    <span className="text-[9px] font-mono font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 px-1.5 py-0.5 rounded">
+                                      ONU: {fmt.onuCode || product.onuCode}
+                                    </span>
+                                  )}
                                 </div>
                               </div>
 
@@ -635,6 +641,23 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                       <span className="font-semibold">{product.technicalSpecs.shelfLife}</span>
                     </div>
                   </div>
+
+                  {product.onuCode && (
+                    <div className="p-3 rounded-xl bg-emerald-50/80 border border-emerald-200/80 flex items-start justify-between gap-3 text-emerald-950">
+                      <div>
+                        <span className="text-[10px] font-black uppercase tracking-wider text-emerald-800 flex items-center gap-1.5 mb-0.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                          Código ONU Oficial • Mercado Público / ChileCompra
+                        </span>
+                        <p className="text-[11px] text-emerald-900 font-medium">
+                          {product.unspscName || 'Clasificación oficial UNSPSC para adquisiciones hospitalarias'}
+                        </p>
+                      </div>
+                      <span className="shrink-0 font-mono font-black text-sm bg-white text-emerald-950 px-2.5 py-1 rounded-lg border border-emerald-300 shadow-2xs">
+                        {product.onuCode}
+                      </span>
+                    </div>
+                  )}
 
                   <div className="pt-2 flex justify-end">
                     <button

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { CatalogSection } from './components/CatalogSection';
+import { MercadoPublicoSection } from './components/MercadoPublicoSection';
 import { CompanyPage } from './components/CompanyPage';
 import { Footer } from './components/Footer';
 import { ProductDetailModal } from './components/ProductDetailModal';
@@ -165,6 +166,7 @@ export default function App() {
             unitPerBox: product.unitPerBox,
             quantityBoxes: 1,
             image: product.image,
+            onuCode: product.onuCode,
           },
         ];
       }
@@ -275,6 +277,12 @@ export default function App() {
               onOpenImage={handleOpenLightbox}
               quoteItems={quoteItems}
               onOpenQuickQuote={() => setIsQuoteFunnelOpen(true)}
+            />
+
+            {/* Mercado Público / ChileCompra Section & Official ONU Codes Table */}
+            <MercadoPublicoSection
+              onOpenQuote={() => setIsQuoteFunnelOpen(true)}
+              onSelectProduct={(prod) => setSelectedDetailProduct(prod)}
             />
 
             {/* Banner Conector a la Página de la Empresa */}

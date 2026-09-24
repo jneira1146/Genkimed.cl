@@ -153,8 +153,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           
           <div>
             <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
-              {product.category === 'spine_surgery' || product.brand.toLowerCase().includes('ver3') || product.brand.toLowerCase().includes('unomis') || product.brand.toLowerCase().includes('openped')
-                ? 'Categoría Ossyn • Cirugía de Columna'
+              {product.category === 'spine_surgery' || product.brand.toLowerCase().includes('ver3') || product.brand.toLowerCase().includes('unomis')
+                ? 'Línea Columna MIS'
                 : product.brand === 'Fixapro®' 
                   ? 'Línea Quirúrgica & Curación' 
                   : 'Terapia Respiratoria & Clínica'}
@@ -177,7 +177,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                   Presentación
                 </span>
                 <span className="text-xs font-bold text-slate-800">
-                  {product.category === 'spine_surgery' || product.category === 'ver3_spine' || product.category === 'unomis_spine' || product.category === 'openped_spine' || product.brand.toLowerCase().includes('ver3') || product.brand.toLowerCase().includes('unomis') || product.brand.toLowerCase().includes('openped')
+                  {product.category === 'spine_surgery' || product.category === 'ver3_spine' || product.category === 'unomis_spine' || product.brand.toLowerCase().includes('ver3') || product.brand.toLowerCase().includes('unomis')
                     ? product.brand.toLowerCase().includes('ver3')
                       ? 'Implante Ti-6Al-4V ELI + Set'
                       : 'Implantes Ti-6Al-4V + Instrumental'
@@ -195,6 +195,19 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               </span>
             )}
           </div>
+
+          {/* UNSPSC / Código ONU for Mercado Público */}
+          {product.onuCode && (
+            <div className="flex items-center justify-between text-[11px] px-2.5 py-1.5 rounded-xl bg-emerald-50/70 border border-emerald-200/70 text-emerald-950">
+              <span className="font-semibold text-emerald-800 flex items-center gap-1.5 text-[10px] uppercase tracking-wide">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Cód. ONU (Mercado Público)
+              </span>
+              <span className="font-mono font-black text-xs text-emerald-900 bg-white px-2 py-0.5 rounded-md border border-emerald-300/80 shadow-2xs">
+                {product.onuCode}
+              </span>
+            </div>
+          )}
 
         </div>
       </div>
@@ -225,13 +238,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                 <Plus className="w-4 h-4" />
                 <span>
                   {product.badge?.toLowerCase().includes('próx')
-                    ? (product.brand.toLowerCase().includes('openped')
-                        ? '+ Pre-ordenar / Consultar OpenPed®'
-                        : product.brand.toLowerCase().includes('unomis')
-                          ? '+ Pre-ordenar / Consultar Unomis®'
-                          : product.brand.toLowerCase().includes('ver3')
-                            ? '+ Pre-ordenar / Consultar Ver3®'
-                            : '+ Pre-ordenar / Consultar')
+                    ? (product.brand.toLowerCase().includes('unomis')
+                        ? '+ Pre-ordenar / Consultar Unomis®'
+                        : product.brand.toLowerCase().includes('ver3')
+                          ? '+ Pre-ordenar / Consultar Ver3®'
+                          : '+ Pre-ordenar / Consultar')
                     : '+ Cotizar este Insumo'}
                 </span>
               </>

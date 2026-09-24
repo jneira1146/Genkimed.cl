@@ -354,6 +354,25 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({
                     </div>
                   </div>
                 </div>
+
+                {/* Información de Códigos ONU registrados en cada producto */}
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <div className="space-y-1">
+                    <span className="font-bold text-xs text-slate-800 flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
+                      Códigos ONU / UNSPSC Oficiales Integrados en Cada Insumo
+                    </span>
+                    <p className="text-[11px] text-slate-500 max-w-xl leading-relaxed">
+                      Para facilitar la emisión de Órdenes de Compra (OC) y requerimientos en ChileCompra, cada insumo de fijación vascular, curación avanzada Fixapro®, terapia respiratoria Alveos® y cirugía de columna Ossyn incluye su <strong>Código ONU oficial registrado directamente en su tarjeta y ficha técnica</strong> del catálogo.
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => onNavigateToProducts()}
+                    className="px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 text-xs font-bold transition-all shrink-0 shadow-2xs hover:border-[#7B37A0]"
+                  >
+                    Ver Códigos en Catálogo
+                  </button>
+                </div>
               </div>
             )}
 

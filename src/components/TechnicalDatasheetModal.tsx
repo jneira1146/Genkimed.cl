@@ -101,18 +101,22 @@ export const TechnicalDatasheetModal: React.FC<TechnicalDatasheetModalProps> = (
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
               <div className="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
                 <span className="text-[10px] font-bold text-slate-400 uppercase block">Marca Oficial</span>
                 <span className="font-bold text-slate-900">{product.brand}</span>
               </div>
               <div className="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <span className="text-[10px] font-bold text-slate-400 uppercase block">Dimensiones Nominales</span>
+                <span className="text-[10px] font-bold text-slate-400 uppercase block">Dimensiones</span>
                 <span className="font-bold font-mono text-purple-900">{product.dimensions}</span>
               </div>
               <div className="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <span className="text-[10px] font-bold text-slate-400 uppercase block">Formato de Presentación</span>
+                <span className="text-[10px] font-bold text-slate-400 uppercase block">Presentación</span>
                 <span className="font-bold text-slate-800">{product.presentation || `Caja x${product.unitPerBox} uds`}</span>
+              </div>
+              <div className="p-2.5 bg-emerald-50/80 rounded-lg border border-emerald-200">
+                <span className="text-[10px] font-bold text-emerald-800 uppercase block">Cód. ONU (ChileCompra)</span>
+                <span className="font-bold font-mono text-emerald-950">{product.onuCode || 'Consultar mesa'}</span>
               </div>
             </div>
 
@@ -169,6 +173,14 @@ export const TechnicalDatasheetModal: React.FC<TechnicalDatasheetModalProps> = (
                   {product.technicalSpecs.latexFree ? '100% Libre de Látex' : 'Contiene látex'} • {product.technicalSpecs.hypoallergenic ? 'Hipoalergénico Comprobado' : 'Estándar'} • Radiotransparente
                 </div>
               </div>
+              {product.onuCode && (
+                <div className="grid grid-cols-12 p-2.5 text-[11px] bg-emerald-50/50">
+                  <div className="col-span-5 font-bold text-emerald-900">Código ONU / UNSPSC (Mercado Público)</div>
+                  <div className="col-span-7 font-mono font-bold text-emerald-950">
+                    {product.onuCode} {product.unspscName ? `• ${product.unspscName}` : ''}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 

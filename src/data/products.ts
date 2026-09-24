@@ -43,65 +43,65 @@ export const CATEGORIES: CategoryInfo[] = [
     label: 'Catálogo General Genkimed SpA',
     shortLabel: 'Todos',
     iconName: 'LayoutGrid',
-    description: 'Catálogo integral de insumos clínicos, líneas Fixapro®, Alveos®, Ver3®, Unomis® y OpenPed® para instituciones de salud.'
-  },
-  {
-    id: 'spine_surgery',
-    label: 'Ossyn',
-    shortLabel: 'Ossyn',
-    iconName: 'Activity',
-    image: openpedSpineConstructImg,
-    badge: 'Próximamente • 3 Sistemas',
-    comingSoon: true,
-    description: 'Categoría Quirúrgica de Columna Ossyn: Soluciones avanzadas de alta tecnología que comprenden el Sistema de Restauración Vertebral Expansible Ver3® Vertres, el Sistema de Fijación Pedicular Percutánea y CBT Unomis® MISS, y el Sistema de Fijación Pedicular Posterior OpenPed® con tornillos de reducción y aumentación PMMA.'
+    description: 'Catálogo de insumos clínicos: Línea Fixapro® (Apósitos, Cintas & Vendas), Línea Alveos® (Respiratorio & Sondas) y Línea Quirúrgica de Columna Ossyn (Ver3®, Unomis® y OpenPed®).'
   },
   {
     id: 'wound_care',
-    label: 'Apósitos Film Fixapro® Transparentes (Gama Completa)',
-    shortLabel: 'Fixapro® Film',
+    label: 'Apósitos Transparentes de Poliuretano Fixapro® Film',
+    shortLabel: 'Apósitos Poliuretano',
     iconName: 'HeartPulse',
     image: film1012Img,
     description: 'Películas de poliuretano estériles transparentes con marco tipo ventana: 10x12 cm (caja x50), 10x25 cm (caja x30) y 6x7 cm (caja x100) para heridas postoperatorias, laparotomías y protección dérmica.'
   },
   {
     id: 'iv_fixation',
-    label: 'Apósitos Fixapro® IV & CVC Advanced (Gama Completa)',
-    shortLabel: 'Fixapro® Advanced & CHG',
+    label: 'Apósitos con Almohadilla de Clorhexidina (CHG) & Fijación IV/CVC',
+    shortLabel: 'Apósitos CHG & IV',
     iconName: 'ShieldCheck',
     image: iv85115Img,
     description: 'Línea institucional Fixapro® Advanced y CHG: 8.5x11.5 cm CHG Antimicrobiano (Caja x25, Cód. 55432), 8.5x11.5 cm CVC (Caja x50), 5x5.7 cm Pediátrico (Caja x100) y 6.5x7 cm CVP (Caja x100).'
   },
   {
+    id: 'tapes',
+    label: 'Cintas Quirúrgicas de Papel Microporoso Fixapro®',
+    shortLabel: 'Cintas Médicas',
+    iconName: 'Bandage',
+    image: tapesImg,
+    description: 'Cintas de papel microporoso hipoalergénicas tono piel para fijación de apósitos y sondas (2.5 cm x 9.1 m, caja x12 rollos).'
+  },
+  {
+    id: 'bandages',
+    label: 'Vendas Elásticas de Compresión Fixapro® (2", 3", 4" y 5")',
+    shortLabel: 'Vendas Elásticas',
+    iconName: 'ShieldCheck',
+    image: bandageImg,
+    description: 'Vendas de compresión continua (12% Spandex / 88% Poliéster, libres de látex) en 5 cm, 7.5 cm, 10 cm y 12.7 cm con clips metálicos para soporte articular y urgencias.'
+  },
+  {
     id: 'nebulizers',
-    label: 'Kits de Micronebulización Alveos® (Adulto & Pediátrico)',
-    shortLabel: 'Nebulizadores',
+    label: 'Kits de Micronebulización Alveos® (Adulto y Pediátrico)',
+    shortLabel: 'Micronebulizadores',
     iconName: 'Wind',
     image: alveosNebulizerImg,
     description: 'Kits de micronebulización completos con mascarilla ergonómica (Adulto y Pediátrico), vaso dosificador 6cc y tubo anticolapso 2.1m.'
   },
   {
     id: 'respiratory',
-    label: 'Sondas de Aspiración Traqueal Alveos® (6 a 18 FR)',
+    label: 'Sondas de Aspiración Traqueal con Control Alveos® (6 a 18 FR)',
     shortLabel: 'Sondas de Aspiración',
     iconName: 'Pipette',
     image: alveosSuctionImg,
-    description: 'Sondas de aspiración traqueal con control de succión digital y código de color ISO.'
+    description: 'Sondas de aspiración traqueal estériles con control de succión digital y código de color ISO.'
   },
   {
-    id: 'tapes',
-    label: 'Cintas Médicas y Quirúrgicas Fixapro®',
-    shortLabel: 'Cintas Médicas',
-    iconName: 'Bandage',
-    image: tapesImg,
-    description: 'Cintas de papel microporoso hipoalergénicas para fijación de apósitos y sondas.'
-  },
-  {
-    id: 'bandages',
-    label: 'Vendas Elásticas y Compresión Fixapro®',
-    shortLabel: 'Vendas Elásticas',
+    id: 'spine_surgery',
+    label: 'Línea Quirúrgica de Columna Ossyn (Ver3®, Unomis® & OpenPed®)',
+    shortLabel: 'Columna (Ver3®, Unomis®, OpenPed®)',
     iconName: 'Activity',
-    image: bandageImg,
-    description: 'Vendas elásticas de compresión y soporte flexible con clips de sujeción para esguinces, torceduras y sujeción articular.'
+    image: ver3ExpansionTechImg,
+    badge: 'Próx. • Ossyn Spine',
+    comingSoon: true,
+    description: 'Línea Quirúrgica de Columna Ossyn / MaffHealth: Restauración Vertebral Ver3® Vertres, Fijación MIS Unomis® CBT y Sistema Pedicular Posterior OpenPed® con Aumentación PMMA.'
   }
 ];
 
@@ -116,6 +116,8 @@ export const PRODUCTS: Product[] = [
     presentation: '8.5x11.5 cm CHG en caja de 25 unidades (Cód. 55432); 8.5x11.5 cm en caja de 50 unidades (REF 20-001); formatos 5x5.7 cm y 6.5x7 cm en cajas de 100 unidades',
     unitPerBox: 50,
     masterBoxUnits: 1000,
+    onuCode: '42311505',
+    unspscName: 'Vendajes o apósitos para uso general / fijación de accesos vasculares (UNSPSC 42311505)',
     shortDescription: 'Línea completa de apósitos estériles transparentes Fixapro® Advanced: 8.5x11.5 cm CHG antimicrobiano (Caja x25), 8.5x11.5 cm CVC (Caja x50 Uds), 5x5.7 cm (Caja x100 Uds) y 6.5x7 cm (Caja x100 Uds) con marco fenestrado reforzado y tiras de fijación vascular.',
     description: 'La gama Fixapro® IV & CVC Advanced reúne los formatos esenciales para la fijación y protección aséptica de accesos vasculares en centros hospitalarios y clínicas: apósito CHG antimicrobiano con clorhexidina al 2% (8.5 x 11.5 cm, Cód. 55432, Caja x25), formato central para catéteres CVC, PICC y líneas medias (8.5 x 11.5 cm, REF 20-001, Caja x50), formato para vías venosas periféricas estándar (6.5 x 7 cm, REF 20-005, Caja x100) y formato pediátrico/neonatal (5 x 5.7 cm, REF 20-002, Caja x100). Todos los modelos incorporan membrana de poliuretano de alta transmisión de vapor acuoso (MVTR > 3000 g/m²/24h), adhesivo acrílico hipoalergénico sensible a la presión, refuerzo perimetral no tejido que previene el despegue de bordes por tracción mecánica, ranura fenestrada que abraza el cuerpo del catéter, y tiras adhesivas de sujeción estériles independientes con área rotulable para registro clínico.',
     features: [
@@ -150,6 +152,7 @@ export const PRODUCTS: Product[] = [
         inches: '8.5 x 11.5 cm (CVC/PICC)',
         boxUnits: 50,
         refCode: 'REF 20-001',
+        onuCode: '42311505',
         image: iv85115Img,
         targetArea: 'Catéteres Centrales (CVC, PICC, Líneas Medias)',
         clinicalUse: 'Accesos vasculares centrales subclavios, yugulares, braquiales y catéteres de hemodiálisis',
@@ -161,6 +164,7 @@ export const PRODUCTS: Product[] = [
         inches: '8.5 x 11.5 cm + CHG',
         boxUnits: 25,
         refCode: 'CÓD. 55432',
+        onuCode: '42311546',
         image: ivChgImg,
         targetArea: 'Accesos Centrales de Alto Riesgo (CVC, PICC, Hemodiálisis)',
         clinicalUse: 'Prevención activa de bacteriemia (CRBSI/CLABSI) mediante almohadilla con Gluconato de Clorhexidina al 2%',
@@ -172,6 +176,7 @@ export const PRODUCTS: Product[] = [
         inches: '5 x 5.7 cm (Pediátrico)',
         boxUnits: 100,
         refCode: 'REF 20-002',
+        onuCode: '42311505',
         image: iv5057Img,
         targetArea: 'Neonatología, Pediatría y Venas Pequeñas',
         clinicalUse: 'Fijación de catéteres periféricos pequeños (22G a 26G) en neonatos, lactantes y niños',
@@ -183,6 +188,7 @@ export const PRODUCTS: Product[] = [
         inches: '6.5 x 7 cm (CVP)',
         boxUnits: 100,
         refCode: 'REF 20-005',
+        onuCode: '42311505',
         image: ivDressingImg,
         targetArea: 'Vías Venosas Periféricas (CVP Adultos)',
         clinicalUse: 'Fijación y cobertura de catéteres periféricos 18G a 24G en antebrazo y dorso de mano',
@@ -217,6 +223,8 @@ export const PRODUCTS: Product[] = [
     presentation: 'Cajas institucionales: 10x12 cm (Caja x50), 10x25 cm (Caja x30) y 6x7 cm (Caja x100) estériles individuales',
     unitPerBox: 50,
     masterBoxUnits: 1000,
+    onuCode: '42311524',
+    unspscName: 'Apósitos transparentes de película de poliuretano (UNSPSC 42311524)',
     shortDescription: 'Línea completa de películas de poliuretano transparentes estériles Fixapro® Film con marco tipo ventana: 10x12 cm (caja x50), 10x25 cm (caja x30) y 6x7 cm (caja x100) para protección dérmica, heridas postoperatorias y laparotomías.',
     description: 'La gama Fixapro® Film reúne los 3 formatos quirúrgicos e institucionales oficiales de apósitos transparentes estériles de grado médico: formato quirúrgico estándar de 10 x 12 cm (REF 20-008, Caja x50 unidades), formato extendido de 10 x 25 cm para laparotomías y esternotomías (REF 20-010, Caja x30 unidades) y formato menor de 6 x 7 cm (REF 20-007, Caja x100 unidades). Su lámina ultrafina de 20 micras hidrofilizada es totalmente impermeable a bacterias, virus y fluidos externos, permitiendo al mismo tiempo una alta tasa de transmisión de vapor de agua (MVTR > 3000 g/m²/24h) que previene la maceración dérmica y promueve la cicatrización en ambiente húmedo fisiológico.',
     features: [
@@ -250,6 +258,7 @@ export const PRODUCTS: Product[] = [
         inches: '10 x 12 cm (Quirúrgico)',
         boxUnits: 50,
         refCode: 'REF 20-008',
+        onuCode: '42311524',
         image: film1012Img,
         targetArea: 'Incisiones Quirúrgicas Postoperatorias',
         clinicalUse: 'Curación de heridas limpias (cesáreas, apendicectomías, artroscopías) y cobertura impermeable',
@@ -261,6 +270,7 @@ export const PRODUCTS: Product[] = [
         inches: '10 x 25 cm (Laparotomía)',
         boxUnits: 30,
         refCode: 'REF 20-010',
+        onuCode: '42311524',
         image: film1025Img,
         targetArea: 'Cirugía Mayor, Laparotomías y Traumatología',
         clinicalUse: 'Incisiones quirúrgicas extensas abdominales, esternotomías, traumatología y reemplazos articulares',
@@ -272,6 +282,7 @@ export const PRODUCTS: Product[] = [
         inches: '6 x 7 cm (Menor)',
         boxUnits: 100,
         refCode: 'REF 20-007',
+        onuCode: '42311524',
         image: film6070Img,
         targetArea: 'Heridas Menores, Abrasiones y Sitios de Punción',
         clinicalUse: 'Protección de heridas superficiales, incisiones menores, fijación de apósitos y prevención de fricción',
@@ -305,6 +316,8 @@ export const PRODUCTS: Product[] = [
     presentation: 'Caja dispensadora con 12 rollos individuales',
     unitPerBox: 12,
     masterBoxUnits: 120,
+    onuCode: '42311701',
+    unspscName: 'Cinta quirúrgica médica adhesiva hipoalergénica de papel (UNSPSC 42311701)',
     shortDescription: 'Cinta médica de papel microporoso hipoalergénico color piel, suave y transpirable para curaciones y fijación general.',
     description: 'Cinta adhesiva quirúrgica microporosa de alta calidad en tono piel natural. Su adhesivo hipoalergénico sensible a la presión permite una fijación segura sin irritar la piel, facilitando la respiración dérmica normal y retirándose con mínima molestia.',
     features: [
@@ -351,6 +364,8 @@ export const PRODUCTS: Product[] = [
     presentation: 'Cajas con 50 unidades estériles c/u en empaque individual peel-pack',
     unitPerBox: 50,
     masterBoxUnits: 500,
+    onuCode: '42271907',
+    unspscName: 'Accesorios de aspiradores respiratorios y sondas de succión (UNSPSC 42271907 / 42142401)',
     shortDescription: 'Sonda de aspiración endotraqueal estéril de PVC termosensible con conector de succión y código de colores internacional ISO en calibres desde 6 FR hasta 18 FR.',
     description: 'La línea completa de Sondas de Aspiración Traqueal Alveos® cubre todos los requerimientos clínicos desde neonatología y pediatría hasta adultos y pacientes de alto flujo (calibres 6 FR, 8 FR, 10 FR, 12 FR, 14 FR, 16 FR y 18 FR). Fabricadas en cloruro de polivinilo (PVC) termosensible y siliconado de grado médico, se ablandan a la temperatura corporal garantizando una inserción atraumática a través de tubos endotraqueales, cánulas de traqueostomía o vías aéreas naturales. Cuentan con conector ergonómico codificado por color, punta roma no cortante con dos orificios laterales contrapuestos y línea radiopaca continua.',
     features: [
@@ -413,6 +428,8 @@ export const PRODUCTS: Product[] = [
     presentation: 'Cajas institucionales de 50 kits completos envasados individualmente (Adulto / Pediátrico)',
     unitPerBox: 50,
     masterBoxUnits: 200,
+    onuCode: '42271802',
+    unspscName: 'Nebulizador o accesorios de terapia respiratoria en aerosol (UNSPSC 42271802)',
     shortDescription: 'Kit de aerosolterapia clínica Alveos® con vaso dosificador de 6cc hermético, tubo anticolapso de 2.1 metros y mascarilla facial ergonómica disponible en formato Adulto y Pediátrico (Caja x50 kits individuales).',
     description: 'La línea institucional de Kits de Mascarilla con Micronebulizador Alveos® (Adulto y Pediátrico) está formulada para la administración homogénea y eficiente de aerosoles terapéuticos (broncodilatadores, corticoides inhalados, mucolíticos y soluciones salinas) en hospitales, clínicas y salas ERA/IRA. Ambos formatos incorporan un vaso micronebulizador de alta precisión que genera una nube ultrafina con partículas respirables (MMAD < 5 micras) con mínimo volumen residual, rosca antiderrame con inclinación funcional hasta 45°, y tubo de extensión estriado interiormente con diseño estrella que previene el estrangulamiento del flujo. La versión Adulto cuenta con mascarilla ergonómica de vinilo suave con clip nasal maleable, mientras que la versión Pediátrica está contorneada específicamente para la fisonomía de lactantes y niños con bordes suaves que no ejercen presión dérmica lesiva. Totalmente libres de látex e hipoalergénicos.',
     features: [
@@ -444,6 +461,7 @@ export const PRODUCTS: Product[] = [
         format: 'Formato Adulto (REF NEB-AD)',
         inches: 'Adulto',
         boxUnits: 50,
+        onuCode: '42271802',
         targetArea: 'Adultos y Adolescentes',
         clinicalUse: 'Aerosolterapia hospitalaria, EPOC, asma aguda y fluidificación bronquial',
         technique: 'Mascarilla ergonómica de vinilo suave con clip nasal maleable y banda elástica occipital regulable',
@@ -453,6 +471,7 @@ export const PRODUCTS: Product[] = [
         format: 'Formato Pediátrico (REF NEB-PED)',
         inches: 'Pediátrico',
         boxUnits: 50,
+        onuCode: '42271802',
         targetArea: 'Lactantes, Niños y Población Infantil',
         clinicalUse: 'Salas IRA, Pediatría de Urgencia, bronquiolitis, laringitis y asma infantil',
         technique: 'Mascarilla contorneada con bordes redondeados atraumáticos de baja presión facial dérmica',
@@ -484,6 +503,8 @@ export const PRODUCTS: Product[] = [
     presentation: 'Cajas dispensadoras de 12 unidades individuales con 2 broches metálicos cada una',
     unitPerBox: 12,
     masterBoxUnits: 144,
+    onuCode: '42311506',
+    unspscName: 'Vendajes elásticos de soporte o compresión articular (UNSPSC 42311506)',
     shortDescription: 'Línea hospitalaria de vendas elásticas de compresión y soporte articular Fixapro® (12% Spandex, 88% Poliéster, 100% libres de látex). Disponibles en anchos de 5 cm (2"), 7.5 cm (3"), 10 cm (4") y 12.7 cm (5") x 4.5 m estirada. Presentación en caja dispensadora institucional de 12 unidades individuales con 2 clips metálicos por rollo.',
     description: 'La línea institucional de Vendas Elásticas Fixapro® ofrece compresión continua, adaptable y de grado médico para el tratamiento integral de esguinces, torceduras, contusiones articulares, soporte postoperatorio y control del edema en traumatología y servicios de urgencia. Fabricadas con una mezcla premium de 12% Spandex y 88% Poliéster, proporcionan una fuerza de restitución elástica constante sin deformarse ni aflojarse con el movimiento del paciente. Su estructura textil porosa es 100% libre de látex e hipoalergénica, garantizando máxima tolerancia dermatológica sin riesgo de dermatitis ni maceración. Cada rollo cuenta con envoltura higiénica individual y dos broches / clips metálicos elásticos de anclaje rápido. Son lavables y reutilizables con 5 años de vida útil certificada.',
     features: [
@@ -521,6 +542,7 @@ export const PRODUCTS: Product[] = [
         format: '5.0 cm x 4.5 m (2")',
         inches: '2 Pulgadas (5.08 cm)',
         boxUnits: 12,
+        onuCode: '42311506',
         targetArea: 'Muñeca, Mano, Dedos y Traumatología Pediátrica',
         clinicalUse: 'Inmovilización de articulaciones pequeñas, soporte ligamentoso de muñeca y vendajes en extremidades infantiles o de menor calibre.',
         technique: 'Técnica circular o en espiral cruzada sobre mano y muñeca con compresión elástica suave sin estrangulamiento.',
@@ -530,6 +552,7 @@ export const PRODUCTS: Product[] = [
         format: '7.5 cm x 4.5 m (3" / 7.62 cm)',
         inches: '3 Pulgadas (7.62 cm)',
         boxUnits: 12,
+        onuCode: '42311506',
         targetArea: 'Tobillo, Pie, Muñeca, Codo y Antebrazo',
         clinicalUse: 'Formato estándar de alta rotación en urgencias para el manejo de esguinces de tobillo (grados I y II), contusiones y fijación de férulas.',
         technique: 'Vendaje en ocho (figura de 8) cruzando la articulación tibiotarsiana a 90° de flexión funcional con anclaje firme.',
@@ -539,6 +562,7 @@ export const PRODUCTS: Product[] = [
         format: '10.0 cm x 4.5 m (4")',
         inches: '4 Pulgadas (10.16 cm)',
         boxUnits: 12,
+        onuCode: '42311506',
         targetArea: 'Rodilla, Pantorrilla, Pierna y Extremidades Mayores',
         clinicalUse: 'Compresión postoperatoria (artroscopías de rodilla), contención de desgarros musculares, soporte venoso y grandes apósitos.',
         technique: 'Vendaje en espiga ascendente desde distal hacia proximal solapando dos tercios de la vuelta anterior sin presionar la rótula.',
@@ -548,6 +572,7 @@ export const PRODUCTS: Product[] = [
         format: '12.7 cm x 4.5 m (5" / 15 cm)',
         inches: '5 Pulgadas (12.70 cm / Formato Ancho)',
         boxUnits: 12,
+        onuCode: '42311506',
         targetArea: 'Muslo, Cadera, Hombro, Tórax y Muñones',
         clinicalUse: 'Cobertura rápida de segmentos corporales extensos, vendajes compresivos torácicos, fijación de apósitos post-laparotomía y muñones.',
         technique: 'Vendaje amplio con distribución homogénea de la tensión elástica evitando pliegues en superficies cóncavas.',
@@ -581,6 +606,8 @@ export const PRODUCTS: Product[] = [
     presentation: 'Implante estéril de titanio Ti-6Al-4V ELI en sobre sellado grado médico + Set de instrumental quirúrgico autoclavable',
     unitPerBox: 1,
     masterBoxUnits: 10,
+    onuCode: '42321600',
+    unspscName: 'Implantes de columna y expansores vertebrales percutáneos (UNSPSC 42321600 / 42295500)',
     shortDescription: 'Sistema MIS (Mínimamente Invasivo) intracorporal y controlable para restauración anatómica de altura vertebral y aumentación con cemento óseo PMMA. Especial para fracturas por compresión y osteoporosis.',
     description: 'El Sistema Ver3® Vertres (MaffHealth / Ossyn) es una solución quirúrgica mínimamente invasiva (MIS) intracorporal y controlable, cuyo diseño de expansión tridimensional restaura anatómicamente el cuerpo vertebral y su altura original en el segmento raquídeo comprendido entre T6 y L5.\n\nVertres crea un espacio óptimo y seguro en el cuerpo vertebral colapsado para la técnica de aumentación en su uso previsto con cemento óseo de PMMA. Brinda una distribución homogénea y contenida del cemento, generando un soporte biomecánico estable para máxima funcionalidad y alivio rápido y duradero del dolor en pacientes con fracturas vertebrales dolorosas por compresión (según clasificación de Magerl de tipo A1, A2 y A3), fragilidad ósea generada por osteoporosis severa, lesiones traumáticas o patologías tumorales osteolíticas metastásicas y mieloma.\n\nDisponible en dos referencias codificadas por color: REF 50-7000 (Color Dorado, Ø 5.0 mm sin expandir, longitud 25 mm, altura total expandida 15.0 mm, canal pedicular mín. 6.1 mm) y REF 50-7001 (Color Azul, Ø 5.8 mm sin expandir, longitud 28 mm, altura total expandida 17.0 mm, canal pedicular mín. 6.4 mm).',
     features: [
@@ -682,6 +709,7 @@ export const PRODUCTS: Product[] = [
         format: 'Referencia 50-7000 (Color Dorado)',
         inches: 'Ø 5.0 mm x L 25 mm',
         boxUnits: 1,
+        onuCode: '42321600',
         targetArea: 'Vértebras Toracolumbares (T6 - L2) / Pedículos estándar',
         clinicalUse: 'Diámetro sin expandir: 5.0 mm | Altura expandida: 15.0 mm | Canal pedicular mín: 6.1 mm',
         technique: 'Abordaje MIS transpedicular unipedicular o bipedicular + Cemento PMMA',
@@ -693,6 +721,7 @@ export const PRODUCTS: Product[] = [
         format: 'Referencia 50-7001 (Color Azul)',
         inches: 'Ø 5.8 mm x L 28 mm',
         boxUnits: 1,
+        onuCode: '42321600',
         targetArea: 'Vértebras Lumbares (L1 - L5) / Cuerpos vertebrales mayores',
         clinicalUse: 'Diámetro sin expandir: 5.8 mm | Altura expandida: 17.0 mm | Canal pedicular mín: 6.4 mm',
         technique: 'Abordaje MIS transpedicular + Expansión tridimensional 17 mm + Cemento PMMA',
@@ -712,6 +741,8 @@ export const PRODUCTS: Product[] = [
     presentation: 'Sistema Completo de Implantes Estériles Ti-6Al-4V + Set Instrumental Multipropósito Autoclavable',
     unitPerBox: 1,
     masterBoxUnits: 1,
+    onuCode: '42321601',
+    unspscName: 'Sistemas de fijación pedicular transpedicular de columna (UNSPSC 42321601)',
     shortDescription: 'Sistema de concepto MIS (Mínimamente Invasivo) para fijación posterior del segmento raquídeo (T6-L5). Permite técnicas CBT (Trayectoria de Hueso Cortical) o Transpedicular tradicional, con incisión de tan solo 1.8 mm para 4 tornillos, 2 barras y 4 tuercas de cierre. Tornillos canulados y fenestrados con dos pasos de rosca diferentes para fijación mejorada en hueso cortical y esponjoso.',
     description: 'El Sistema de Fijación Pedicular UNOMIS® de MaffHealth y Ossyn es una solución quirúrgica flexible de concepto MIS (Mínimamente Invasivo) para una óptima fijación posterior del segmento raquídeo entre T6 y L5. Permite al cirujano utilizarlo indistintamente en la Técnica CBT (Trayectoria de Hueso Cortical) o en la técnica Transpedicular percutánea.\n\nEn la Trayectoria Cortical (CBT) se incrementa significativamente la fijación debido al mayor contacto en la interface implante-hueso en la zona densa del arco posterior de la columna. El diseño especializado del tornillo Unomis cuenta con dos pasos de rosca diferentes: uno más fino para hueso cortical denso y uno más amplio para hueso esponjoso, maximizando la fuerza de fijación y el torque de inserción.\n\nSu abordaje mínimamente invasivo permite una incisión de apenas 1.8 mm para implantar 4 tornillos, 2 barras y 4 tuercas. Los tornillos cuentan con bajo perfil, cabeza con diseño en U, poliaxialidad de hasta ±30°, aletas extendidas con reducción integrada, canulación axial y fenestración distal para alambre guía flexible de aleación níquel-titanio (Nitinol). Las barras preconformadas de 5.5 mm incorporan punta tipo proyectil (bullet tip) para un deslizamiento subfascial suave, y los tornillos de cierre ofrecen rosca autorroscante doble anti-trasroscado.',
     features: [
@@ -929,6 +960,8 @@ export const PRODUCTS: Product[] = [
     presentation: 'Sistema Quirúrgico Modular de Columna • Implantes de Titanio Grado Médico + Set Instrumental Inteligente',
     unitPerBox: 1,
     masterBoxUnits: 1,
+    onuCode: '42321601',
+    unspscName: 'Sistemas de fijación pedicular posterior, tornillos de reducción y barras (UNSPSC 42321601)',
     shortDescription: 'Sistema de fijación pedicular posterior de aleación Ti-6Al-4V con tornillos poliaxiales (±30°) de aleta larga de reducción, versiones canuladas con ranura distal para aumentación con PMMA y no canuladas, barras rectas de Ø 5.5 mm y conector transverso Cross Link telescópico.',
     description: 'El Sistema de Fijación Pedicular Posterior de Columna OpenPed® (MaffHealth / Ossyn) constituye una plataforma quirúrgica integral y de alta resistencia biomecánica, desarrollada específicamente para procedimientos de artrodesis y estabilización torácica, lumbar y sacra en pacientes esqueléticamente maduros.\n\nConstruido en aleación de Titanio Grado Médico (Ti-6Al-4V según normativas internacionales ASTM F136 e ISO 5832-3), el sistema incorpora tornillos pediculares autorroscantes de perfil optimizado con aletas integradas de reducción, concebidos para facilitar el descenso progresivo y controlado de la barra sin forzar la interfase hueso-implante en espondilolistesis y fracturas complejas.\n\nLa versión canulada dispone de una fenestración lateral distal especialmente diseñada para la inyección segura y controlada de cemento óseo biocompatible (PMMA), brindando un anclaje superior y minimizando el riesgo de aflojamiento o pull-out en pacientes con densidad mineral ósea disminuida (osteopenia u osteoporosis severa). Su poliaxialidad multidireccional de hasta ± 30° agiliza la captura de las barras rectas de Ø 5.5 mm (disponibles en longitudes de 60 a 400 mm).\n\nPara maximizar la estabilidad torsional y rigidez transversal de montajes uni y multinivel, el sistema incorpora conectores transversos preensamblados Cross Link en dos rangos telescópicos (40–60 mm y 60–90 mm) junto a tornillos de cierre autorroscantes de rosca inversa y doble paso que suprimen el trasroscado accidental.',
     features: [
@@ -1133,11 +1166,11 @@ export const PRODUCTS: Product[] = [
 export const CLINICAL_RECOMMENDATIONS: ClinicalProcedureRecommendation[] = [
   {
     id: 'rec-openped-spine',
-    procedureName: 'Fijación Pedicular Posterior de Columna con Tornillos de Reducción y Aumentación (OpenPed®)',
-    specialty: 'Cirugía de Columna / Traumatología Raquídea / Neurocirugía',
+    procedureName: 'Artrodesis e Instrumentación Pedicular Posterior de Columna',
+    specialty: 'Cirugía de Columna / Neurocirugía / Traumatología Adulto / Pabellón Central',
     recommendedProductIds: ['openped-spine-system'],
-    clinicalRationale: 'El sistema OpenPed® proporciona una solución versátil y robusta para la estabilización toracolumbar y lumbosacra en pacientes esqueléticamente maduros. Sus tornillos con aletas de reducción facilitan el descenso atraumático de la barra en espondilolistesis y fracturas, mientras que la canulación con fenestraciones distales permite aumentación con cemento PMMA en pacientes con calidad ósea comprometida. El conector transverso Cross Link confiere máxima rigidez torsional en montajes uni y multinivel.',
-    bestPracticeTip: 'En pacientes con osteopenia u osteoporosis, utilizar la versión canulada de OpenPed® con inyección de cemento PMMA de viscosidad media-alta bajo control radioscópico continuo para prevenir fugas y asegurar un anclaje óptimo.'
+    clinicalRationale: 'El sistema OpenPed® proporciona fijación pedicular poliaxial rígida (±30°) con aletas largas de reducción para corrección gradual de listesis y deformidades, junto a tornillos canulados fenestrados para aumentación segura con cemento PMMA en vértebras con osteoporosis.',
+    bestPracticeTip: 'Al realizar aumentación con PMMA en tornillo canulado, inyectar el cemento en fase pastosa bajo control radioscópico biplanar estricto para certificar ausencia de fugas peridurales o venosas.'
   },
   {
     id: 'rec-unomis-cbt-spine',
@@ -1154,6 +1187,14 @@ export const CLINICAL_RECOMMENDATIONS: ClinicalProcedureRecommendation[] = [
     recommendedProductIds: ['ver3-vertres-mis'],
     clinicalRationale: 'El sistema Ver3® Vertres restaura mecánicamente la altura del cuerpo vertebral mediante expansión tridimensional controlable de titanio Ti-6Al-4V ELI, creando una cavidad confinada que optimiza la distribución de cemento óseo PMMA y alivia el dolor de inmediato.',
     bestPracticeTip: 'Comprobar la indemnidad del muro posterior mediante TC o radioscopía previa para prevenir extravasación del cemento hacia el canal raquídeo.'
+  },
+  {
+    id: 'rec-sprain-compression',
+    procedureName: 'Inmovilización Funcional y Compresión en Esguinces y Traumatología',
+    specialty: 'Urgencias / Traumatología / Kinesiología / Atención Primaria',
+    recommendedProductIds: ['fixapro-vendas-elasticas', 'fixapro-micropore-25'],
+    clinicalRationale: 'La venda elástica Fixapro® (5, 7.5, 10 o 12.7 cm) proporciona compresión elástica continua y adaptable (12% Spandex) que reabsorbe el edema periarticular y estabiliza la articulación sin efecto torniquete ni maceración.',
+    bestPracticeTip: 'Aplicar vendaje en ocho o espiga desde distal hacia proximal solapando 50% de cada vuelta, y verificar el llenado capilar distal tras la fijación con los dos broches metálicos incluidos.'
   },
   {
     id: 'rec-respiratory-suction',
@@ -1194,14 +1235,6 @@ export const CLINICAL_RECOMMENDATIONS: ClinicalProcedureRecommendation[] = [
     recommendedProductIds: ['fixapro-film-line', 'fixapro-micropore-25'],
     clinicalRationale: 'El apósito transparente Fixapro® Film (formatos 6x7, 10x12 y 10x25 cm) protege la incisión frente a patógenos externos y fluidos, permitiendo la transpiración dérmica y la inspección visual permanente sin levantar la curación.',
     bestPracticeTip: 'Aplicar sin tensión mecánica sobre la herida para evitar fuerzas de cizallamiento en los bordes suturados.'
-  },
-  {
-    id: 'rec-sprain-compression',
-    procedureName: 'Vendaje Compresivo, Inmovilización Articular y Manejo de Esguinces',
-    specialty: 'Traumatología / Urgencias / Kinesiología / Policlínico de Curaciones',
-    recommendedProductIds: ['fixapro-vendas-elasticas'],
-    clinicalRationale: 'Las vendas elásticas Fixapro® (12% Spandex, 88% Poliéster, 100% libres de látex) proveen soporte flexible continuo para limitar el edema postraumático y estabilizar la articulación sin estrangular la extremidad ni provocar dermatitis por contacto.',
-    bestPracticeTip: 'Aplicar el vendaje en posición funcional anatómica desde la porción distal hacia la proximal con técnica en espiga o en ocho; afianzar con los clips provistos evitando presionar salientes óseas y evaluar el llenado capilar distal.'
   }
 ];
 

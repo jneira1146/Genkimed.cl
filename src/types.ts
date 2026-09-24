@@ -49,6 +49,8 @@ export interface Product {
   masterBoxUnits: number;
   shortDescription: string;
   description: string;
+  onuCode?: string;
+  unspscName?: string;
   features: string[];
   clinicalIndications: string[];
   technicalSpecs: {
@@ -100,6 +102,7 @@ export interface Product {
     badge?: string;
     refCode?: string;
     image?: string;
+    onuCode?: string;
   }[];
 }
 
@@ -121,5 +124,6 @@ export interface QuoteItem {
   quantityBoxes: number;
   formatOrCaliber?: string;
   image?: string;
+  onuCode?: string;
 }
 

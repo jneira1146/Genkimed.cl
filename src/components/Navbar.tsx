@@ -49,7 +49,10 @@ export const Navbar: React.FC<NavbarProps> = ({
     : products.filter(p => 
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.dimensions.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        p.category.toLowerCase().includes(searchQuery.toLowerCase())
+        p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        p.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (p.onuCode && p.onuCode.includes(searchQuery.trim())) ||
+        (p.unspscName && p.unspscName.toLowerCase().includes(searchQuery.toLowerCase()))
       ).slice(0, 5);
 
   const handleSelectSearchedProduct = (prod: Product) => {
@@ -171,7 +174,14 @@ export const Navbar: React.FC<NavbarProps> = ({
                       />
                       <div>
                         <p className="font-bold text-xs text-slate-900 leading-tight">{prod.name}</p>
-                        <p className="text-[11px] text-slate-500">{prod.dimensions} • Caja x {prod.unitPerBox} un.</p>
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                          <p className="text-[11px] text-slate-500">{prod.dimensions} • Caja x {prod.unitPerBox} un.</p>
+                          {prod.onuCode && (
+                            <span className="text-[9px] font-mono font-bold text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">
+                              ONU {prod.onuCode}
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </div>
                     <span className="text-[10px] font-bold text-[#7B37A0] bg-purple-50 border border-purple-200 px-2 py-0.5 rounded-md">
@@ -382,7 +392,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 >
                   <div className="flex items-center gap-1.5">
                     <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-500 via-emerald-500 to-purple-500"></span>
-                    <span>Ossyn (Columna: Ver3®, Unomis® & OpenPed®)</span>
+                    <span>Línea Quirúrgica Ossyn (Ver3®, Unomis®, OpenPed®)</span>
                   </div>
                   <span className="text-[9px] bg-amber-400 text-slate-950 font-black px-1.5 py-0.5 rounded border border-amber-500">Próximamente</span>
                 </button>

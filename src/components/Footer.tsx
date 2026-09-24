@@ -126,7 +126,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigatePage, onNavigateBrand 
                   className="hover:text-[#A8287F] transition-colors text-left flex items-center gap-1.5 font-bold text-slate-300"
                 >
                   <span className="w-2 h-2 rounded-full bg-[#A8287F]"></span>
-                  <span>Línea Fixapro® (Apósitos & Cintas)</span>
+                  <span>Línea Fixapro® (Apósitos, Cintas & Vendas)</span>
                 </button>
               </li>
               <li>
@@ -150,7 +150,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigatePage, onNavigateBrand 
                   className="hover:text-purple-300 transition-colors text-left flex items-center gap-1.5 font-bold text-purple-200"
                 >
                   <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-400 to-emerald-400"></span>
-                  <span>Línea Columna MIS (Ver3® & Unomis®)</span>
+                  <span>Línea Quirúrgica Ossyn (Ver3®, Unomis®, OpenPed®)</span>
                   <span className="text-[9px] bg-amber-400 text-slate-950 border border-amber-500 px-1 py-0.2 rounded font-black uppercase">
                     Próx.
                   </span>

@@ -85,12 +85,12 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
         onBrandChange?.('Columna');
       }
     } else if (catId === 'respiratory' || catId === 'nebulizers') {
-      if (selectedBrand === 'Fixapro' || selectedBrand === 'Columna' || selectedBrand === 'Ver3' || selectedBrand === 'Unomis' || selectedBrand === 'OpenPed') {
+      if (selectedBrand === 'Fixapro' || selectedBrand === 'Columna' || selectedBrand === 'Ossyn' || selectedBrand === 'Ver3' || selectedBrand === 'Unomis' || selectedBrand === 'OpenPed') {
         setInternalBrand('all');
         onBrandChange?.('all');
       }
     } else if (catId !== 'all') {
-      if (selectedBrand === 'Alveos' || selectedBrand === 'Columna' || selectedBrand === 'Ver3' || selectedBrand === 'Unomis' || selectedBrand === 'OpenPed') {
+      if (selectedBrand === 'Alveos' || selectedBrand === 'Columna' || selectedBrand === 'Ossyn' || selectedBrand === 'Ver3' || selectedBrand === 'Unomis' || selectedBrand === 'OpenPed') {
         setInternalBrand('all');
         onBrandChange?.('all');
       }
@@ -214,7 +214,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
             }`}
           >
             <span className="w-2 h-2 rounded-full bg-pink-300"></span>
-            Línea Fixapro® (Apósitos & Curación)
+            Línea Fixapro® (Apósitos & Cintas)
           </button>
           <button
             onClick={() => handleBrandSelect('Alveos')}
@@ -228,16 +228,16 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
             Línea Alveos® (Respiratorio & Sondas)
           </button>
           <button
-            onClick={() => handleBrandSelect('Ossyn')}
+            onClick={() => handleBrandSelect('Columna')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
-              selectedBrand === 'Ossyn' || selectedBrand === 'Columna' || selectedBrand === 'Ver3' || selectedBrand === 'Unomis' || selectedBrand === 'OpenPed'
+              selectedBrand === 'Columna' || selectedBrand === 'Ossyn' || selectedBrand === 'Ver3' || selectedBrand === 'Unomis' || selectedBrand === 'OpenPed'
                 ? 'bg-gradient-to-r from-slate-900 via-purple-950 to-slate-950 text-white border border-purple-500/40 shadow-sm'
                 : 'text-slate-600 hover:text-purple-700'
             }`}
           >
             <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-400 via-emerald-400 to-purple-400 animate-pulse"></span>
-            <span>Línea Ossyn (Ver3®, Unomis® & OpenPed®)</span>
-            <span className="text-[9px] font-black uppercase px-1.5 py-0.5 rounded-full bg-amber-400 text-slate-950 border border-amber-500 ml-0.5">
+            <span>Línea Quirúrgica Ossyn (Ver3®, Unomis® & OpenPed®)</span>
+            <span className="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-amber-400 text-slate-950 border border-amber-500 ml-0.5">
               Próximamente
             </span>
           </button>
@@ -326,7 +326,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                   {currentCat.id === 'spine_surgery' && (
                     <span className="text-[10px] font-black uppercase tracking-wider text-amber-300 bg-amber-950/70 px-2 py-0.5 rounded border border-amber-500/40 flex items-center gap-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-                      Ver3® Vertres, Unomis® MISS & OpenPed®
+                      Línea Columna Ossyn (Ver3® Vertres, Unomis® MISS & OpenPed®)
                     </span>
                   )}
                   {selectedCategory === 'wound_care' && (
@@ -360,19 +360,19 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                         <span className="bg-amber-500/20 border border-amber-400/50 text-amber-200 px-2.5 py-1 rounded-lg font-bold flex items-center gap-1.5">
                           <strong className="text-amber-300">Ver3® Vertres:</strong> Implante Expansible Ti-6Al-4V ELI + Cemento PMMA (T6-L5)
                           <span className="text-[9px] font-black uppercase px-1.5 py-0.2 rounded bg-amber-400 text-slate-950 border border-amber-500 ml-1">
-                            Próximamente
+                            Próx.
                           </span>
                         </span>
                         <span className="bg-emerald-500/20 border border-emerald-400/50 text-emerald-200 px-2.5 py-1 rounded-lg font-bold flex items-center gap-1.5">
-                          <strong className="text-emerald-300">Unomis® MISS:</strong> Tornillos Ø 5.0-7.0 mm (Incisión 1.8 mm) + Barras Bullet Ø 5.5 mm
+                          <strong className="text-emerald-300">Unomis® MIS:</strong> Tornillos Ø 5.0-7.0 mm (Incisión 1.8 mm) + Barras Bullet Ø 5.5 mm
                           <span className="text-[9px] font-black uppercase px-1.5 py-0.2 rounded bg-amber-400 text-slate-950 border border-amber-500 ml-1">
-                            Próximamente
+                            Próx.
                           </span>
                         </span>
-                        <span className="bg-purple-500/20 border border-purple-400/50 text-purple-200 px-2.5 py-1 rounded-lg font-bold flex items-center gap-1.5">
-                          <strong className="text-purple-300">OpenPed®:</strong> Tornillos Canulados Ø 4.5-6.0 mm (Aletas Reducción + PMMA) + Cross Link + Barras 5.5 mm
+                        <span className="bg-purple-900/40 border border-purple-400/40 text-purple-200 px-2.5 py-1 rounded-lg font-bold flex items-center gap-1.5">
+                          <strong className="text-amber-300">OpenPed®:</strong> Tornillos Poliaxiales de Reducción + Aumentación PMMA
                           <span className="text-[9px] font-black uppercase px-1.5 py-0.2 rounded bg-amber-400 text-slate-950 border border-amber-500 ml-1">
-                            Próximamente
+                            Próx.
                           </span>
                         </span>
                       </div>
@@ -394,16 +394,16 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                             className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-3 py-1 rounded-lg text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer"
                           >
                             <Play className="w-3.5 h-3.5 fill-slate-950 text-slate-950" />
-                            <span>Video Unomis® MISS CBT</span>
+                            <span>Video Unomis® MIS CBT</span>
                           </button>
                         )}
                         {openpedProduct && (
                           <button
                             type="button"
-                            onClick={() => onSelectProduct(openpedProduct)}
-                            className="bg-purple-600 hover:bg-purple-500 text-white font-black px-3 py-1 rounded-lg text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer"
+                            onClick={() => onSelectProduct?.(openpedProduct)}
+                            className="bg-purple-800 hover:bg-purple-700 text-amber-300 font-bold px-3 py-1 rounded-lg text-xs flex items-center gap-1.5 shadow-sm transition-all border border-purple-400 cursor-pointer"
                           >
-                            <Layers className="w-3.5 h-3.5 text-amber-400" />
+                            <Sparkles className="w-3.5 h-3.5 text-amber-300" />
                             <span>Ver Ficha OpenPed®</span>
                           </button>
                         )}
